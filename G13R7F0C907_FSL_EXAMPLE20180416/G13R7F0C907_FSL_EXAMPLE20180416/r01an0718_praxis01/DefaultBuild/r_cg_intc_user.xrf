@@ -1,0 +1,598 @@
+
+
+
+78K0R C Compiler V2.72 Cross reference List                                                               Date:30 Jun 2018 Page:   1
+
+Command   : -cf100bc -yC:\Program Files (x86)\Renesas Electronics\CS+\CACX\Device\RL78\Devicefile r_cg_intc_user.c -oDefaultBuild -_
+            msgoff -nq -i. -iinc -zpsf -mm -zz02000h -zt02000h -mi0 -xDefaultBuild -g2
+In-file   : r_cg_intc_user.c
+Xref-file : DefaultBuild\r_cg_intc_user.xrf
+Para-file : 
+Inc-file  : [ 1] r_cg_macrodriver.h
+            [ 2] r_cg_intc.h
+            [ 3] r_cg_serial.h
+            [ 4] r_cg_userdefine.h
+
+ATTRIB MODIFY TYPE    SYMBOL          DEFINE   REFERENCE
+
+EXSTC  VECT   func    r_intc1_interrupt
+                                         65       32
+EXSTC  VECT   func    r_intc2_interrupt
+                                         83       33
+EXTYP         char    int8_t             72: 1
+EXTYP         uchar   uint8_t            73: 1
+EXTYP         short   int16_t            74: 1
+EXTYP         ushort  uint16_t           75: 1
+EXTYP         long    int32_t            76: 1
+EXTYP         ulong   uint32_t           77: 1
+EXTYP         ushort  MD_STATUS          78: 1
+EXTERN FAR    func    R_INTC_Create               81: 2
+EXTERN FAR    func    R_INTC1_Start               82: 2
+EXTERN FAR    func    R_INTC1_Stop                83: 2
+EXTERN FAR    func    R_INTC2_Start               84: 2
+EXTERN FAR    func    R_INTC2_Stop                85: 2
+EXTERN FAR    func    R_SAU0_Create              395: 3
+EXTERN FAR    func    R_UART0_Create             396: 3
+EXTERN FAR    func    R_UART0_Start              397: 3
+EXTERN FAR    func    R_UART0_Stop               398: 3
+EXTERN FAR    func    R_UART0_Send               399: 3
+EXTERN FAR    func    R_UART0_Receive            400: 3
+EXSTC  FAR    func    r_uart0_callback_error
+                                        401: 3
+EXSTC  FAR    func    r_uart0_callback_receiveend
+                                        402: 3
+EXSTC  FAR    func    r_uart0_callback_sendend
+                                        403: 3
+EXSTC  FAR    func    r_uart0_callback_softwareoverrun
+                                        404: 3
+EXTERN FAR    func    R_UART1_Create             405: 3
+EXTERN FAR    func    R_UART1_Start              406: 3
+EXTERN FAR    func    R_UART1_Stop               407: 3
+EXTERN FAR    func    R_UART1_Send               408: 3
+EXTERN FAR    func    R_UART1_Receive            409: 3
+EXSTC  FAR    func    r_uart1_callback_error
+                                        410: 3
+EXSTC  FAR    func    r_uart1_callback_receiveend
+                                        411: 3
+EXSTC  FAR    func    r_uart1_callback_sendend
+                                        412: 3
+EXSTC  FAR    func    r_uart1_callback_softwareoverrun
+                                        413: 3
+EXTERN FAR    func    R_SAU1_Create              414: 3
+EXTERN FAR    func    R_UART2_Create             415: 3
+EXTERN FAR    func    R_UART2_Start              416: 3
+EXTERN FAR    func    R_UART2_Stop               417: 3
+EXTERN FAR    func    R_UART2_Send               418: 3
+EXTERN FAR    func    R_UART2_Receive            419: 3
+EXSTC  FAR    func    r_uart2_callback_error
+                                        420: 3
+EXSTC  FAR    func    r_uart2_callback_receiveend
+                                        421: 3
+EXSTC  FAR    func    r_uart2_callback_sendend
+                                        422: 3
+EXSTC  FAR    func    r_uart2_callback_softwareoverrun
+                                        423: 3
+EXTERN FAR    func    R_IICA0_Create             424: 3
+EXTERN FAR    func    R_IICA0_Master_Send
+                                                 425: 3
+EXTERN FAR    func    R_IICA0_Master_Receive
+                                                 426: 3
+EXTERN FAR    func    R_IICA0_Stop               427: 3
+EXTERN FAR    func    R_IICA0_StopCondition
+                                                 428: 3
+EXSTC  FAR    func    r_iica0_callback_master_sendend
+                                        429: 3
+EXSTC  FAR    func    r_iica0_callback_master_receiveend
+                                        430: 3
+EXSTC  FAR    func    r_iica0_callback_master_error
+                                        431: 3
+EXSTC  FAR    func    iica0_master_handler
+                                        432: 3
+EXSTC  FAR    func    iica0_slave_handler
+                                        433: 3
+EXTERN FAR    func    r_uart1_header_init
+                                                 436: 3
+EXTERN FAR    func    r_uart2_header_init
+                                                 437: 3
+EXTERN FAR    func    r_uart0_reset              438: 3
+EXTERN FAR    func    r_uart1_reset              439: 3
+EXTERN FAR    func    r_uart2_reset              440: 3
+EXTERN NEAR   array   debug_gpio         52
+EXTERN NEAR   uchar   temp1              53       68       69       71
+EXTERN NEAR   ulong   vga1_det           54       70
+       VLT
+EXTERN NEAR   uchar   temp2              55       86       87       89
+EXTERN NEAR   ulong   vga2_det           56       88
+       VLT
+              #define STATUS_H           30: 1
+              #define MD_STATUSBASE      50: 1
+              #define MD_OK              51: 1
+              #define MD_SPT             52: 1
+              #define MD_NACK            53: 1
+              #define MD_BUSY1           54: 1
+              #define MD_BUSY2           55: 1
+              #define MD_OVERRUN         56: 1
+              #define MD_ERRORBASE       59: 1
+              #define MD_ERROR           60: 1
+              #define MD_ARGERROR        61: 1
+              #define MD_ERROR1          62: 1
+              #define MD_ERROR2          63: 1
+              #define MD_ERROR3          64: 1
+              #define MD_ERROR4          65: 1
+              #define __TYPEDEF__        79: 1
+              #define INTC_H             30: 2
+              #define _01_INTP0_EDGE_RISING_SEL
+                                         40: 2
+              #define _00_INTP0_EDGE_RISING_UNSEL
+                                         41: 2
+              #define _02_INTP1_EDGE_RISING_SEL
+                                         42: 2
+              #define _00_INTP1_EDGE_RISING_UNSEL
+                                         43: 2
+              #define _04_INTP2_EDGE_RISING_SEL
+                                         44: 2
+              #define _00_INTP2_EDGE_RISING_UNSEL
+                                         45: 2
+              #define _08_INTP3_EDGE_RISING_SEL
+                                         46: 2
+              #define _00_INTP3_EDGE_RISING_UNSEL
+                                         47: 2
+              #define _10_INTP4_EDGE_RISING_SEL
+                                         48: 2
+              #define _00_INTP4_EDGE_RISING_UNSEL
+                                         49: 2
+              #define _20_INTP5_EDGE_RISING_SEL
+                                         50: 2
+              #define _00_INTP5_EDGE_RISING_UNSEL
+                                         51: 2
+              #define _01_INTP0_EDGE_FALLING_SEL
+                                         57: 2
+              #define _00_INTP0_EDGE_FALLING_UNSEL
+                                         58: 2
+              #define _02_INTP1_EDGE_FALLING_SEL
+                                         59: 2
+              #define _00_INTP1_EDGE_FALLING_UNSEL
+                                         60: 2
+              #define _04_INTP2_EDGE_FALLING_SEL
+                                         61: 2
+              #define _00_INTP2_EDGE_FALLING_UNSEL
+                                         62: 2
+              #define _08_INTP3_EDGE_FALLING_SEL
+                                         63: 2
+              #define _00_INTP3_EDGE_FALLING_UNSEL
+                                         64: 2
+              #define _10_INTP4_EDGE_FALLING_SEL
+                                         65: 2
+              #define _00_INTP4_EDGE_FALLING_UNSEL
+                                         66: 2
+              #define _20_INTP5_EDGE_FALLING_SEL
+                                         67: 2
+              #define _00_INTP5_EDGE_FALLING_UNSEL
+                                         68: 2
+              #define SERIAL_H           30: 3
+              #define _0000_SAU_CK00_FCLK_0
+                                         39: 3
+              #define _0001_SAU_CK00_FCLK_1
+                                         40: 3
+              #define _0002_SAU_CK00_FCLK_2
+                                         41: 3
+              #define _0003_SAU_CK00_FCLK_3
+                                         42: 3
+              #define _0004_SAU_CK00_FCLK_4
+                                         43: 3
+              #define _0005_SAU_CK00_FCLK_5
+                                         44: 3
+              #define _0006_SAU_CK00_FCLK_6
+                                         45: 3
+              #define _0007_SAU_CK00_FCLK_7
+                                         46: 3
+              #define _0008_SAU_CK00_FCLK_8
+                                         47: 3
+              #define _0009_SAU_CK00_FCLK_9
+                                         48: 3
+              #define _000A_SAU_CK00_FCLK_10
+                                         49: 3
+              #define _000B_SAU_CK00_FCLK_11
+                                         50: 3
+              #define _000C_SAU_CK00_FCLK_12
+                                         51: 3
+              #define _000D_SAU_CK00_FCLK_13
+                                         52: 3
+              #define _000E_SAU_CK00_FCLK_14
+                                         53: 3
+              #define _000F_SAU_CK00_FCLK_15
+                                         54: 3
+              #define _0000_SAU_CK01_FCLK_0
+                                         56: 3
+              #define _0010_SAU_CK01_FCLK_1
+                                         57: 3
+              #define _0020_SAU_CK01_FCLK_2
+                                         58: 3
+              #define _0030_SAU_CK01_FCLK_3
+                                         59: 3
+              #define _0040_SAU_CK01_FCLK_4
+                                         60: 3
+              #define _0050_SAU_CK01_FCLK_5
+                                         61: 3
+              #define _0060_SAU_CK01_FCLK_6
+                                         62: 3
+              #define _0070_SAU_CK01_FCLK_7
+                                         63: 3
+              #define _0080_SAU_CK01_FCLK_8
+                                         64: 3
+              #define _0090_SAU_CK01_FCLK_9
+                                         65: 3
+              #define _00A0_SAU_CK01_FCLK_10
+                                         66: 3
+              #define _00B0_SAU_CK01_FCLK_11
+                                         67: 3
+              #define _00C0_SAU_CK01_FCLK_12
+                                         68: 3
+              #define _00D0_SAU_CK01_FCLK_13
+                                         69: 3
+              #define _00E0_SAU_CK01_FCLK_14
+                                         70: 3
+              #define _00F0_SAU_CK01_FCLK_15
+                                         71: 3
+              #define _0020_SAU_SMRMN_INITIALVALUE
+                                         76: 3
+              #define _0000_SAU_CLOCK_SELECT_CK00
+                                         78: 3
+              #define _8000_SAU_CLOCK_SELECT_CK01
+                                         79: 3
+              #define _0000_SAU_CLOCK_MODE_CKS
+                                         81: 3
+              #define _4000_SAU_CLOCK_MODE_TI0N
+                                         82: 3
+              #define _0000_SAU_TRIGGER_SOFTWARE
+                                         84: 3
+              #define _0100_SAU_TRIGGER_RXD
+                                         85: 3
+              #define _0000_SAU_EDGE_FALL
+                                         87: 3
+              #define _0040_SAU_EDGE_RISING
+                                         88: 3
+              #define _0000_SAU_MODE_CSI
+                                         90: 3
+              #define _0002_SAU_MODE_UART
+                                         91: 3
+              #define _0004_SAU_MODE_IIC
+                                         92: 3
+              #define _0000_SAU_TRANSFER_END
+                                         94: 3
+              #define _0001_SAU_BUFFER_EMPTY
+                                         95: 3
+              #define _0000_SAU_NOT_COMMUNICATION
+                                        101: 3
+              #define _4000_SAU_RECEPTION
+                                        102: 3
+              #define _8000_SAU_TRANSMISSION
+                                        103: 3
+              #define _C000_SAU_RECEPTION_TRANSMISSION
+                                        104: 3
+              #define _0000_SAU_TIMING_1
+                                        106: 3
+              #define _1000_SAU_TIMING_2
+                                        107: 3
+              #define _2000_SAU_TIMING_3
+                                        108: 3
+              #define _3000_SAU_TIMING_4
+                                        109: 3
+              #define _0000_SAU_INTSRE_MASK
+                                        111: 3
+              #define _0400_SAU_INTSRE_ENABLE
+                                        112: 3
+              #define _0000_SAU_PARITY_NONE
+                                        114: 3
+              #define _0100_SAU_PARITY_ZERO
+                                        115: 3
+              #define _0200_SAU_PARITY_EVEN
+                                        116: 3
+              #define _0300_SAU_PARITY_ODD
+                                        117: 3
+              #define _0000_SAU_MSB     119: 3
+              #define _0080_SAU_LSB     120: 3
+              #define _0000_SAU_STOP_NONE
+                                        122: 3
+              #define _0010_SAU_STOP_1
+                                        123: 3
+              #define _0020_SAU_STOP_2
+                                        124: 3
+              #define _0005_SAU_LENGTH_9
+                                        126: 3
+              #define _0006_SAU_LENGTH_7
+                                        127: 3
+              #define _0007_SAU_LENGTH_8
+                                        128: 3
+              #define _0000_SAU_CHANNEL0_NORMAL
+                                        134: 3
+              #define _0001_SAU_CHANNEL0_INVERTED
+                                        135: 3
+              #define _0000_SAU_CHANNEL1_NORMAL
+                                        136: 3
+              #define _0002_SAU_CHANNEL1_INVERTED
+                                        137: 3
+              #define _0000_SAU_CHANNEL2_NORMAL
+                                        138: 3
+              #define _0004_SAU_CHANNEL2_INVERTED
+                                        139: 3
+              #define _0000_SAU_CHANNEL3_NORMAL
+                                        140: 3
+              #define _0008_SAU_CHANNEL3_INVERTED
+                                        141: 3
+              #define _00_SAU_RXD3_FILTER_OFF
+                                        147: 3
+              #define _40_SAU_RXD3_FILTER_ON
+                                        148: 3
+              #define _00_SAU_RXD2_FILTER_OFF
+                                        149: 3
+              #define _10_SAU_RXD2_FILTER_ON
+                                        150: 3
+              #define _00_SAU_RXD1_FILTER_OFF
+                                        151: 3
+              #define _04_SAU_RXD1_FILTER_ON
+                                        152: 3
+              #define _00_SAU_RXD0_FILTER_OFF
+                                        153: 3
+              #define _01_SAU_RXD0_FILTER_ON
+                                        154: 3
+              #define _0040_SAU_UNDER_EXECUTE
+                                        160: 3
+              #define _0020_SAU_VALID_STORED
+                                        162: 3
+              #define _0004_SAU_FRAM_ERROR
+                                        164: 3
+              #define _0002_SAU_PARITY_ERROR
+                                        166: 3
+              #define _0001_SAU_OVERRUN_ERROR
+                                        168: 3
+              #define _0000_SAU_CH0_START_TRG_OFF
+                                        174: 3
+              #define _0001_SAU_CH0_START_TRG_ON
+                                        175: 3
+              #define _0000_SAU_CH1_START_TRG_OFF
+                                        177: 3
+              #define _0002_SAU_CH1_START_TRG_ON
+                                        178: 3
+              #define _0000_SAU_CH2_START_TRG_OFF
+                                        180: 3
+              #define _0004_SAU_CH2_START_TRG_ON
+                                        181: 3
+              #define _0000_SAU_CH3_START_TRG_OFF
+                                        183: 3
+              #define _0008_SAU_CH3_START_TRG_ON
+                                        184: 3
+              #define _0000_SAU_CH0_STOP_TRG_OFF
+                                        190: 3
+              #define _0001_SAU_CH0_STOP_TRG_ON
+                                        191: 3
+              #define _0000_SAU_CH1_STOP_TRG_OFF
+                                        193: 3
+              #define _0002_SAU_CH1_STOP_TRG_ON
+                                        194: 3
+              #define _0000_SAU_CH2_STOP_TRG_OFF
+                                        196: 3
+              #define _0004_SAU_CH2_STOP_TRG_ON
+                                        197: 3
+              #define _0000_SAU_CH3_STOP_TRG_OFF
+                                        199: 3
+              #define _0008_SAU_CH3_STOP_TRG_ON
+                                        200: 3
+              #define _0001_SAU_SIRMN_OVCTMN
+                                        206: 3
+              #define _0002_SAU_SIRMN_PECTMN
+                                        208: 3
+              #define _0004_SAU_SIRMN_FECTMN
+                                        210: 3
+              #define _0001_SAU_CH0_OUTPUT_ENABLE
+                                        216: 3
+              #define _0000_SAU_CH0_OUTPUT_DISABLE
+                                        217: 3
+              #define _0002_SAU_CH1_OUTPUT_ENABLE
+                                        219: 3
+              #define _0000_SAU_CH1_OUTPUT_DISABLE
+                                        220: 3
+              #define _0004_SAU_CH2_OUTPUT_ENABLE
+                                        222: 3
+              #define _0000_SAU_CH2_OUTPUT_DISABLE
+                                        223: 3
+              #define _0008_SAU_CH3_OUTPUT_ENABLE
+                                        225: 3
+              #define _0000_SAU_CH3_OUTPUT_DISABLE
+                                        226: 3
+              #define _0000_SAU_CH0_DATA_OUTPUT_0
+                                        232: 3
+              #define _0001_SAU_CH0_DATA_OUTPUT_1
+                                        233: 3
+              #define _0000_SAU_CH1_DATA_OUTPUT_0
+                                        235: 3
+              #define _0002_SAU_CH1_DATA_OUTPUT_1
+                                        236: 3
+              #define _0000_SAU_CH2_DATA_OUTPUT_0
+                                        238: 3
+              #define _0004_SAU_CH2_DATA_OUTPUT_1
+                                        239: 3
+              #define _0000_SAU_CH3_DATA_OUTPUT_0
+                                        241: 3
+              #define _0008_SAU_CH3_DATA_OUTPUT_1
+                                        242: 3
+              #define _0000_SAU_CH0_CLOCK_OUTPUT_0
+                                        244: 3
+              #define _0100_SAU_CH0_CLOCK_OUTPUT_1
+                                        245: 3
+              #define _0000_SAU_CH1_CLOCK_OUTPUT_0
+                                        247: 3
+              #define _0200_SAU_CH1_CLOCK_OUTPUT_1
+                                        248: 3
+              #define _0000_SAU_CH2_CLOCK_OUTPUT_0
+                                        250: 3
+              #define _0400_SAU_CH2_CLOCK_OUTPUT_1
+                                        251: 3
+              #define _0000_SAU_CH3_CLOCK_OUTPUT_0
+                                        253: 3
+              #define _0800_SAU_CH3_CLOCK_OUTPUT_1
+                                        254: 3
+              #define _0000_SAU_CH0_SNOOZE_OFF
+                                        260: 3
+              #define _0001_SAU_CH0_SNOOZE_ON
+                                        261: 3
+              #define _00_SAU_IIC_MASTER_FLAG_CLEAR
+                                        264: 3
+              #define _01_SAU_IIC_SEND_FLAG
+                                        265: 3
+              #define _02_SAU_IIC_RECEIVE_FLAG
+                                        266: 3
+              #define _04_SAU_IIC_SENDED_ADDRESS_FLAG
+                                        267: 3
+              #define _00_SAU_SSI00_UNUSED
+                                        273: 3
+              #define _80_SAU_SSI00_USED
+                                        274: 3
+              #define _00_IICA_OPERATION_DISABLE
+                                        280: 3
+              #define _80_IICA_OPERATION_ENABLE
+                                        281: 3
+              #define _00_IICA_COMMUNICATION_NORMAL
+                                        283: 3
+              #define _40_IICA_COMMUNICATION_EXIT
+                                        284: 3
+              #define _00_IICA_WAIT_NOTCANCEL
+                                        286: 3
+              #define _20_IICA_WAIT_CANCEL
+                                        287: 3
+              #define _00_IICA_STOPINT_DISABLE
+                                        289: 3
+              #define _10_IICA_STOPINT_ENABLE
+                                        290: 3
+              #define _00_IICA_WAITINT_CLK8FALLING
+                                        292: 3
+              #define _08_IICA_WAITINT_CLK9FALLING
+                                        293: 3
+              #define _00_IICA_ACK_DISABLE
+                                        295: 3
+              #define _04_IICA_ACK_ENABLE
+                                        296: 3
+              #define _00_IICA_START_NOTGENERATE
+                                        298: 3
+              #define _02_IICA_START_GENERATE
+                                        299: 3
+              #define _00_IICA_STOP_NOTGENERATE
+                                        301: 3
+              #define _01_IICA_STOP_GENERATE
+                                        302: 3
+              #define _00_IICA_STATUS_NOTMASTER
+                                        308: 3
+              #define _80_IICA_STATUS_MASTER
+                                        309: 3
+              #define _00_IICA_ARBITRATION_NO
+                                        311: 3
+              #define _40_IICA_ARBITRATION_LOSS
+                                        312: 3
+              #define _00_IICA_EXTCODE_NOT
+                                        314: 3
+              #define _20_IICA_EXTCODE_RECEIVED
+                                        315: 3
+              #define _00_IICA_ADDRESS_NOTMATCH
+                                        317: 3
+              #define _10_IICA_ADDRESS_MATCH
+                                        318: 3
+              #define _00_IICA_STATUS_RECEIVE
+                                        320: 3
+              #define _08_IICA_STATUS_TRANSMIT
+                                        321: 3
+              #define _00_IICA_ACK_NOTDETECTED
+                                        323: 3
+              #define _04_IICA_ACK_DETECTED
+                                        324: 3
+              #define _00_IICA_START_NOTDETECTED
+                                        326: 3
+              #define _02_IICA_START_DETECTED
+                                        327: 3
+              #define _00_IICA_STOP_NOTDETECTED
+                                        329: 3
+              #define _01_IICA_STOP_DETECTED
+                                        330: 3
+              #define _00_IICA_STARTFLAG_GENERATE
+                                        336: 3
+              #define _80_IICA_STARTFLAG_UNSUCCESSFUL
+                                        337: 3
+              #define _00_IICA_BUS_RELEASE
+                                        339: 3
+              #define _40_IICA_BUS_COMMUNICATION
+                                        340: 3
+              #define _00_IICA_START_WITHSTOP
+                                        342: 3
+              #define _02_IICA_START_WITHOUTSTOP
+                                        343: 3
+              #define _00_IICA_RESERVATION_ENABLE
+                                        345: 3
+              #define _01_IICA_RESERVATION_DISABLE
+                                        346: 3
+              #define _00_IICA_WAKEUP_STOP
+                                        352: 3
+              #define _80_IICA_WAKEUP_ENABLE
+                                        353: 3
+              #define _00_IICA_SCL_LOW
+                                        355: 3
+              #define _20_IICA_SCL_HIGH
+                                        356: 3
+              #define _00_IICA_SDA_LOW
+                                        358: 3
+              #define _10_IICA_SDA_HIGH
+                                        359: 3
+              #define _00_IICA_MODE_STANDARD
+                                        361: 3
+              #define _08_IICA_MODE_HIGHSPEED
+                                        362: 3
+              #define _00_IICA_FILTER_OFF
+                                        364: 3
+              #define _04_IICA_FILTER_ON
+                                        365: 3
+              #define _00_IICA_fCLK     367: 3
+              #define _01_IICA_fCLK_HALF
+                                        368: 3
+              #define _80_IICA_ADDRESS_COMPLETE
+                                        370: 3
+              #define _00_IICA_MASTER_FLAG_CLEAR
+                                        371: 3
+              #define _9A00_UART0_RECEIVE_DIVISOR
+                                        376: 3
+              #define _9A00_UART0_TRANSMIT_DIVISOR
+                                        377: 3
+              #define _CE00_UART0_RECEIVE_DIVISOR
+                                        378: 3
+              #define _CE00_UART0_TRANSMIT_DIVISOR
+                                        379: 3
+              #define _CE00_UART1_RECEIVE_DIVISOR
+                                        380: 3
+              #define _CE00_UART1_TRANSMIT_DIVISOR
+                                        381: 3
+              #define _CE00_UART2_RECEIVE_DIVISOR
+                                        382: 3
+              #define _CE00_UART2_TRANSMIT_DIVISOR
+                                        383: 3
+              #define _10_IICA0_MASTERADDRESS
+                                        384: 3
+              #define _55_IICA0_IICWH_VALUE
+                                        385: 3
+              #define _4C_IICA0_IICWL_VALUE
+                                        386: 3
+              #define _USER_DEF_H        30: 4
+              #define TRUE               37: 4
+              #define FALSE              38: 4
+              #define TX2_BUFFER_LENTH
+                                         39: 4
+              #define RX2_BUFFER_LENTH
+                                         40: 4
+              #define TX1_BUFFER_LENTH
+                                         41: 4
+              #define RX1_BUFFER_LENTH
+                                         42: 4
+              #define TX0_BUFFER_LENTH
+                                         43: 4
+              #define RX0_BUFFER_LENTH
+                                         44: 4
+
+
+ Target chip : R5F100BC
+ Device file : V1.14 

@@ -1,0 +1,3302 @@
+
+
+
+78K0R Linker W1.80                            Date:30 Jun 2018 Page:   1
+
+Command:   -yC:\Program Files (x86)\Renesas Electronics\CS+\CACX\Device\
+           RL78\Devicefile -_msgoff -ddr\r_fsl_praxis01_flash_map.dr -oD
+           efaultBuild\r_fsl_praxis01_flash.lmf -go84h,7E00h,512 -gb0FFF
+           FE0H -mi0 -s -pDefaultBuild\r_fsl_praxis01_flash.map -kl -kp 
+           C:\Program Files (x86)\Renesas Electronics\CS+\CACX\CA78K0R\V
+           1.72\lib78k0r\s0rlle.rel DefaultBuild\r_fsl_praxis01_flash_ma
+           in.rel DefaultBuild\r_systeminit.rel DefaultBuild\r_cg_cgc.re
+           l DefaultBuild\r_cg_cgc_user.rel DefaultBuild\r_cg_serial.rel
+            DefaultBuild\r_cg_serial_user.rel DefaultBuild\r_cg_wdt.rel 
+           DefaultBuild\r_cg_wdt_user.rel DefaultBuild\r_cg_intc.rel Def
+           aultBuild\r_cg_intc_user.rel DefaultBuild\r_cg_port.rel Defau
+           ltBuild\r_cg_port_user.rel DefaultBuild\r_cg_timer.rel Defaul
+           tBuild\r_cg_timer_user.rel -bcl0rame.lib -bcl0rme.lib -bcl0rm
+           fe.lib -iC:\Program Files (x86)\Renesas Electronics\CS+\CACX\
+           CA78K0R\V1.72\lib78k0r DefaultBuild\r_fsl_praxis01_boot.lmf
+Para-file:
+Out-file:  DefaultBuild\r_fsl_praxis01_flash.lmf
+Map-file:  DefaultBuild\r_fsl_praxis01_flash.map
+Direc-file:dr\r_fsl_praxis01_flash_map.dr
+Directive: ;***********************************************************
+           ; DISCLAIMER                                                
+           ; This software is supplied by Renesas Electronics          
+           ; Corporation and is only intended for use with Renesas     
+           ; products. No other uses are authorized. This software is  
+           ; owned by Renesas Electronics Corporation and is protected 
+           ; under all applicable laws, including copyright laws.      
+           ; THIS SOFTWARE IS PROVIDED "AS IS" AND RENESAS MAKES NO    
+           ; WARRANTIES REGARDING THIS SOFTWARE, WHETHER EXPRESS,      
+           ; IMPLIED OR STATUTORY, INCLUDING BUT NOT LIMITED TO        
+           ; WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR   
+           ; PURPOSE AND NON-INFRINGEMENT. ALL SUCH WARRANTIES ARE     
+           ; EXPRESSLY DISCLAIMED. TO THE MAXIMUM EXTENT PERMITTED NOT 
+           ; PROHIBITED BY LAW, NEITHER RENESAS ELECTRONICS CORPORATION
+           ; NOR ANY OF ITS AFFILIATED COMPANIES SHALL BE LIABLE FOR   
+           ; ANY DIRECT, INDIRECT, SPECIAL, INCIDENTAL OR CONSEQUENTIAL
+           ; DAMAGES FOR ANY REASON RELATED TO THIS SOFTWARE, EVEN IF  
+           ; RENESAS OR ITS AFFILIATES HAVE BEEN ADVISED OF THE        
+           ; POSSIBILITY OF SUCH DAMAGES.                              
+           ; Renesas reserves the right, without notice, to make       
+           ; changes to this software and to discontinue the           
+           ; availability of this software. By using this software,    
+           ; you agree to the additional terms and conditions found    
+           ; by accessing the following link:                          
+           ; http://www.renesas.com/disclaimer                         
+           ;                                                           
+           ; Copyright (C) 2011 Renesas Electronics Corporation.       
+           ; All rights reserved.                                      
+           ;***********************************************************
+           ;***********************************************************
+           ; File Name     : r_fsl_praxis01_flash_map.dr               
+           ; Version       : 1.00                                      
+           ; Device(s)     : RL78/G13   ( R5F100LEA )                  
+           ; Tool-Chain    : CubeSuite+ ( V1.01 )                      
+           ; OS            : none                                      
+           ; H/W Platform  : QB-R5F100LE-TB                            
+           ; Description   : This is the main tutorial code.           
+           ; Operation     :                                           
+           ; Limitations   : FSL AN-sample.                            
+           ;***********************************************************
+           ;***********************************************************
+           ; History       : Version Description                       
+           ;               : 09.29.2011 1.00 First Release             
+           ;***********************************************************
+           ;
+           ;***********************************************************
+           ; Redefined ROM area
+           ;***********************************************************
+           ; ----------------------------------------------------------
+           ; Redefined default data segment ROM
+           ; ----------------------------------------------------------
+           MEMORY ROM       : ( 000000H, 007800H )
+           
+           ; ----------------------------------------------------------
+           ; Define new memory entry for OCD Monitor area
+           ; ----------------------------------------------------------
+           MEMORY ROM_DATA  : ( 007800H, 000400H )
+           
+           ; ----------------------------------------------------------
+           ; Define new memory entry for OCD Monitor area
+           ; ----------------------------------------------------------
+           MEMORY OCD_ROM   : ( 007C00H, 000400H )
+           
+           ;***********************************************************
+           ; flash segment
+           ;***********************************************************
+           ; ----------------------------------------------------------
+           ; Merge FLAS_CNF segment
+           ; ----------------------------------------------------------
+           MERGE FLAS_CNF := ROM_DATA
+           
+
+
+*** Link information ***
+
+   142 output segment(s)
+ 22D3H byte(s) real data
+  3624 symbol(s) defined
+
+
+*** Memory map ***
+
+
+  SPACE=REGULAR
+
+  MEMORY=ROM
+  BASE ADDRESS=00000H   SIZE=07800H
+         OUTPUT   INPUT    INPUT      BASE      SIZE
+         SEGMENT  SEGMENT  MODULE     ADDRESS
+         @@VECT00                     00000H    00002H  CSEG AT
+                  @@VECT00 r_fsl_praxis01_boot.lmf
+                                      00000H    00002H
+         @@CNST                       00002H    00000H  CSEG AT
+                  @@CNST   r_fsl_praxis01_boot.lmf
+                                      00002H    00000H
+         @@CALT                       00002H    00000H  CSEG AT
+                  @@CALT   r_fsl_praxis01_boot.lmf
+                                      00002H    00000H
+         ??NMIROM                     00002H    00002H  CSEG AT
+                  ??NMIROM r_fsl_praxis01_boot.lmf
+                                      00002H    00002H
+         @@VECT04                     00004H    00002H  CSEG AT
+                  @@VECT04 r_fsl_praxis01_boot.lmf
+                                      00004H    00002H
+         @@VECT06                     00006H    00002H  CSEG AT
+                  @@VECT06 r_fsl_praxis01_boot.lmf
+                                      00006H    00002H
+         @@VECT08                     00008H    00002H  CSEG AT
+                  @@VECT08 r_fsl_praxis01_boot.lmf
+                                      00008H    00002H
+         @@VECT0A                     0000AH    00002H  CSEG AT
+                  @@VECT0A r_fsl_praxis01_boot.lmf
+                                      0000AH    00002H
+         @@VECT0C                     0000CH    00002H  CSEG AT
+                  @@VECT0C r_fsl_praxis01_boot.lmf
+                                      0000CH    00002H
+         @@VECT0E                     0000EH    00002H  CSEG AT
+                  @@VECT0E r_fsl_praxis01_boot.lmf
+                                      0000EH    00002H
+         @@VECT10                     00010H    00002H  CSEG AT
+                  @@VECT10 r_fsl_praxis01_boot.lmf
+                                      00010H    00002H
+         @@VECT12                     00012H    00002H  CSEG AT
+                  @@VECT12 r_fsl_praxis01_boot.lmf
+                                      00012H    00002H
+         @@VECT14                     00014H    00002H  CSEG AT
+                  @@VECT14 r_fsl_praxis01_boot.lmf
+                                      00014H    00002H
+         @@VECT16                     00016H    00002H  CSEG AT
+                  @@VECT16 r_fsl_praxis01_boot.lmf
+                                      00016H    00002H
+         @@VECT18                     00018H    00002H  CSEG AT
+                  @@VECT18 r_fsl_praxis01_boot.lmf
+                                      00018H    00002H
+         @@VECT1A                     0001AH    00002H  CSEG AT
+                  @@VECT1A r_fsl_praxis01_boot.lmf
+                                      0001AH    00002H
+         @@VECT1C                     0001CH    00002H  CSEG AT
+                  @@VECT1C r_fsl_praxis01_boot.lmf
+                                      0001CH    00002H
+         @@VECT1E                     0001EH    00002H  CSEG AT
+                  @@VECT1E r_fsl_praxis01_boot.lmf
+                                      0001EH    00002H
+         @@VECT20                     00020H    00002H  CSEG AT
+                  @@VECT20 r_fsl_praxis01_boot.lmf
+                                      00020H    00002H
+         @@VECT22                     00022H    00002H  CSEG AT
+                  @@VECT22 r_fsl_praxis01_boot.lmf
+                                      00022H    00002H
+         @@VECT24                     00024H    00002H  CSEG AT
+                  @@VECT24 r_fsl_praxis01_boot.lmf
+                                      00024H    00002H
+         @@VECT26                     00026H    00002H  CSEG AT
+                  @@VECT26 r_fsl_praxis01_boot.lmf
+                                      00026H    00002H
+         @@VECT28                     00028H    00002H  CSEG AT
+                  @@VECT28 r_fsl_praxis01_boot.lmf
+                                      00028H    00002H
+         @@VECT2A                     0002AH    00002H  CSEG AT
+                  @@VECT2A r_fsl_praxis01_boot.lmf
+                                      0002AH    00002H
+         @@VECT2C                     0002CH    00002H  CSEG AT
+                  @@VECT2C r_fsl_praxis01_boot.lmf
+                                      0002CH    00002H
+         @@VECT2E                     0002EH    00002H  CSEG AT
+                  @@VECT2E r_fsl_praxis01_boot.lmf
+                                      0002EH    00002H
+         @@VECT30                     00030H    00002H  CSEG AT
+                  @@VECT30 r_fsl_praxis01_boot.lmf
+                                      00030H    00002H
+         @@VECT32                     00032H    00002H  CSEG AT
+                  @@VECT32 r_fsl_praxis01_boot.lmf
+                                      00032H    00002H
+         @@VECT34                     00034H    00002H  CSEG AT
+                  @@VECT34 r_fsl_praxis01_boot.lmf
+                                      00034H    00002H
+         @@VECT36                     00036H    00002H  CSEG AT
+                  @@VECT36 r_fsl_praxis01_boot.lmf
+                                      00036H    00002H
+         @@VECT38                     00038H    00002H  CSEG AT
+                  @@VECT38 r_fsl_praxis01_boot.lmf
+                                      00038H    00002H
+         @@VECT3A                     0003AH    00002H  CSEG AT
+                  @@VECT3A r_fsl_praxis01_boot.lmf
+                                      0003AH    00002H
+         @@VECT3C                     0003CH    00002H  CSEG AT
+                  @@VECT3C r_fsl_praxis01_boot.lmf
+                                      0003CH    00002H
+         @@VECT3E                     0003EH    00002H  CSEG AT
+                  @@VECT3E r_fsl_praxis01_boot.lmf
+                                      0003EH    00002H
+         @@VECT40                     00040H    00002H  CSEG AT
+                  @@VECT40 r_fsl_praxis01_boot.lmf
+                                      00040H    00002H
+         @@VECT42                     00042H    00002H  CSEG AT
+                  @@VECT42 r_fsl_praxis01_boot.lmf
+                                      00042H    00002H
+         @@VECT44                     00044H    00002H  CSEG AT
+                  @@VECT44 r_fsl_praxis01_boot.lmf
+                                      00044H    00002H
+         @@VECT46                     00046H    00002H  CSEG AT
+                  @@VECT46 r_fsl_praxis01_boot.lmf
+                                      00046H    00002H
+         @@VECT48                     00048H    00002H  CSEG AT
+                  @@VECT48 r_fsl_praxis01_boot.lmf
+                                      00048H    00002H
+         @@VECT4A                     0004AH    00002H  CSEG AT
+                  @@VECT4A r_fsl_praxis01_boot.lmf
+                                      0004AH    00002H
+         @@VECT4C                     0004CH    00002H  CSEG AT
+                  @@VECT4C r_fsl_praxis01_boot.lmf
+                                      0004CH    00002H
+         @@VECT4E                     0004EH    00002H  CSEG AT
+                  @@VECT4E r_fsl_praxis01_boot.lmf
+                                      0004EH    00002H
+         @@VECT50                     00050H    00002H  CSEG AT
+                  @@VECT50 r_fsl_praxis01_boot.lmf
+                                      00050H    00002H
+         @@VECT52                     00052H    00002H  CSEG AT
+                  @@VECT52 r_fsl_praxis01_boot.lmf
+                                      00052H    00002H
+         @@VECT54                     00054H    00002H  CSEG AT
+                  @@VECT54 r_fsl_praxis01_boot.lmf
+                                      00054H    00002H
+         @@VECT56                     00056H    00002H  CSEG AT
+                  @@VECT56 r_fsl_praxis01_boot.lmf
+                                      00056H    00002H
+         @@VECT58                     00058H    00002H  CSEG AT
+                  @@VECT58 r_fsl_praxis01_boot.lmf
+                                      00058H    00002H
+         @@VECT5A                     0005AH    00002H  CSEG AT
+                  @@VECT5A r_fsl_praxis01_boot.lmf
+                                      0005AH    00002H
+         @@VECT5C                     0005CH    00002H  CSEG AT
+                  @@VECT5C r_fsl_praxis01_boot.lmf
+                                      0005CH    00002H
+         @@VECT5E                     0005EH    00002H  CSEG AT
+                  @@VECT5E r_fsl_praxis01_boot.lmf
+                                      0005EH    00002H
+         @@VECT60                     00060H    00002H  CSEG AT
+                  @@VECT60 r_fsl_praxis01_boot.lmf
+                                      00060H    00002H
+         @@VECT62                     00062H    00002H  CSEG AT
+                  @@VECT62 r_fsl_praxis01_boot.lmf
+                                      00062H    00002H
+         @@VECT64                     00064H    00002H  CSEG AT
+                  @@VECT64 r_fsl_praxis01_boot.lmf
+                                      00064H    00002H
+         @@VECT66                     00066H    00002H  CSEG AT
+                  @@VECT66 r_fsl_praxis01_boot.lmf
+                                      00066H    00002H
+         @@VECT68                     00068H    00002H  CSEG AT
+                  @@VECT68 r_fsl_praxis01_boot.lmf
+                                      00068H    00002H
+         @@VECT6A                     0006AH    00002H  CSEG AT
+                  @@VECT6A r_fsl_praxis01_boot.lmf
+                                      0006AH    00002H
+         @@VECT6C                     0006CH    00002H  CSEG AT
+                  @@VECT6C r_fsl_praxis01_boot.lmf
+                                      0006CH    00002H
+         @@VECT6E                     0006EH    00002H  CSEG AT
+                  @@VECT6E r_fsl_praxis01_boot.lmf
+                                      0006EH    00002H
+         @@VECT70                     00070H    00002H  CSEG AT
+                  @@VECT70 r_fsl_praxis01_boot.lmf
+                                      00070H    00002H
+         @@VECT72                     00072H    00002H  CSEG AT
+                  @@VECT72 r_fsl_praxis01_boot.lmf
+                                      00072H    00002H
+         @@VECT74                     00074H    00002H  CSEG AT
+                  @@VECT74 r_fsl_praxis01_boot.lmf
+                                      00074H    00002H
+         @@VECT76                     00076H    00002H  CSEG AT
+                  @@VECT76 r_fsl_praxis01_boot.lmf
+                                      00076H    00002H
+         @@VECT78                     00078H    00002H  CSEG AT
+                  @@VECT78 r_fsl_praxis01_boot.lmf
+                                      00078H    00002H
+         @@VECT7A                     0007AH    00002H  CSEG AT
+                  @@VECT7A r_fsl_praxis01_boot.lmf
+                                      0007AH    00002H
+         @@VECT7C                     0007CH    00002H  CSEG AT
+                  @@VECT7C r_fsl_praxis01_boot.lmf
+                                      0007CH    00002H
+         @@VECT7E                     0007EH    00002H  CSEG AT
+                  @@VECT7E r_fsl_praxis01_boot.lmf
+                                      0007EH    00002H
+* gap *                               00080H    00040H
+         ?CSEGOB0                     000C0H    00004H  CSEG AT
+                  ?CSEGOB0 r_fsl_praxis01_boot.lmf
+                                      000C0H    00004H
+         @@CODE                       000C4H    00000H  CSEG AT
+                  @@CODE   r_fsl_praxis01_boot.lmf
+                                      000C4H    00000H
+         @@CNSTL                      000C4H    00000H  CSEG AT
+                  @@CNSTL  r_fsl_praxis01_boot.lmf
+                                      000C4H    00000H
+         @@CNSTL                      000C4H    00000H  CSEG AT
+                  @@CNSTL  r_fsl_praxis01_boot.lmf
+                                      000C4H    00000H
+         @@CNSTL                      000C4H    00000H  CSEG AT
+                  @@CNSTL  r_fsl_praxis01_boot.lmf
+                                      000C4H    00000H
+         @@RLINIT                     000C4H    00000H  CSEG AT
+                  @@RLINIT r_fsl_praxis01_boot.lmf
+                                      000C4H    00000H
+         @@R_INIS                     000C4H    00000H  CSEG AT
+                  @@R_INIS r_fsl_praxis01_boot.lmf
+                                      000C4H    00000H
+         ?CSEGSI                      000C4H    0000AH  CSEG AT
+                  ?CSEGSI  r_fsl_praxis01_boot.lmf
+                                      000C4H    0000AH
+         ?OCDSTAD                     000CEH    0000AH  CSEG AT
+                  ?OCDSTAD r_fsl_praxis01_boot.lmf
+                                      000CEH    0000AH
+         @@LCODE                      000D8H    0012DH  CSEG AT
+                  @@LCODE  r_fsl_praxis01_boot.lmf
+                                      000D8H    0012DH
+         @@BASE                       00205H    00048H  CSEG AT
+                  @@BASE   r_fsl_praxis01_boot.lmf
+                                      00205H    00048H
+* gap *                               0024DH    00001H
+         BOOT_CNS                     0024EH    00020H  CSEG AT
+                  BOOT_CNS r_fsl_praxis01_boot.lmf
+                                      0024EH    00020H
+         BOOT_CNS                     0026EH    00004H  CSEG AT
+                  BOOT_CNS r_fsl_praxis01_boot.lmf
+                                      0026EH    00004H
+         @@R_INIT                     00272H    00008H  CSEG AT
+                  @@R_INIT r_fsl_praxis01_boot.lmf
+                                      00272H    00008H
+         BOOT_COD                     0027AH    0079AH  CSEG AT
+                  BOOT_COD r_fsl_praxis01_boot.lmf
+                                      0027AH    0079AH
+         @@CODEL                      00A14H    0014AH  CSEG AT
+                  @@CODEL  r_fsl_praxis01_boot.lmf
+                                      00A14H    0014AH
+         FSL_FCD                      00B5EH    000B1H  CSEG AT
+                  FSL_FCD  r_fsl_praxis01_boot.lmf
+                                      00B5EH    000B1H
+* gap *                               00C0FH    00001H
+         FSL_BCD                      00C10H    00100H  CSEG AT
+                  FSL_BCD  r_fsl_praxis01_boot.lmf
+                                      00C10H    00100H
+         FSL_BECD                     00D10H    00080H  CSEG AT
+                  FSL_BECD r_fsl_praxis01_boot.lmf
+                                      00D10H    00080H
+         FSL_RCD                      00D90H    00085H  CSEG AT
+                  FSL_RCD  r_fsl_praxis01_boot.lmf
+                                      00D90H    00085H
+* gap *                               00E15H    00001H
+         PFDL_COD                     00E16H    000AFH  CSEG AT
+                  PFDL_COD r_fsl_praxis01_boot.lmf
+                                      00E16H    000AFH
+         @@LCODEL                     00EC5H    00095H  CSEG AT
+                  @@LCODEL r_fsl_praxis01_boot.lmf
+                                      00EC5H    00095H
+* gap *                               00F5AH    010A6H
+         @EVECT00                     02000H    00004H  CSEG AT
+                  @EVECT00 @cstarte   02000H    00004H
+         @ECNST                       02004H    00000H  CSEG UNITP
+                  @ECNST   @cstarte   02004H    00000H
+                  @ECNST   r_systeminit
+                                      02004H    00000H
+                  @ECNST   r_cg_cgc   02004H    00000H
+                  @ECNST   r_cg_cgc_user
+                                      02004H    00000H
+                  @ECNST   r_cg_serial
+                                      02004H    00000H
+                  @ECNST   r_cg_serial_user
+                                      02004H    00000H
+                  @ECNST   r_cg_wdt   02004H    00000H
+                  @ECNST   r_cg_wdt_user
+                                      02004H    00000H
+                  @ECNST   r_cg_intc
+                                      02004H    00000H
+                  @ECNST   r_cg_intc_user
+                                      02004H    00000H
+                  @ECNST   r_cg_port
+                                      02004H    00000H
+                  @ECNST   r_cg_port_user
+                                      02004H    00000H
+                  @ECNST   r_cg_timer
+                                      02004H    00000H
+                  @ECNST   r_cg_timer_user
+                                      02004H    00000H
+         @ECNSTL                      02004H    00000H  CSEG PAGE64KP
+                  @ECNSTL  @cstarte   02004H    00000H
+         @ECNSTL                      02004H    00000H  CSEG PAGE64KP
+                  @ECNSTL  r_systeminit
+                                      02004H    00000H
+         @ECNSTL                      02004H    00000H  CSEG PAGE64KP
+                  @ECNSTL  r_cg_cgc   02004H    00000H
+         @ECNSTL                      02004H    00000H  CSEG PAGE64KP
+                  @ECNSTL  r_cg_cgc_user
+                                      02004H    00000H
+         @ECNSTL                      02004H    00000H  CSEG PAGE64KP
+                  @ECNSTL  r_cg_serial
+                                      02004H    00000H
+         @ECNSTL                      02004H    00000H  CSEG PAGE64KP
+                  @ECNSTL  r_cg_serial_user
+                                      02004H    00000H
+         @ECNSTL                      02004H    00000H  CSEG PAGE64KP
+                  @ECNSTL  r_cg_wdt   02004H    00000H
+         @ECNSTL                      02004H    00000H  CSEG PAGE64KP
+                  @ECNSTL  r_cg_wdt_user
+                                      02004H    00000H
+         @ECNSTL                      02004H    00000H  CSEG PAGE64KP
+                  @ECNSTL  r_cg_intc
+                                      02004H    00000H
+         @ECNSTL                      02004H    00000H  CSEG PAGE64KP
+                  @ECNSTL  r_cg_intc_user
+                                      02004H    00000H
+         @ECNSTL                      02004H    00000H  CSEG PAGE64KP
+                  @ECNSTL  r_cg_port
+                                      02004H    00000H
+         @ECNSTL                      02004H    00000H  CSEG PAGE64KP
+                  @ECNSTL  r_cg_port_user
+                                      02004H    00000H
+         @ECNSTL                      02004H    00000H  CSEG PAGE64KP
+                  @ECNSTL  r_cg_timer
+                                      02004H    00000H
+         @ECNSTL                      02004H    00000H  CSEG PAGE64KP
+                  @ECNSTL  r_cg_timer_user
+                                      02004H    00000H
+         @ERLINIT                     02004H    00000H  CSEG UNIT64KP
+                  @ERLINIT @cstarte   02004H    00000H
+                  @ERLINIT r_fsl_praxis01_flash_main
+                                      02004H    00000H
+                  @ERLINIT r_systeminit
+                                      02004H    00000H
+                  @ERLINIT r_cg_cgc   02004H    00000H
+                  @ERLINIT r_cg_cgc_user
+                                      02004H    00000H
+                  @ERLINIT r_cg_serial
+                                      02004H    00000H
+                  @ERLINIT r_cg_serial_user
+                                      02004H    00000H
+                  @ERLINIT r_cg_wdt   02004H    00000H
+                  @ERLINIT r_cg_wdt_user
+                                      02004H    00000H
+                  @ERLINIT r_cg_intc
+                                      02004H    00000H
+                  @ERLINIT r_cg_intc_user
+                                      02004H    00000H
+                  @ERLINIT r_cg_port
+                                      02004H    00000H
+                  @ERLINIT r_cg_port_user
+                                      02004H    00000H
+                  @ERLINIT r_cg_timer
+                                      02004H    00000H
+                  @ERLINIT r_cg_timer_user
+                                      02004H    00000H
+                  @ERLINIT @rome      02004H    00000H
+         @ER_INIS                     02004H    00000H  CSEG UNIT64KP
+                  @ER_INIS @cstarte   02004H    00000H
+                  @ER_INIS r_fsl_praxis01_flash_main
+                                      02004H    00000H
+                  @ER_INIS r_systeminit
+                                      02004H    00000H
+                  @ER_INIS r_cg_cgc   02004H    00000H
+                  @ER_INIS r_cg_cgc_user
+                                      02004H    00000H
+                  @ER_INIS r_cg_serial
+                                      02004H    00000H
+                  @ER_INIS r_cg_serial_user
+                                      02004H    00000H
+                  @ER_INIS r_cg_wdt   02004H    00000H
+                  @ER_INIS r_cg_wdt_user
+                                      02004H    00000H
+                  @ER_INIS r_cg_intc
+                                      02004H    00000H
+                  @ER_INIS r_cg_intc_user
+                                      02004H    00000H
+                  @ER_INIS r_cg_port
+                                      02004H    00000H
+                  @ER_INIS r_cg_port_user
+                                      02004H    00000H
+                  @ER_INIS r_cg_timer
+                                      02004H    00000H
+                  @ER_INIS r_cg_timer_user
+                                      02004H    00000H
+                  @ER_INIS @rome      02004H    00000H
+         @ECALT                       02004H    00000H  CSEG
+                  @ECALT   r_fsl_praxis01_flash_main
+                                      02004H    00000H
+                  @ECALT   r_systeminit
+                                      02004H    00000H
+                  @ECALT   r_cg_cgc   02004H    00000H
+                  @ECALT   r_cg_cgc_user
+                                      02004H    00000H
+                  @ECALT   r_cg_serial
+                                      02004H    00000H
+                  @ECALT   r_cg_serial_user
+                                      02004H    00000H
+                  @ECALT   r_cg_wdt   02004H    00000H
+                  @ECALT   r_cg_wdt_user
+                                      02004H    00000H
+                  @ECALT   r_cg_intc
+                                      02004H    00000H
+                  @ECALT   r_cg_intc_user
+                                      02004H    00000H
+                  @ECALT   r_cg_port
+                                      02004H    00000H
+                  @ECALT   r_cg_port_user
+                                      02004H    00000H
+                  @ECALT   r_cg_timer
+                                      02004H    00000H
+                  @ECALT   r_cg_timer_user
+                                      02004H    00000H
+         @ECODE                       02004H    00000H  CSEG
+                  @ECODE   r_fsl_praxis01_flash_main
+                                      02004H    00000H
+                  @ECODE   r_systeminit
+                                      02004H    00000H
+                  @ECODE   r_cg_cgc   02004H    00000H
+                  @ECODE   r_cg_cgc_user
+                                      02004H    00000H
+                  @ECODE   r_cg_serial
+                                      02004H    00000H
+                  @ECODE   r_cg_serial_user
+                                      02004H    00000H
+                  @ECODE   r_cg_wdt   02004H    00000H
+                  @ECODE   r_cg_wdt_user
+                                      02004H    00000H
+                  @ECODE   r_cg_intc
+                                      02004H    00000H
+                  @ECODE   r_cg_intc_user
+                                      02004H    00000H
+                  @ECODE   r_cg_port
+                                      02004H    00000H
+                  @ECODE   r_cg_port_user
+                                      02004H    00000H
+                  @ECODE   r_cg_timer
+                                      02004H    00000H
+                  @ECODE   r_cg_timer_user
+                                      02004H    00000H
+         @EBASE                       02004H    00000H  CSEG
+                  @EBASE   r_fsl_praxis01_flash_main
+                                      02004H    00000H
+                  @EBASE   r_systeminit
+                                      02004H    00000H
+                  @EBASE   r_cg_cgc   02004H    00000H
+                  @EBASE   r_cg_cgc_user
+                                      02004H    00000H
+                  @EBASE   r_cg_serial
+                                      02004H    00000H
+                  @EBASE   r_cg_serial_user
+                                      02004H    00000H
+                  @EBASE   r_cg_wdt   02004H    00000H
+                  @EBASE   r_cg_wdt_user
+                                      02004H    00000H
+                  @EBASE   r_cg_intc
+                                      02004H    00000H
+                  @EBASE   r_cg_intc_user
+                                      02004H    00000H
+                  @EBASE   r_cg_port
+                                      02004H    00000H
+                  @EBASE   r_cg_port_user
+                                      02004H    00000H
+                  @EBASE   r_cg_timer
+                                      02004H    00000H
+                  @EBASE   r_cg_timer_user
+                                      02004H    00000H
+* gap *                               02004H    00004H
+         @EVECT04                     02008H    00004H  CSEG AT
+                  @EVECT04 r_cg_wdt_user
+                                      02008H    00004H
+         FLAS_CNN                     0200CH    00006H  CSEG MIRRORP
+                  FLAS_CNN r_fsl_praxis01_flash_main
+                                      0200CH    00006H
+* gap *                               02012H    00002H
+         @EVECT0A                     02014H    00008H  CSEG AT
+                  @EVECT0A r_cg_intc_user
+                                      02014H    00008H
+* gap *                               0201CH    0000CH
+         @EVECT14                     02028H    00008H  CSEG AT
+                  @EVECT14 r_cg_serial_user
+                                      02028H    00008H
+* gap *                               02030H    0000CH
+         @EVECT1E                     0203CH    00008H  CSEG AT
+                  @EVECT1E r_cg_serial_user
+                                      0203CH    00008H
+* gap *                               02044H    00004H
+         @EVECT24                     02048H    00008H  CSEG AT
+                  @EVECT24 r_cg_serial_user
+                                      02048H    00008H
+* gap *                               02050H    00004H
+         @EVECT2A                     02054H    00004H  CSEG AT
+                  @EVECT2A r_cg_serial_user
+                                      02054H    00004H
+         @EVECT2C                     02058H    00004H  CSEG AT
+                  @EVECT2C r_cg_timer_user
+                                      02058H    00004H
+         @LECODEL                     0205CH    000A4H  CSEG
+                  @LECODEL @cstarte   0205CH    00088H
+                  @LECODEL exit       020E4H    0001CH
+         @ER_INIT                     02100H    00022H  CSEG UNIT64KP
+                  @ER_INIT @cstarte   02100H    00000H
+                  @ER_INIT r_fsl_praxis01_flash_main
+                                      02100H    00006H
+                  @ER_INIT r_systeminit
+                                      02106H    00000H
+                  @ER_INIT r_cg_cgc   02106H    00000H
+                  @ER_INIT r_cg_cgc_user
+                                      02106H    00000H
+                  @ER_INIT r_cg_serial
+                                      02106H    00000H
+                  @ER_INIT r_cg_serial_user
+                                      02106H    00004H
+                  @ER_INIT r_cg_wdt   0210AH    00000H
+                  @ER_INIT r_cg_wdt_user
+                                      0210AH    00000H
+                  @ER_INIT r_cg_intc
+                                      0210AH    00000H
+                  @ER_INIT r_cg_intc_user
+                                      0210AH    0000CH
+                  @ER_INIT r_cg_port
+                                      02116H    00000H
+                  @ER_INIT r_cg_port_user
+                                      02116H    00000H
+                  @ER_INIT r_cg_timer
+                                      02116H    00000H
+                  @ER_INIT r_cg_timer_user
+                                      02116H    0000CH
+                  @ER_INIT @rome      02122H    00000H
+         FLAS_COD                     02122H    000D6H  CSEG
+                  FLAS_COD r_fsl_praxis01_flash_main
+                                      02122H    000D6H
+         @ECODEL                      021F8H    00FEDH  CSEG
+                  @ECODEL  r_systeminit
+                                      021F8H    00056H
+                  @ECODEL  r_cg_cgc   0224EH    00011H
+                  @ECODEL  r_cg_cgc_user
+                                      0225FH    0000CH
+                  @ECODEL  r_cg_serial
+                                      0226BH    004B5H
+                  @ECODEL  r_cg_serial_user
+                                      02720H    00693H
+                  @ECODEL  r_cg_wdt   02DB3H    00014H
+                  @ECODEL  r_cg_wdt_user
+                                      02DC7H    00002H
+                  @ECODEL  r_cg_intc
+                                      02DC9H    0005FH
+                  @ECODEL  r_cg_intc_user
+                                      02E28H    0004AH
+                  @ECODEL  r_cg_port
+                                      02E72H    00028H
+                  @ECODEL  r_cg_port_user
+                                      02E9AH    00000H
+                  @ECODEL  r_cg_timer
+                                      02E9AH    00091H
+                  @ECODEL  r_cg_timer_user
+                                      02F2BH    002BAH
+* gap *                               031E5H    0461BH
+
+  MEMORY=ROM_DATA
+  BASE ADDRESS=07800H   SIZE=00400H
+         OUTPUT   INPUT    INPUT      BASE      SIZE
+         SEGMENT  SEGMENT  MODULE     ADDRESS
+         FLAS_CNF                     07800H    00000H  CSEG PAGE64KP
+         FLAS_CNF                     07800H    00000H  CSEG PAGE64KP
+                  FLAS_CNF r_fsl_praxis01_flash_main
+                                      07800H    00000H
+* gap *                               07800H    00400H
+
+  MEMORY=OCD_ROM
+  BASE ADDRESS=07C00H   SIZE=00400H
+         OUTPUT   INPUT    INPUT      BASE      SIZE
+         SEGMENT  SEGMENT  MODULE     ADDRESS
+* gap *                               07C00H    00200H
+         ??OCDROM                     07E00H    00200H  CSEG AT
+                  ??OCDROM r_fsl_praxis01_boot.lmf
+                                      07E00H    00200H
+
+  MEMORY=RAM
+  BASE ADDRESS=FF700H   SIZE=00900H
+         OUTPUT   INPUT    INPUT      BASE      SIZE
+         SEGMENT  SEGMENT  MODULE     ADDRESS
+         @@DATA                       FF700H    000CEH  DSEG AT
+                  @@DATA   r_fsl_praxis01_boot.lmf
+                                      FF700H    000CEH
+         @@INIT                       FF7CEH    00008H  DSEG AT
+                  @@INIT   r_fsl_praxis01_boot.lmf
+                                      FF7CEH    00008H
+         BOOT_DAT                     FF7D6H    00200H  DSEG AT
+                  BOOT_DAT r_fsl_praxis01_boot.lmf
+                                      FF7D6H    00200H
+         @@INIS                       FF9D6H    00000H  DSEG AT
+                  @@INIS   r_fsl_praxis01_boot.lmf
+                                      FF9D6H    00000H
+         @@DATS                       FF9D6H    00000H  DSEG AT
+                  @@DATS   r_fsl_praxis01_boot.lmf
+                                      FF9D6H    00000H
+         @@INITL                      FF9D6H    00000H  DSEG AT
+                  @@INITL  r_fsl_praxis01_boot.lmf
+                                      FF9D6H    00000H
+         @@DATAL                      FF9D6H    00000H  DSEG AT
+                  @@DATAL  r_fsl_praxis01_boot.lmf
+                                      FF9D6H    00000H
+         @EINIT                       FF9D6H    00022H  DSEG BASEP
+                  @EINIT   @cstarte   FF9D6H    00000H
+                  @EINIT   r_fsl_praxis01_flash_main
+                                      FF9D6H    00006H
+                  @EINIT   r_systeminit
+                                      FF9DCH    00000H
+                  @EINIT   r_cg_cgc   FF9DCH    00000H
+                  @EINIT   r_cg_cgc_user
+                                      FF9DCH    00000H
+                  @EINIT   r_cg_serial
+                                      FF9DCH    00000H
+                  @EINIT   r_cg_serial_user
+                                      FF9DCH    00004H
+                  @EINIT   r_cg_wdt   FF9E0H    00000H
+                  @EINIT   r_cg_wdt_user
+                                      FF9E0H    00000H
+                  @EINIT   r_cg_intc
+                                      FF9E0H    00000H
+                  @EINIT   r_cg_intc_user
+                                      FF9E0H    0000CH
+                  @EINIT   r_cg_port
+                                      FF9ECH    00000H
+                  @EINIT   r_cg_port_user
+                                      FF9ECH    00000H
+                  @EINIT   r_cg_timer
+                                      FF9ECH    00000H
+                  @EINIT   r_cg_timer_user
+                                      FF9ECH    0000CH
+                  @EINIT   @rome      FF9F8H    00000H
+         @EDATA                       FF9F8H    00054H  DSEG BASEP
+                  @EDATA   @cstarte   FF9F8H    00000H
+                  @EDATA   r_systeminit
+                                      FF9F8H    00000H
+                  @EDATA   r_cg_cgc   FF9F8H    00000H
+                  @EDATA   r_cg_cgc_user
+                                      FF9F8H    00000H
+                  @EDATA   r_cg_serial
+                                      FF9F8H    0002AH
+                  @EDATA   r_cg_serial_user
+                                      FFA22H    00020H
+                  @EDATA   r_cg_wdt   FFA42H    00000H
+                  @EDATA   r_cg_wdt_user
+                                      FFA42H    00000H
+                  @EDATA   r_cg_intc
+                                      FFA42H    00000H
+                  @EDATA   r_cg_intc_user
+                                      FFA42H    00002H
+                  @EDATA   r_cg_port
+                                      FFA44H    00000H
+                  @EDATA   r_cg_port_user
+                                      FFA44H    00000H
+                  @EDATA   r_cg_timer
+                                      FFA44H    00000H
+                  @EDATA   r_cg_timer_user
+                                      FFA44H    00008H
+                  @EDATA   @rome      FFA4CH    00000H
+         FLAS_DAT                     FFA4CH    00300H  DSEG BASEP
+                  FLAS_DAT r_fsl_praxis01_flash_main
+                                      FFA4CH    00300H
+         @EINIS                       FFD4CH    00000H  DSEG UNITP
+                  @EINIS   @cstarte   FFD4CH    00000H
+                  @EINIS   r_fsl_praxis01_flash_main
+                                      FFD4CH    00000H
+                  @EINIS   r_systeminit
+                                      FFD4CH    00000H
+                  @EINIS   r_cg_cgc   FFD4CH    00000H
+                  @EINIS   r_cg_cgc_user
+                                      FFD4CH    00000H
+                  @EINIS   r_cg_serial
+                                      FFD4CH    00000H
+                  @EINIS   r_cg_serial_user
+                                      FFD4CH    00000H
+                  @EINIS   r_cg_wdt   FFD4CH    00000H
+                  @EINIS   r_cg_wdt_user
+                                      FFD4CH    00000H
+                  @EINIS   r_cg_intc
+                                      FFD4CH    00000H
+                  @EINIS   r_cg_intc_user
+                                      FFD4CH    00000H
+                  @EINIS   r_cg_port
+                                      FFD4CH    00000H
+                  @EINIS   r_cg_port_user
+                                      FFD4CH    00000H
+                  @EINIS   r_cg_timer
+                                      FFD4CH    00000H
+                  @EINIS   r_cg_timer_user
+                                      FFD4CH    00000H
+                  @EINIS   @rome      FFD4CH    00000H
+         @EDATS                       FFD4CH    00000H  DSEG UNITP
+                  @EDATS   @cstarte   FFD4CH    00000H
+                  @EDATS   r_fsl_praxis01_flash_main
+                                      FFD4CH    00000H
+                  @EDATS   r_systeminit
+                                      FFD4CH    00000H
+                  @EDATS   r_cg_cgc   FFD4CH    00000H
+                  @EDATS   r_cg_cgc_user
+                                      FFD4CH    00000H
+                  @EDATS   r_cg_serial
+                                      FFD4CH    00000H
+                  @EDATS   r_cg_serial_user
+                                      FFD4CH    00000H
+                  @EDATS   r_cg_wdt   FFD4CH    00000H
+                  @EDATS   r_cg_wdt_user
+                                      FFD4CH    00000H
+                  @EDATS   r_cg_intc
+                                      FFD4CH    00000H
+                  @EDATS   r_cg_intc_user
+                                      FFD4CH    00000H
+                  @EDATS   r_cg_port
+                                      FFD4CH    00000H
+                  @EDATS   r_cg_port_user
+                                      FFD4CH    00000H
+                  @EDATS   r_cg_timer
+                                      FFD4CH    00000H
+                  @EDATS   r_cg_timer_user
+                                      FFD4CH    00000H
+                  @EDATS   @rome      FFD4CH    00000H
+         @EINITL                      FFD4CH    00000H  DSEG UNIT64KP
+                  @EINITL  @cstarte   FFD4CH    00000H
+                  @EINITL  r_fsl_praxis01_flash_main
+                                      FFD4CH    00000H
+                  @EINITL  r_systeminit
+                                      FFD4CH    00000H
+                  @EINITL  r_cg_cgc   FFD4CH    00000H
+                  @EINITL  r_cg_cgc_user
+                                      FFD4CH    00000H
+                  @EINITL  r_cg_serial
+                                      FFD4CH    00000H
+                  @EINITL  r_cg_serial_user
+                                      FFD4CH    00000H
+                  @EINITL  r_cg_wdt   FFD4CH    00000H
+                  @EINITL  r_cg_wdt_user
+                                      FFD4CH    00000H
+                  @EINITL  r_cg_intc
+                                      FFD4CH    00000H
+                  @EINITL  r_cg_intc_user
+                                      FFD4CH    00000H
+                  @EINITL  r_cg_port
+                                      FFD4CH    00000H
+                  @EINITL  r_cg_port_user
+                                      FFD4CH    00000H
+                  @EINITL  r_cg_timer
+                                      FFD4CH    00000H
+                  @EINITL  r_cg_timer_user
+                                      FFD4CH    00000H
+                  @EINITL  @rome      FFD4CH    00000H
+         @EDATAL                      FFD4CH    00000H  DSEG UNIT64KP
+                  @EDATAL  @cstarte   FFD4CH    00000H
+                  @EDATAL  r_fsl_praxis01_flash_main
+                                      FFD4CH    00000H
+                  @EDATAL  r_systeminit
+                                      FFD4CH    00000H
+                  @EDATAL  r_cg_cgc   FFD4CH    00000H
+                  @EDATAL  r_cg_cgc_user
+                                      FFD4CH    00000H
+                  @EDATAL  r_cg_serial
+                                      FFD4CH    00000H
+                  @EDATAL  r_cg_serial_user
+                                      FFD4CH    00000H
+                  @EDATAL  r_cg_wdt   FFD4CH    00000H
+                  @EDATAL  r_cg_wdt_user
+                                      FFD4CH    00000H
+                  @EDATAL  r_cg_intc
+                                      FFD4CH    00000H
+                  @EDATAL  r_cg_intc_user
+                                      FFD4CH    00000H
+                  @EDATAL  r_cg_port
+                                      FFD4CH    00000H
+                  @EDATAL  r_cg_port_user
+                                      FFD4CH    00000H
+                  @EDATAL  r_cg_timer
+                                      FFD4CH    00000H
+                  @EDATAL  r_cg_timer_user
+                                      FFD4CH    00000H
+                  @EDATAL  @rome      FFD4CH    00000H
+* gap *                               FFD4CH    000D4H
+         @@BITS                       FFE20H    00001H  BSEG AT
+                  @@BITS   r_fsl_praxis01_boot.lmf
+                                      FFE20H.0  00001H.0
+         @EBITS                       FFE21H    00001H  BSEG
+                  @EBITS   @cstarte   FFE21H.0  00000H.0
+                  @EBITS   r_fsl_praxis01_flash_main
+                                      FFE21H.0  00000H.1
+                  @EBITS   r_systeminit
+                                      FFE21H.1  00000H.0
+                  @EBITS   r_cg_cgc   FFE21H.1  00000H.0
+                  @EBITS   r_cg_cgc_user
+                                      FFE21H.1  00000H.0
+                  @EBITS   r_cg_serial
+                                      FFE21H.1  00000H.0
+                  @EBITS   r_cg_serial_user
+                                      FFE21H.1  00000H.1
+                  @EBITS   r_cg_wdt   FFE21H.2  00000H.0
+                  @EBITS   r_cg_wdt_user
+                                      FFE21H.2  00000H.0
+                  @EBITS   r_cg_intc
+                                      FFE21H.2  00000H.0
+                  @EBITS   r_cg_intc_user
+                                      FFE21H.2  00000H.0
+                  @EBITS   r_cg_port
+                                      FFE21H.2  00000H.0
+                  @EBITS   r_cg_port_user
+                                      FFE21H.2  00000H.0
+                  @EBITS   r_cg_timer
+                                      FFE21H.2  00000H.0
+                  @EBITS   r_cg_timer_user
+                                      FFE21H.2  00000H.0
+* gap *                               FFE22H    000B2H
+         @@SEGREG                     FFED4H    00004H  DSEG AT
+                  @@SEGREG r_fsl_praxis01_boot.lmf
+                                      FFED4H    00004H
+         @@RTARG0                     FFED8H    00008H  DSEG AT
+                  @@RTARG0 r_fsl_praxis01_boot.lmf
+                                      FFED8H    00008H
+* gap *                               FFEE0H    00020H
+* gap (Not Free Area) *               FFF00H    00100H
+
+
+
+*** Local symbol list ***
+
+MODULE    ATTR       VALUE    NAME
+
+@cstarte
+          MOD                 @cstarte
+          CSEG                @EVECT00
+          CSEG                @LECODEL
+          CSEG                @ER_INIT
+          CSEG                @ERLINIT
+          CSEG                @ER_INIS
+          DSEG                @EINIT
+          DSEG                @EINITL
+          DSEG                @EDATA
+          DSEG                @EDATAL
+          DSEG                @EINIS
+          DSEG                @EDATS
+          CSEG                @ECNST
+          CSEG                @ECNSTL
+          BSEG                @EBITS
+r_fsl_praxis01_flash_main
+          MOD                 r_fsl_praxis01_flash_main
+          BSEG                @EBITS
+          CSEG                FLAS_CNN
+          CSEG                @ER_INIT
+          DSEG                @EINIT
+          DSEG                FLAS_DAT
+          CSEG                @ER_INIS
+          DSEG                @EINIS
+          DSEG                @EDATS
+          CSEG                FLAS_CNF
+          CSEG                @ERLINIT
+          DSEG                @EINITL
+          DSEG                @EDATAL
+          CSEG                @ECALT
+          CSEG                @ECODE
+          CSEG                FLAS_COD
+          CSEG                @EBASE
+                     0000BH   _dubLed2flag
+                     00006H   _duw_i
+                     00001H   _u8RetuenList
+                     00001H   _i
+                     00000H   _j
+                     0200CH   L0003
+r_systeminit
+          MOD                 r_systeminit
+          BSEG                @EBITS
+          CSEG                @ECNST
+          CSEG                @ER_INIT
+          DSEG                @EINIT
+          DSEG                @EDATA
+          CSEG                @ER_INIS
+          DSEG                @EINIS
+          DSEG                @EDATS
+          CSEG                @ECNSTL
+          CSEG                @ERLINIT
+          DSEG                @EINITL
+          DSEG                @EDATAL
+          CSEG                @ECALT
+          CSEG                @ECODE
+          CSEG                @ECODEL
+          CSEG                @EBASE
+                     00000H   _w_count
+r_cg_cgc
+          MOD                 r_cg_cgc
+          BSEG                @EBITS
+          CSEG                @ECNST
+          CSEG                @ER_INIT
+          DSEG                @EINIT
+          DSEG                @EDATA
+          CSEG                @ER_INIS
+          DSEG                @EINIS
+          DSEG                @EDATS
+          CSEG                @ECNSTL
+          CSEG                @ERLINIT
+          DSEG                @EINITL
+          DSEG                @EDATAL
+          CSEG                @ECALT
+          CSEG                @ECODE
+          CSEG                @ECODEL
+          CSEG                @EBASE
+r_cg_cgc_user
+          MOD                 r_cg_cgc_user
+          BSEG                @EBITS
+          CSEG                @ECNST
+          CSEG                @ER_INIT
+          DSEG                @EINIT
+          DSEG                @EDATA
+          CSEG                @ER_INIS
+          DSEG                @EINIS
+          DSEG                @EDATS
+          CSEG                @ECNSTL
+          CSEG                @ERLINIT
+          DSEG                @EINITL
+          DSEG                @EDATAL
+          CSEG                @ECALT
+          CSEG                @ECODE
+          CSEG                @ECODEL
+          CSEG                @EBASE
+                     00001H   _reset_flag
+r_cg_serial
+          MOD                 r_cg_serial
+          BSEG                @EBITS
+          CSEG                @ECNST
+          CSEG                @ER_INIT
+          DSEG                @EINIT
+          DSEG                @EDATA
+          CSEG                @ER_INIS
+          DSEG                @EINIS
+          DSEG                @EDATS
+          CSEG                @ECNSTL
+          CSEG                @ERLINIT
+          DSEG                @EINITL
+          DSEG                @EDATAL
+          CSEG                @ECALT
+          CSEG                @ECODE
+          CSEG                @ECODEL
+          CSEG                @EBASE
+                     00002H   _rx_buf
+                     0000AH   _rx_num
+                     00000H   _status
+                     00002H   _tx_buf
+                     0000AH   _tx_num
+                     00000H   _status
+                     00002H   _rx_buf
+                     0000AH   _rx_num
+                     00000H   _status
+                     00002H   _tx_buf
+                     0000AH   _tx_num
+                     00000H   _status
+                     00002H   _rx_buf
+                     0000AH   _rx_num
+                     00000H   _status
+                     00002H   _tx_buf
+                     0000AH   _tx_num
+                     00000H   _status
+                     00002H   _adr
+                     0000AH   _tx_buf
+                     0000CH   _tx_num
+                     0000EH   _wait
+                     00000H   _status
+                     00002H   _adr
+                     0000AH   _rx_buf
+                     0000CH   _rx_num
+                     0000EH   _wait
+                     00000H   _status
+r_cg_serial_user
+          MOD                 r_cg_serial_user
+          BSEG                @EBITS
+          CSEG                @ECNST
+          CSEG                @ER_INIT
+          DSEG                @EINIT
+          DSEG                @EDATA
+          CSEG                @ER_INIS
+          DSEG                @EINIS
+          DSEG                @EDATS
+          CSEG                @ECNSTL
+          CSEG                @ERLINIT
+          DSEG                @EINITL
+          DSEG                @EDATAL
+          CSEG                @ECALT
+          CSEG                @ECODE
+          CSEG                @ECODEL
+          CSEG                @EBASE
+          CSEG                @EVECT14
+          CSEG                @EVECT1E
+          CSEG                @EVECT24
+          CSEG                @EVECT2A
+          ADDR       02720H   _r_uart0_interrupt_receive
+                     00003H   _rx_data
+                     00002H   _err_type
+                     00001H   _checksum
+                     00000H   _i
+          ADDR       0286CH   _r_uart0_interrupt_send
+          ADDR       028BEH   _r_uart0_callback_receiveend
+          ADDR       029F1H   _r_uart0_callback_softwareoverrun
+                     00000H   _rx_data
+          ADDR       029FDH   _r_uart0_callback_sendend
+          ADDR       029FEH   _r_uart0_callback_error
+                     00000H   _err_type
+          ADDR       02A0AH   _r_uart1_interrupt_receive
+                     00001H   _rx_data
+                     00000H   _err_type
+          ADDR       02A8FH   _r_uart1_interrupt_send
+          ADDR       02AE1H   _r_uart1_callback_receiveend
+          ADDR       02AF6H   _r_uart1_callback_softwareoverrun
+                     00000H   _rx_data
+          ADDR       02AFEH   _r_uart1_callback_sendend
+          ADDR       02B06H   _r_uart1_callback_error
+                     00000H   _err_type
+          ADDR       02B0EH   _r_uart2_interrupt_receive
+                     00001H   _rx_data
+                     00000H   _err_type
+          ADDR       02B93H   _r_uart2_interrupt_send
+          ADDR       02BE5H   _r_uart2_callback_receiveend
+          ADDR       02BFAH   _r_uart2_callback_softwareoverrun
+                     00000H   _rx_data
+          ADDR       02C06H   _r_uart2_callback_sendend
+          ADDR       02C0EH   _r_uart2_callback_error
+                     00000H   _err_type
+          ADDR       02C1AH   _r_iica0_interrupt
+          ADDR       02C60H   _iica0_master_handler
+          ADDR       02D25H   _r_iica0_callback_master_error
+                     00000H   _flag
+          ADDR       02D2DH   _r_iica0_callback_master_receiveend
+          ADDR       02D32H   _r_iica0_callback_master_sendend
+                     00001H   _i
+                     00001H   _i
+                     00001H   _i
+r_cg_wdt
+          MOD                 r_cg_wdt
+          BSEG                @EBITS
+          CSEG                @ECNST
+          CSEG                @ER_INIT
+          DSEG                @EINIT
+          DSEG                @EDATA
+          CSEG                @ER_INIS
+          DSEG                @EINIS
+          DSEG                @EDATS
+          CSEG                @ECNSTL
+          CSEG                @ERLINIT
+          DSEG                @EINITL
+          DSEG                @EDATAL
+          CSEG                @ECALT
+          CSEG                @ECODE
+          CSEG                @ECODEL
+          CSEG                @EBASE
+r_cg_wdt_user
+          MOD                 r_cg_wdt_user
+          BSEG                @EBITS
+          CSEG                @ECNST
+          CSEG                @ER_INIT
+          DSEG                @EINIT
+          DSEG                @EDATA
+          CSEG                @ER_INIS
+          DSEG                @EINIS
+          DSEG                @EDATS
+          CSEG                @ECNSTL
+          CSEG                @ERLINIT
+          DSEG                @EINITL
+          DSEG                @EDATAL
+          CSEG                @ECALT
+          CSEG                @ECODE
+          CSEG                @ECODEL
+          CSEG                @EBASE
+          CSEG                @EVECT04
+          ADDR       02DC7H   _r_wdt_interrupt
+r_cg_intc
+          MOD                 r_cg_intc
+          BSEG                @EBITS
+          CSEG                @ECNST
+          CSEG                @ER_INIT
+          DSEG                @EINIT
+          DSEG                @EDATA
+          CSEG                @ER_INIS
+          DSEG                @EINIS
+          DSEG                @EDATS
+          CSEG                @ECNSTL
+          CSEG                @ERLINIT
+          DSEG                @EINITL
+          DSEG                @EDATAL
+          CSEG                @ECALT
+          CSEG                @ECODE
+          CSEG                @ECODEL
+          CSEG                @EBASE
+r_cg_intc_user
+          MOD                 r_cg_intc_user
+          BSEG                @EBITS
+          CSEG                @ECNST
+          CSEG                @ER_INIT
+          DSEG                @EINIT
+          DSEG                @EDATA
+          CSEG                @ER_INIS
+          DSEG                @EINIS
+          DSEG                @EDATS
+          CSEG                @ECNSTL
+          CSEG                @ERLINIT
+          DSEG                @EINITL
+          DSEG                @EDATAL
+          CSEG                @ECALT
+          CSEG                @ECODE
+          CSEG                @ECODEL
+          CSEG                @EBASE
+          CSEG                @EVECT0A
+          ADDR       02E28H   _r_intc1_interrupt
+          ADDR       02E4DH   _r_intc2_interrupt
+r_cg_port
+          MOD                 r_cg_port
+          BSEG                @EBITS
+          CSEG                @ECNST
+          CSEG                @ER_INIT
+          DSEG                @EINIT
+          DSEG                @EDATA
+          CSEG                @ER_INIS
+          DSEG                @EINIS
+          DSEG                @EDATS
+          CSEG                @ECNSTL
+          CSEG                @ERLINIT
+          DSEG                @EINITL
+          DSEG                @EDATAL
+          CSEG                @ECALT
+          CSEG                @ECODE
+          CSEG                @ECODEL
+          CSEG                @EBASE
+r_cg_port_user
+          MOD                 r_cg_port_user
+          BSEG                @EBITS
+          CSEG                @ECNST
+          CSEG                @ER_INIT
+          DSEG                @EINIT
+          DSEG                @EDATA
+          CSEG                @ER_INIS
+          DSEG                @EINIS
+          DSEG                @EDATS
+          CSEG                @ECNSTL
+          CSEG                @ERLINIT
+          DSEG                @EINITL
+          DSEG                @EDATAL
+          CSEG                @ECALT
+          CSEG                @ECODE
+          CSEG                @ECODEL
+          CSEG                @EBASE
+r_cg_timer
+          MOD                 r_cg_timer
+          BSEG                @EBITS
+          CSEG                @ECNST
+          CSEG                @ER_INIT
+          DSEG                @EINIT
+          DSEG                @EDATA
+          CSEG                @ER_INIS
+          DSEG                @EINIS
+          DSEG                @EDATS
+          CSEG                @ECNSTL
+          CSEG                @ERLINIT
+          DSEG                @EINITL
+          DSEG                @EDATAL
+          CSEG                @ECALT
+          CSEG                @ECODE
+          CSEG                @ECODEL
+          CSEG                @EBASE
+r_cg_timer_user
+          MOD                 r_cg_timer_user
+          BSEG                @EBITS
+          CSEG                @ECNST
+          CSEG                @ER_INIT
+          DSEG                @EINIT
+          DSEG                @EDATA
+          CSEG                @ER_INIS
+          DSEG                @EINIS
+          DSEG                @EDATS
+          CSEG                @ECNSTL
+          CSEG                @ERLINIT
+          DSEG                @EINITL
+          DSEG                @EDATAL
+          CSEG                @ECALT
+          CSEG                @ECODE
+          CSEG                @ECODEL
+          CSEG                @EBASE
+          CSEG                @EVECT2C
+          ADDR       02F2BH   _r_tau1_timer
+          ADDR       02F40H   _r_tau0_channel0_interrupt
+@rom
+          MOD                 @cstart
+          DSEG                @@DATA
+          CSEG                @@VECT00
+          CSEG                @@LCODE
+          CSEG                @@R_INIT
+          CSEG                @@RLINIT
+          CSEG                @@R_INIS
+          DSEG                @@INIT
+          DSEG                @@INITL
+          DSEG                @@DATAL
+          DSEG                @@INIS
+          DSEG                @@DATS
+          CSEG                @@CALT
+          CSEG                @@CNST
+          CSEG                @@CNSTL
+          BSEG                @@BITS
+@rom
+          MOD                 r_fsl_praxis01_boot_write
+          BSEG                @@BITS
+          CSEG                @@CNST
+          CSEG                @@R_INIT
+          DSEG                @@INIT
+          DSEG                BOOT_DAT
+          CSEG                @@R_INIS
+          DSEG                @@INIS
+          DSEG                @@DATS
+          CSEG                BOOT_CNS
+          CSEG                @@RLINIT
+          DSEG                @@INITL
+          DSEG                @@DATAL
+          CSEG                @@CALT
+          CSEG                @@CODE
+          CSEG                BOOT_COD
+          CSEG                @@BASE
+                     00000H   .0fake
+                     00000H   _fsl_flash_voltage_u08
+                     00001H   _fsl_frequency_u08
+                     00002H   _fsl_auto_status_check_u08
+                     00000H   .1fake
+                     00000H   _fsl_data_buffer_p_u08
+                     00002H   _fsl_destination_address_u32
+                     00006H   _fsl_word_count_u08
+                     00000H   .3fake
+                     00000H   _fsl_start_block_u16
+                     00002H   _fsl_end_block_u16
+          ADDR       0024EH   _fsl_descriptor_pstr
+          ADDR       FF7D6H   _prDubWriteBuffer
+          ADDR       FF8D6H   _prDubMsgBuffer
+          ADDR       FF7CEH   _prDubLedBrinkFlag
+                     00020H   _duhSelfLoop
+                     0001FH   _dubMsgResult
+                     0001EH   _dubReturn
+                     0001DH   _dubSelfResult
+                     0001CH   _dubCommnad
+                     00018H   _duwEndWriteAddress
+                     00014H   _duwWriteAdressIndex
+                     00010H   _duwWriteSize
+                     00008H   _dtyWriteBuff
+                     00007H   _dub_i
+                     00006H   _dubStartEraseBlock
+                     00002H   _duwStartWriteAddress
+                     00001H   _dubBlockLength
+                     00004H   _dtyFslFsw
+                     00001H   _dubRetCode
+                     00002H   _dubSelfResult
+                     00001H   _dubMsgErrCode
+                     00008H   _pubDataBuffer
+                     00010H   _pubCommand
+                     00006H   _duh_i
+                     00005H   _dubRetCode
+                     00002H   _duhDataSize
+                     00001H   _dubCheckSum
+                     00001H   _dubRcvData
+                     00004H   _dubCommand
+                     0000CH   _dubRetMsg
+                     00002H   _duhSendLength
+                     00001H   _dubCheckSum
+          ADDR       FF7CFH   _dubDataFrame
+                     00000H   _pubSendData
+                     00000H   _dubBlinkSetFlag
+                     00001H   _Result
+                     00252H   L0022
+@rom
+          MOD                 r_fsl_praxis01_boot_main
+          BSEG                @@BITS
+          CSEG                @@CNST
+          CSEG                @@R_INIT
+          DSEG                @@INIT
+          DSEG                BOOT_DAT
+          CSEG                @@R_INIS
+          DSEG                @@INIS
+          DSEG                @@DATS
+          CSEG                BOOT_CNS
+          CSEG                @@RLINIT
+          DSEG                @@INITL
+          DSEG                @@DATAL
+          CSEG                @@CALT
+          CSEG                @@CODE
+          CSEG                BOOT_COD
+          CSEG                @@BASE
+          CSEG                @@VECT04
+          CSEG                @@VECT08
+                     00002H   _buf
+                     00001H   _dubRetCode
+                     00000H   _duw_i
+                     00004H   _dubEndMode
+                     00002H   _duh_i
+                     00001H   _dubLed1flag
+                     0026EH   L0005
+                     00000H   @prSendMsgAsciiData
+@rom
+          MOD                 r_pfdl
+          BSEG                @@BITS
+          CSEG                @@CNST
+          CSEG                @@R_INIT
+          DSEG                @@INIT
+          DSEG                @@DATA
+          CSEG                @@R_INIS
+          DSEG                @@INIS
+          DSEG                @@DATS
+          CSEG                @@CNSTL
+          CSEG                @@RLINIT
+          DSEG                @@INITL
+          DSEG                @@DATAL
+          CSEG                @@CALT
+          CSEG                @@CODE
+          CSEG                @@CODEL
+          CSEG                @@BASE
+                     00000H   .1fake
+                     00030H   _PFDL_IDLE
+                     00000H   _PFDL_OK
+                     000FFH   _PFDL_BUSY
+                     00010H   _PFDL_ERR_PROTECTION
+                     0001AH   _PFDL_ERR_ERASE
+                     0001BH   _PFDL_ERR_MARGIN
+                     0001CH   _PFDL_ERR_WRITE
+                     00005H   _PFDL_ERR_PARAMETER
+                     00000H   .3fake
+                     00000H   _fx_MHz_u08
+                     00001H   _wide_voltage_mode_u08
+                     00000H   .0fake
+                     00000H   _PFDL_CMD_READ_BYTES
+                     00006H   _PFDL_CMD_IVERIFY_BYTES
+                     00008H   _PFDL_CMD_BLANKCHECK_BYTES
+                     00004H   _PFDL_CMD_WRITE_BYTES
+                     00003H   _PFDL_CMD_ERASE_BLOCK
+                     00000H   .2fake
+                     00000H   _index_u16
+                     00002H   _data_pu08
+                     00004H   _bytecount_u16
+                     00006H   _command_enu
+                     00000H   _descriptor
+                     00002H   _requester
+                     00001H   _ret
+                     00002H   _requester
+                     00001H   _ret
+                     00002H   _requester
+                     00001H   _ret
+@rom
+          MOD                 r_pfdl_user
+          BSEG                @@BITS
+          CSEG                @@CNST
+          CSEG                @@R_INIT
+          DSEG                @@INIT
+          DSEG                @@DATA
+          CSEG                @@R_INIS
+          DSEG                @@INIS
+          DSEG                @@DATS
+          CSEG                @@CNSTL
+          CSEG                @@RLINIT
+          DSEG                @@INITL
+          DSEG                @@DATAL
+          CSEG                @@CALT
+          CSEG                @@CODE
+          CSEG                @@CODEL
+          CSEG                @@BASE
+                     00002H   _i
+                     00000H   _j
+@rom
+          MOD                 fsl_f_init
+          CSEG                FSL_FCD
+@rom
+          MOD                 fsl_f_open
+          CSEG                FSL_FCD
+@rom
+          MOD                 fsl_f_close
+          CSEG                FSL_FCD
+@rom
+          MOD                 fsl_f_pfunc
+          CSEG                FSL_FCD
+@rom
+          MOD                 fsl_b_common
+          CSEG                FSL_BCD
+@rom
+          MOD                 fsl_f_pefunc
+          CSEG                FSL_FCD
+@rom
+          MOD                 fsl_be_common
+          CSEG                FSL_BECD
+@rom
+          MOD                 fsl_r_std_cmd
+          CSEG                FSL_RCD
+@rom
+          MOD                 fsl_r_check_flow
+          CSEG                FSL_RCD
+@rom
+          MOD                 fsl_r_si_fsw
+          CSEG                FSL_RCD
+@rom
+          MOD                 fsl_r_reset
+          CSEG                FSL_RCD
+@rom
+          MOD                 pfdl
+          CSEG                PFDL_COD
+@rom
+          MOD                 pfdl_version
+          CSEG                PFDL_COD
+@rom
+          MOD                 @ladd
+          CSEG                @@LCODE
+@rom
+          MOD                 @lsub
+          CSEG                @@LCODE
+@rom
+          MOD                 @llsh
+          CSEG                @@LCODE
+@rom
+          MOD                 @lursh
+          CSEG                @@LCODE
+@rom
+          MOD                 @lscmp
+          CSEG                @@LCODE
+@rom
+          MOD                 @lbor
+          CSEG                @@LCODE
+@rom
+          MOD                 @SEGREG
+          DSEG                @@SEGREG
+@rom
+          MOD                 @stkinit
+          CSEG                @@LCODEL
+@rom
+          MOD                 @RTARG0
+          DSEG                @@RTARG0
+@rom
+          MOD                 @vect06
+          NUM        00001H   MIRROR
+          NUM        00000H   _STATIC
+          NUM        00000H   _PASCAL
+          NUM        00000H   _SAVERSVD
+          NUM        00000H   _OLDFUNC
+          NUM        00000H   _RL78_2
+          NUM        00000H   _XMAC
+          NUM        00000H   _XMULDIV
+          NUM        00000H   _XMUL
+          NUM        00000H   _FLASH
+          NUM        00000H   _RAMFUNC
+          NUM        00001H   _MIRROR
+          NUM        00001H   _ESCOPY
+          NUM        00001H   _LIBCNSTFAR
+          NUM        00001H   _ORGFUNC
+          NUM        00001H   _CODEFAR
+          NUM        00000H   _DATAFAR
+          NUM        00000H   _DHRYSTONE
+          NUM        00001H   _PATCH01
+          NUM        02000H   ITBLTOP
+          CSEG                @@VECT06
+@rom
+          MOD                 @vect0a
+          NUM        00001H   MIRROR
+          NUM        00000H   _STATIC
+          NUM        00000H   _PASCAL
+          NUM        00000H   _SAVERSVD
+          NUM        00000H   _OLDFUNC
+          NUM        00000H   _RL78_2
+          NUM        00000H   _XMAC
+          NUM        00000H   _XMULDIV
+          NUM        00000H   _XMUL
+          NUM        00000H   _FLASH
+          NUM        00000H   _RAMFUNC
+          NUM        00001H   _MIRROR
+          NUM        00001H   _ESCOPY
+          NUM        00001H   _LIBCNSTFAR
+          NUM        00001H   _ORGFUNC
+          NUM        00001H   _CODEFAR
+          NUM        00000H   _DATAFAR
+          NUM        00000H   _DHRYSTONE
+          NUM        00001H   _PATCH01
+          NUM        02000H   ITBLTOP
+          CSEG                @@VECT0A
+@rom
+          MOD                 @vect0c
+          NUM        00001H   MIRROR
+          NUM        00000H   _STATIC
+          NUM        00000H   _PASCAL
+          NUM        00000H   _SAVERSVD
+          NUM        00000H   _OLDFUNC
+          NUM        00000H   _RL78_2
+          NUM        00000H   _XMAC
+          NUM        00000H   _XMULDIV
+          NUM        00000H   _XMUL
+          NUM        00000H   _FLASH
+          NUM        00000H   _RAMFUNC
+          NUM        00001H   _MIRROR
+          NUM        00001H   _ESCOPY
+          NUM        00001H   _LIBCNSTFAR
+          NUM        00001H   _ORGFUNC
+          NUM        00001H   _CODEFAR
+          NUM        00000H   _DATAFAR
+          NUM        00000H   _DHRYSTONE
+          NUM        00001H   _PATCH01
+          NUM        02000H   ITBLTOP
+          CSEG                @@VECT0C
+@rom
+          MOD                 @vect0e
+          NUM        00001H   MIRROR
+          NUM        00000H   _STATIC
+          NUM        00000H   _PASCAL
+          NUM        00000H   _SAVERSVD
+          NUM        00000H   _OLDFUNC
+          NUM        00000H   _RL78_2
+          NUM        00000H   _XMAC
+          NUM        00000H   _XMULDIV
+          NUM        00000H   _XMUL
+          NUM        00000H   _FLASH
+          NUM        00000H   _RAMFUNC
+          NUM        00001H   _MIRROR
+          NUM        00001H   _ESCOPY
+          NUM        00001H   _LIBCNSTFAR
+          NUM        00001H   _ORGFUNC
+          NUM        00001H   _CODEFAR
+          NUM        00000H   _DATAFAR
+          NUM        00000H   _DHRYSTONE
+          NUM        00001H   _PATCH01
+          NUM        02000H   ITBLTOP
+          CSEG                @@VECT0E
+@rom
+          MOD                 @vect10
+          NUM        00001H   MIRROR
+          NUM        00000H   _STATIC
+          NUM        00000H   _PASCAL
+          NUM        00000H   _SAVERSVD
+          NUM        00000H   _OLDFUNC
+          NUM        00000H   _RL78_2
+          NUM        00000H   _XMAC
+          NUM        00000H   _XMULDIV
+          NUM        00000H   _XMUL
+          NUM        00000H   _FLASH
+          NUM        00000H   _RAMFUNC
+          NUM        00001H   _MIRROR
+          NUM        00001H   _ESCOPY
+          NUM        00001H   _LIBCNSTFAR
+          NUM        00001H   _ORGFUNC
+          NUM        00001H   _CODEFAR
+          NUM        00000H   _DATAFAR
+          NUM        00000H   _DHRYSTONE
+          NUM        00001H   _PATCH01
+          NUM        02000H   ITBLTOP
+          CSEG                @@VECT10
+@rom
+          MOD                 @vect12
+          NUM        00001H   MIRROR
+          NUM        00000H   _STATIC
+          NUM        00000H   _PASCAL
+          NUM        00000H   _SAVERSVD
+          NUM        00000H   _OLDFUNC
+          NUM        00000H   _RL78_2
+          NUM        00000H   _XMAC
+          NUM        00000H   _XMULDIV
+          NUM        00000H   _XMUL
+          NUM        00000H   _FLASH
+          NUM        00000H   _RAMFUNC
+          NUM        00001H   _MIRROR
+          NUM        00001H   _ESCOPY
+          NUM        00001H   _LIBCNSTFAR
+          NUM        00001H   _ORGFUNC
+          NUM        00001H   _CODEFAR
+          NUM        00000H   _DATAFAR
+          NUM        00000H   _DHRYSTONE
+          NUM        00001H   _PATCH01
+          NUM        02000H   ITBLTOP
+          CSEG                @@VECT12
+@rom
+          MOD                 @vect14
+          NUM        00001H   MIRROR
+          NUM        00000H   _STATIC
+          NUM        00000H   _PASCAL
+          NUM        00000H   _SAVERSVD
+          NUM        00000H   _OLDFUNC
+          NUM        00000H   _RL78_2
+          NUM        00000H   _XMAC
+          NUM        00000H   _XMULDIV
+          NUM        00000H   _XMUL
+          NUM        00000H   _FLASH
+          NUM        00000H   _RAMFUNC
+          NUM        00001H   _MIRROR
+          NUM        00001H   _ESCOPY
+          NUM        00001H   _LIBCNSTFAR
+          NUM        00001H   _ORGFUNC
+          NUM        00001H   _CODEFAR
+          NUM        00000H   _DATAFAR
+          NUM        00000H   _DHRYSTONE
+          NUM        00001H   _PATCH01
+          NUM        02000H   ITBLTOP
+          CSEG                @@VECT14
+@rom
+          MOD                 @vect16
+          NUM        00001H   MIRROR
+          NUM        00000H   _STATIC
+          NUM        00000H   _PASCAL
+          NUM        00000H   _SAVERSVD
+          NUM        00000H   _OLDFUNC
+          NUM        00000H   _RL78_2
+          NUM        00000H   _XMAC
+          NUM        00000H   _XMULDIV
+          NUM        00000H   _XMUL
+          NUM        00000H   _FLASH
+          NUM        00000H   _RAMFUNC
+          NUM        00001H   _MIRROR
+          NUM        00001H   _ESCOPY
+          NUM        00001H   _LIBCNSTFAR
+          NUM        00001H   _ORGFUNC
+          NUM        00001H   _CODEFAR
+          NUM        00000H   _DATAFAR
+          NUM        00000H   _DHRYSTONE
+          NUM        00001H   _PATCH01
+          NUM        02000H   ITBLTOP
+          CSEG                @@VECT16
+@rom
+          MOD                 @vect18
+          NUM        00001H   MIRROR
+          NUM        00000H   _STATIC
+          NUM        00000H   _PASCAL
+          NUM        00000H   _SAVERSVD
+          NUM        00000H   _OLDFUNC
+          NUM        00000H   _RL78_2
+          NUM        00000H   _XMAC
+          NUM        00000H   _XMULDIV
+          NUM        00000H   _XMUL
+          NUM        00000H   _FLASH
+          NUM        00000H   _RAMFUNC
+          NUM        00001H   _MIRROR
+          NUM        00001H   _ESCOPY
+          NUM        00001H   _LIBCNSTFAR
+          NUM        00001H   _ORGFUNC
+          NUM        00001H   _CODEFAR
+          NUM        00000H   _DATAFAR
+          NUM        00000H   _DHRYSTONE
+          NUM        00001H   _PATCH01
+          NUM        02000H   ITBLTOP
+          CSEG                @@VECT18
+@rom
+          MOD                 @vect1a
+          NUM        00001H   MIRROR
+          NUM        00000H   _STATIC
+          NUM        00000H   _PASCAL
+          NUM        00000H   _SAVERSVD
+          NUM        00000H   _OLDFUNC
+          NUM        00000H   _RL78_2
+          NUM        00000H   _XMAC
+          NUM        00000H   _XMULDIV
+          NUM        00000H   _XMUL
+          NUM        00000H   _FLASH
+          NUM        00000H   _RAMFUNC
+          NUM        00001H   _MIRROR
+          NUM        00001H   _ESCOPY
+          NUM        00001H   _LIBCNSTFAR
+          NUM        00001H   _ORGFUNC
+          NUM        00001H   _CODEFAR
+          NUM        00000H   _DATAFAR
+          NUM        00000H   _DHRYSTONE
+          NUM        00001H   _PATCH01
+          NUM        02000H   ITBLTOP
+          CSEG                @@VECT1A
+@rom
+          MOD                 @vect1c
+          NUM        00001H   MIRROR
+          NUM        00000H   _STATIC
+          NUM        00000H   _PASCAL
+          NUM        00000H   _SAVERSVD
+          NUM        00000H   _OLDFUNC
+          NUM        00000H   _RL78_2
+          NUM        00000H   _XMAC
+          NUM        00000H   _XMULDIV
+          NUM        00000H   _XMUL
+          NUM        00000H   _FLASH
+          NUM        00000H   _RAMFUNC
+          NUM        00001H   _MIRROR
+          NUM        00001H   _ESCOPY
+          NUM        00001H   _LIBCNSTFAR
+          NUM        00001H   _ORGFUNC
+          NUM        00001H   _CODEFAR
+          NUM        00000H   _DATAFAR
+          NUM        00000H   _DHRYSTONE
+          NUM        00001H   _PATCH01
+          NUM        02000H   ITBLTOP
+          CSEG                @@VECT1C
+@rom
+          MOD                 @vect1e
+          NUM        00001H   MIRROR
+          NUM        00000H   _STATIC
+          NUM        00000H   _PASCAL
+          NUM        00000H   _SAVERSVD
+          NUM        00000H   _OLDFUNC
+          NUM        00000H   _RL78_2
+          NUM        00000H   _XMAC
+          NUM        00000H   _XMULDIV
+          NUM        00000H   _XMUL
+          NUM        00000H   _FLASH
+          NUM        00000H   _RAMFUNC
+          NUM        00001H   _MIRROR
+          NUM        00001H   _ESCOPY
+          NUM        00001H   _LIBCNSTFAR
+          NUM        00001H   _ORGFUNC
+          NUM        00001H   _CODEFAR
+          NUM        00000H   _DATAFAR
+          NUM        00000H   _DHRYSTONE
+          NUM        00001H   _PATCH01
+          NUM        02000H   ITBLTOP
+          CSEG                @@VECT1E
+@rom
+          MOD                 @vect20
+          NUM        00001H   MIRROR
+          NUM        00000H   _STATIC
+          NUM        00000H   _PASCAL
+          NUM        00000H   _SAVERSVD
+          NUM        00000H   _OLDFUNC
+          NUM        00000H   _RL78_2
+          NUM        00000H   _XMAC
+          NUM        00000H   _XMULDIV
+          NUM        00000H   _XMUL
+          NUM        00000H   _FLASH
+          NUM        00000H   _RAMFUNC
+          NUM        00001H   _MIRROR
+          NUM        00001H   _ESCOPY
+          NUM        00001H   _LIBCNSTFAR
+          NUM        00001H   _ORGFUNC
+          NUM        00001H   _CODEFAR
+          NUM        00000H   _DATAFAR
+          NUM        00000H   _DHRYSTONE
+          NUM        00001H   _PATCH01
+          NUM        02000H   ITBLTOP
+          CSEG                @@VECT20
+@rom
+          MOD                 @vect22
+          NUM        00001H   MIRROR
+          NUM        00000H   _STATIC
+          NUM        00000H   _PASCAL
+          NUM        00000H   _SAVERSVD
+          NUM        00000H   _OLDFUNC
+          NUM        00000H   _RL78_2
+          NUM        00000H   _XMAC
+          NUM        00000H   _XMULDIV
+          NUM        00000H   _XMUL
+          NUM        00000H   _FLASH
+          NUM        00000H   _RAMFUNC
+          NUM        00001H   _MIRROR
+          NUM        00001H   _ESCOPY
+          NUM        00001H   _LIBCNSTFAR
+          NUM        00001H   _ORGFUNC
+          NUM        00001H   _CODEFAR
+          NUM        00000H   _DATAFAR
+          NUM        00000H   _DHRYSTONE
+          NUM        00001H   _PATCH01
+          NUM        02000H   ITBLTOP
+          CSEG                @@VECT22
+@rom
+          MOD                 @vect24
+          NUM        00001H   MIRROR
+          NUM        00000H   _STATIC
+          NUM        00000H   _PASCAL
+          NUM        00000H   _SAVERSVD
+          NUM        00000H   _OLDFUNC
+          NUM        00000H   _RL78_2
+          NUM        00000H   _XMAC
+          NUM        00000H   _XMULDIV
+          NUM        00000H   _XMUL
+          NUM        00000H   _FLASH
+          NUM        00000H   _RAMFUNC
+          NUM        00001H   _MIRROR
+          NUM        00001H   _ESCOPY
+          NUM        00001H   _LIBCNSTFAR
+          NUM        00001H   _ORGFUNC
+          NUM        00001H   _CODEFAR
+          NUM        00000H   _DATAFAR
+          NUM        00000H   _DHRYSTONE
+          NUM        00001H   _PATCH01
+          NUM        02000H   ITBLTOP
+          CSEG                @@VECT24
+@rom
+          MOD                 @vect26
+          NUM        00001H   MIRROR
+          NUM        00000H   _STATIC
+          NUM        00000H   _PASCAL
+          NUM        00000H   _SAVERSVD
+          NUM        00000H   _OLDFUNC
+          NUM        00000H   _RL78_2
+          NUM        00000H   _XMAC
+          NUM        00000H   _XMULDIV
+          NUM        00000H   _XMUL
+          NUM        00000H   _FLASH
+          NUM        00000H   _RAMFUNC
+          NUM        00001H   _MIRROR
+          NUM        00001H   _ESCOPY
+          NUM        00001H   _LIBCNSTFAR
+          NUM        00001H   _ORGFUNC
+          NUM        00001H   _CODEFAR
+          NUM        00000H   _DATAFAR
+          NUM        00000H   _DHRYSTONE
+          NUM        00001H   _PATCH01
+          NUM        02000H   ITBLTOP
+          CSEG                @@VECT26
+@rom
+          MOD                 @vect28
+          NUM        00001H   MIRROR
+          NUM        00000H   _STATIC
+          NUM        00000H   _PASCAL
+          NUM        00000H   _SAVERSVD
+          NUM        00000H   _OLDFUNC
+          NUM        00000H   _RL78_2
+          NUM        00000H   _XMAC
+          NUM        00000H   _XMULDIV
+          NUM        00000H   _XMUL
+          NUM        00000H   _FLASH
+          NUM        00000H   _RAMFUNC
+          NUM        00001H   _MIRROR
+          NUM        00001H   _ESCOPY
+          NUM        00001H   _LIBCNSTFAR
+          NUM        00001H   _ORGFUNC
+          NUM        00001H   _CODEFAR
+          NUM        00000H   _DATAFAR
+          NUM        00000H   _DHRYSTONE
+          NUM        00001H   _PATCH01
+          NUM        02000H   ITBLTOP
+          CSEG                @@VECT28
+@rom
+          MOD                 @vect2a
+          NUM        00001H   MIRROR
+          NUM        00000H   _STATIC
+          NUM        00000H   _PASCAL
+          NUM        00000H   _SAVERSVD
+          NUM        00000H   _OLDFUNC
+          NUM        00000H   _RL78_2
+          NUM        00000H   _XMAC
+          NUM        00000H   _XMULDIV
+          NUM        00000H   _XMUL
+          NUM        00000H   _FLASH
+          NUM        00000H   _RAMFUNC
+          NUM        00001H   _MIRROR
+          NUM        00001H   _ESCOPY
+          NUM        00001H   _LIBCNSTFAR
+          NUM        00001H   _ORGFUNC
+          NUM        00001H   _CODEFAR
+          NUM        00000H   _DATAFAR
+          NUM        00000H   _DHRYSTONE
+          NUM        00001H   _PATCH01
+          NUM        02000H   ITBLTOP
+          CSEG                @@VECT2A
+@rom
+          MOD                 @vect2c
+          NUM        00001H   MIRROR
+          NUM        00000H   _STATIC
+          NUM        00000H   _PASCAL
+          NUM        00000H   _SAVERSVD
+          NUM        00000H   _OLDFUNC
+          NUM        00000H   _RL78_2
+          NUM        00000H   _XMAC
+          NUM        00000H   _XMULDIV
+          NUM        00000H   _XMUL
+          NUM        00000H   _FLASH
+          NUM        00000H   _RAMFUNC
+          NUM        00001H   _MIRROR
+          NUM        00001H   _ESCOPY
+          NUM        00001H   _LIBCNSTFAR
+          NUM        00001H   _ORGFUNC
+          NUM        00001H   _CODEFAR
+          NUM        00000H   _DATAFAR
+          NUM        00000H   _DHRYSTONE
+          NUM        00001H   _PATCH01
+          NUM        02000H   ITBLTOP
+          CSEG                @@VECT2C
+@rom
+          MOD                 @vect2e
+          NUM        00001H   MIRROR
+          NUM        00000H   _STATIC
+          NUM        00000H   _PASCAL
+          NUM        00000H   _SAVERSVD
+          NUM        00000H   _OLDFUNC
+          NUM        00000H   _RL78_2
+          NUM        00000H   _XMAC
+          NUM        00000H   _XMULDIV
+          NUM        00000H   _XMUL
+          NUM        00000H   _FLASH
+          NUM        00000H   _RAMFUNC
+          NUM        00001H   _MIRROR
+          NUM        00001H   _ESCOPY
+          NUM        00001H   _LIBCNSTFAR
+          NUM        00001H   _ORGFUNC
+          NUM        00001H   _CODEFAR
+          NUM        00000H   _DATAFAR
+          NUM        00000H   _DHRYSTONE
+          NUM        00001H   _PATCH01
+          NUM        02000H   ITBLTOP
+          CSEG                @@VECT2E
+@rom
+          MOD                 @vect30
+          NUM        00001H   MIRROR
+          NUM        00000H   _STATIC
+          NUM        00000H   _PASCAL
+          NUM        00000H   _SAVERSVD
+          NUM        00000H   _OLDFUNC
+          NUM        00000H   _RL78_2
+          NUM        00000H   _XMAC
+          NUM        00000H   _XMULDIV
+          NUM        00000H   _XMUL
+          NUM        00000H   _FLASH
+          NUM        00000H   _RAMFUNC
+          NUM        00001H   _MIRROR
+          NUM        00001H   _ESCOPY
+          NUM        00001H   _LIBCNSTFAR
+          NUM        00001H   _ORGFUNC
+          NUM        00001H   _CODEFAR
+          NUM        00000H   _DATAFAR
+          NUM        00000H   _DHRYSTONE
+          NUM        00001H   _PATCH01
+          NUM        02000H   ITBLTOP
+          CSEG                @@VECT30
+@rom
+          MOD                 @vect32
+          NUM        00001H   MIRROR
+          NUM        00000H   _STATIC
+          NUM        00000H   _PASCAL
+          NUM        00000H   _SAVERSVD
+          NUM        00000H   _OLDFUNC
+          NUM        00000H   _RL78_2
+          NUM        00000H   _XMAC
+          NUM        00000H   _XMULDIV
+          NUM        00000H   _XMUL
+          NUM        00000H   _FLASH
+          NUM        00000H   _RAMFUNC
+          NUM        00001H   _MIRROR
+          NUM        00001H   _ESCOPY
+          NUM        00001H   _LIBCNSTFAR
+          NUM        00001H   _ORGFUNC
+          NUM        00001H   _CODEFAR
+          NUM        00000H   _DATAFAR
+          NUM        00000H   _DHRYSTONE
+          NUM        00001H   _PATCH01
+          NUM        02000H   ITBLTOP
+          CSEG                @@VECT32
+@rom
+          MOD                 @vect34
+          NUM        00001H   MIRROR
+          NUM        00000H   _STATIC
+          NUM        00000H   _PASCAL
+          NUM        00000H   _SAVERSVD
+          NUM        00000H   _OLDFUNC
+          NUM        00000H   _RL78_2
+          NUM        00000H   _XMAC
+          NUM        00000H   _XMULDIV
+          NUM        00000H   _XMUL
+          NUM        00000H   _FLASH
+          NUM        00000H   _RAMFUNC
+          NUM        00001H   _MIRROR
+          NUM        00001H   _ESCOPY
+          NUM        00001H   _LIBCNSTFAR
+          NUM        00001H   _ORGFUNC
+          NUM        00001H   _CODEFAR
+          NUM        00000H   _DATAFAR
+          NUM        00000H   _DHRYSTONE
+          NUM        00001H   _PATCH01
+          NUM        02000H   ITBLTOP
+          CSEG                @@VECT34
+@rom
+          MOD                 @vect36
+          NUM        00001H   MIRROR
+          NUM        00000H   _STATIC
+          NUM        00000H   _PASCAL
+          NUM        00000H   _SAVERSVD
+          NUM        00000H   _OLDFUNC
+          NUM        00000H   _RL78_2
+          NUM        00000H   _XMAC
+          NUM        00000H   _XMULDIV
+          NUM        00000H   _XMUL
+          NUM        00000H   _FLASH
+          NUM        00000H   _RAMFUNC
+          NUM        00001H   _MIRROR
+          NUM        00001H   _ESCOPY
+          NUM        00001H   _LIBCNSTFAR
+          NUM        00001H   _ORGFUNC
+          NUM        00001H   _CODEFAR
+          NUM        00000H   _DATAFAR
+          NUM        00000H   _DHRYSTONE
+          NUM        00001H   _PATCH01
+          NUM        02000H   ITBLTOP
+          CSEG                @@VECT36
+@rom
+          MOD                 @vect38
+          NUM        00001H   MIRROR
+          NUM        00000H   _STATIC
+          NUM        00000H   _PASCAL
+          NUM        00000H   _SAVERSVD
+          NUM        00000H   _OLDFUNC
+          NUM        00000H   _RL78_2
+          NUM        00000H   _XMAC
+          NUM        00000H   _XMULDIV
+          NUM        00000H   _XMUL
+          NUM        00000H   _FLASH
+          NUM        00000H   _RAMFUNC
+          NUM        00001H   _MIRROR
+          NUM        00001H   _ESCOPY
+          NUM        00001H   _LIBCNSTFAR
+          NUM        00001H   _ORGFUNC
+          NUM        00001H   _CODEFAR
+          NUM        00000H   _DATAFAR
+          NUM        00000H   _DHRYSTONE
+          NUM        00001H   _PATCH01
+          NUM        02000H   ITBLTOP
+          CSEG                @@VECT38
+@rom
+          MOD                 @vect3a
+          NUM        00001H   MIRROR
+          NUM        00000H   _STATIC
+          NUM        00000H   _PASCAL
+          NUM        00000H   _SAVERSVD
+          NUM        00000H   _OLDFUNC
+          NUM        00000H   _RL78_2
+          NUM        00000H   _XMAC
+          NUM        00000H   _XMULDIV
+          NUM        00000H   _XMUL
+          NUM        00000H   _FLASH
+          NUM        00000H   _RAMFUNC
+          NUM        00001H   _MIRROR
+          NUM        00001H   _ESCOPY
+          NUM        00001H   _LIBCNSTFAR
+          NUM        00001H   _ORGFUNC
+          NUM        00001H   _CODEFAR
+          NUM        00000H   _DATAFAR
+          NUM        00000H   _DHRYSTONE
+          NUM        00001H   _PATCH01
+          NUM        02000H   ITBLTOP
+          CSEG                @@VECT3A
+@rom
+          MOD                 @vect3c
+          NUM        00001H   MIRROR
+          NUM        00000H   _STATIC
+          NUM        00000H   _PASCAL
+          NUM        00000H   _SAVERSVD
+          NUM        00000H   _OLDFUNC
+          NUM        00000H   _RL78_2
+          NUM        00000H   _XMAC
+          NUM        00000H   _XMULDIV
+          NUM        00000H   _XMUL
+          NUM        00000H   _FLASH
+          NUM        00000H   _RAMFUNC
+          NUM        00001H   _MIRROR
+          NUM        00001H   _ESCOPY
+          NUM        00001H   _LIBCNSTFAR
+          NUM        00001H   _ORGFUNC
+          NUM        00001H   _CODEFAR
+          NUM        00000H   _DATAFAR
+          NUM        00000H   _DHRYSTONE
+          NUM        00001H   _PATCH01
+          NUM        02000H   ITBLTOP
+          CSEG                @@VECT3C
+@rom
+          MOD                 @vect3e
+          NUM        00001H   MIRROR
+          NUM        00000H   _STATIC
+          NUM        00000H   _PASCAL
+          NUM        00000H   _SAVERSVD
+          NUM        00000H   _OLDFUNC
+          NUM        00000H   _RL78_2
+          NUM        00000H   _XMAC
+          NUM        00000H   _XMULDIV
+          NUM        00000H   _XMUL
+          NUM        00000H   _FLASH
+          NUM        00000H   _RAMFUNC
+          NUM        00001H   _MIRROR
+          NUM        00001H   _ESCOPY
+          NUM        00001H   _LIBCNSTFAR
+          NUM        00001H   _ORGFUNC
+          NUM        00001H   _CODEFAR
+          NUM        00000H   _DATAFAR
+          NUM        00000H   _DHRYSTONE
+          NUM        00001H   _PATCH01
+          NUM        02000H   ITBLTOP
+          CSEG                @@VECT3E
+@rom
+          MOD                 @vect40
+          NUM        00001H   MIRROR
+          NUM        00000H   _STATIC
+          NUM        00000H   _PASCAL
+          NUM        00000H   _SAVERSVD
+          NUM        00000H   _OLDFUNC
+          NUM        00000H   _RL78_2
+          NUM        00000H   _XMAC
+          NUM        00000H   _XMULDIV
+          NUM        00000H   _XMUL
+          NUM        00000H   _FLASH
+          NUM        00000H   _RAMFUNC
+          NUM        00001H   _MIRROR
+          NUM        00001H   _ESCOPY
+          NUM        00001H   _LIBCNSTFAR
+          NUM        00001H   _ORGFUNC
+          NUM        00001H   _CODEFAR
+          NUM        00000H   _DATAFAR
+          NUM        00000H   _DHRYSTONE
+          NUM        00001H   _PATCH01
+          NUM        02000H   ITBLTOP
+          CSEG                @@VECT40
+@rom
+          MOD                 @vect42
+          NUM        00001H   MIRROR
+          NUM        00000H   _STATIC
+          NUM        00000H   _PASCAL
+          NUM        00000H   _SAVERSVD
+          NUM        00000H   _OLDFUNC
+          NUM        00000H   _RL78_2
+          NUM        00000H   _XMAC
+          NUM        00000H   _XMULDIV
+          NUM        00000H   _XMUL
+          NUM        00000H   _FLASH
+          NUM        00000H   _RAMFUNC
+          NUM        00001H   _MIRROR
+          NUM        00001H   _ESCOPY
+          NUM        00001H   _LIBCNSTFAR
+          NUM        00001H   _ORGFUNC
+          NUM        00001H   _CODEFAR
+          NUM        00000H   _DATAFAR
+          NUM        00000H   _DHRYSTONE
+          NUM        00001H   _PATCH01
+          NUM        02000H   ITBLTOP
+          CSEG                @@VECT42
+@rom
+          MOD                 @vect44
+          NUM        00001H   MIRROR
+          NUM        00000H   _STATIC
+          NUM        00000H   _PASCAL
+          NUM        00000H   _SAVERSVD
+          NUM        00000H   _OLDFUNC
+          NUM        00000H   _RL78_2
+          NUM        00000H   _XMAC
+          NUM        00000H   _XMULDIV
+          NUM        00000H   _XMUL
+          NUM        00000H   _FLASH
+          NUM        00000H   _RAMFUNC
+          NUM        00001H   _MIRROR
+          NUM        00001H   _ESCOPY
+          NUM        00001H   _LIBCNSTFAR
+          NUM        00001H   _ORGFUNC
+          NUM        00001H   _CODEFAR
+          NUM        00000H   _DATAFAR
+          NUM        00000H   _DHRYSTONE
+          NUM        00001H   _PATCH01
+          NUM        02000H   ITBLTOP
+          CSEG                @@VECT44
+@rom
+          MOD                 @vect46
+          NUM        00001H   MIRROR
+          NUM        00000H   _STATIC
+          NUM        00000H   _PASCAL
+          NUM        00000H   _SAVERSVD
+          NUM        00000H   _OLDFUNC
+          NUM        00000H   _RL78_2
+          NUM        00000H   _XMAC
+          NUM        00000H   _XMULDIV
+          NUM        00000H   _XMUL
+          NUM        00000H   _FLASH
+          NUM        00000H   _RAMFUNC
+          NUM        00001H   _MIRROR
+          NUM        00001H   _ESCOPY
+          NUM        00001H   _LIBCNSTFAR
+          NUM        00001H   _ORGFUNC
+          NUM        00001H   _CODEFAR
+          NUM        00000H   _DATAFAR
+          NUM        00000H   _DHRYSTONE
+          NUM        00001H   _PATCH01
+          NUM        02000H   ITBLTOP
+          CSEG                @@VECT46
+@rom
+          MOD                 @vect48
+          NUM        00001H   MIRROR
+          NUM        00000H   _STATIC
+          NUM        00000H   _PASCAL
+          NUM        00000H   _SAVERSVD
+          NUM        00000H   _OLDFUNC
+          NUM        00000H   _RL78_2
+          NUM        00000H   _XMAC
+          NUM        00000H   _XMULDIV
+          NUM        00000H   _XMUL
+          NUM        00000H   _FLASH
+          NUM        00000H   _RAMFUNC
+          NUM        00001H   _MIRROR
+          NUM        00001H   _ESCOPY
+          NUM        00001H   _LIBCNSTFAR
+          NUM        00001H   _ORGFUNC
+          NUM        00001H   _CODEFAR
+          NUM        00000H   _DATAFAR
+          NUM        00000H   _DHRYSTONE
+          NUM        00001H   _PATCH01
+          NUM        02000H   ITBLTOP
+          CSEG                @@VECT48
+@rom
+          MOD                 @vect4a
+          NUM        00001H   MIRROR
+          NUM        00000H   _STATIC
+          NUM        00000H   _PASCAL
+          NUM        00000H   _SAVERSVD
+          NUM        00000H   _OLDFUNC
+          NUM        00000H   _RL78_2
+          NUM        00000H   _XMAC
+          NUM        00000H   _XMULDIV
+          NUM        00000H   _XMUL
+          NUM        00000H   _FLASH
+          NUM        00000H   _RAMFUNC
+          NUM        00001H   _MIRROR
+          NUM        00001H   _ESCOPY
+          NUM        00001H   _LIBCNSTFAR
+          NUM        00001H   _ORGFUNC
+          NUM        00001H   _CODEFAR
+          NUM        00000H   _DATAFAR
+          NUM        00000H   _DHRYSTONE
+          NUM        00001H   _PATCH01
+          NUM        02000H   ITBLTOP
+          CSEG                @@VECT4A
+@rom
+          MOD                 @vect4c
+          NUM        00001H   MIRROR
+          NUM        00000H   _STATIC
+          NUM        00000H   _PASCAL
+          NUM        00000H   _SAVERSVD
+          NUM        00000H   _OLDFUNC
+          NUM        00000H   _RL78_2
+          NUM        00000H   _XMAC
+          NUM        00000H   _XMULDIV
+          NUM        00000H   _XMUL
+          NUM        00000H   _FLASH
+          NUM        00000H   _RAMFUNC
+          NUM        00001H   _MIRROR
+          NUM        00001H   _ESCOPY
+          NUM        00001H   _LIBCNSTFAR
+          NUM        00001H   _ORGFUNC
+          NUM        00001H   _CODEFAR
+          NUM        00000H   _DATAFAR
+          NUM        00000H   _DHRYSTONE
+          NUM        00001H   _PATCH01
+          NUM        02000H   ITBLTOP
+          CSEG                @@VECT4C
+@rom
+          MOD                 @vect4e
+          NUM        00001H   MIRROR
+          NUM        00000H   _STATIC
+          NUM        00000H   _PASCAL
+          NUM        00000H   _SAVERSVD
+          NUM        00000H   _OLDFUNC
+          NUM        00000H   _RL78_2
+          NUM        00000H   _XMAC
+          NUM        00000H   _XMULDIV
+          NUM        00000H   _XMUL
+          NUM        00000H   _FLASH
+          NUM        00000H   _RAMFUNC
+          NUM        00001H   _MIRROR
+          NUM        00001H   _ESCOPY
+          NUM        00001H   _LIBCNSTFAR
+          NUM        00001H   _ORGFUNC
+          NUM        00001H   _CODEFAR
+          NUM        00000H   _DATAFAR
+          NUM        00000H   _DHRYSTONE
+          NUM        00001H   _PATCH01
+          NUM        02000H   ITBLTOP
+          CSEG                @@VECT4E
+@rom
+          MOD                 @vect50
+          NUM        00001H   MIRROR
+          NUM        00000H   _STATIC
+          NUM        00000H   _PASCAL
+          NUM        00000H   _SAVERSVD
+          NUM        00000H   _OLDFUNC
+          NUM        00000H   _RL78_2
+          NUM        00000H   _XMAC
+          NUM        00000H   _XMULDIV
+          NUM        00000H   _XMUL
+          NUM        00000H   _FLASH
+          NUM        00000H   _RAMFUNC
+          NUM        00001H   _MIRROR
+          NUM        00001H   _ESCOPY
+          NUM        00001H   _LIBCNSTFAR
+          NUM        00001H   _ORGFUNC
+          NUM        00001H   _CODEFAR
+          NUM        00000H   _DATAFAR
+          NUM        00000H   _DHRYSTONE
+          NUM        00001H   _PATCH01
+          NUM        02000H   ITBLTOP
+          CSEG                @@VECT50
+@rom
+          MOD                 @vect52
+          NUM        00001H   MIRROR
+          NUM        00000H   _STATIC
+          NUM        00000H   _PASCAL
+          NUM        00000H   _SAVERSVD
+          NUM        00000H   _OLDFUNC
+          NUM        00000H   _RL78_2
+          NUM        00000H   _XMAC
+          NUM        00000H   _XMULDIV
+          NUM        00000H   _XMUL
+          NUM        00000H   _FLASH
+          NUM        00000H   _RAMFUNC
+          NUM        00001H   _MIRROR
+          NUM        00001H   _ESCOPY
+          NUM        00001H   _LIBCNSTFAR
+          NUM        00001H   _ORGFUNC
+          NUM        00001H   _CODEFAR
+          NUM        00000H   _DATAFAR
+          NUM        00000H   _DHRYSTONE
+          NUM        00001H   _PATCH01
+          NUM        02000H   ITBLTOP
+          CSEG                @@VECT52
+@rom
+          MOD                 @vect54
+          NUM        00001H   MIRROR
+          NUM        00000H   _STATIC
+          NUM        00000H   _PASCAL
+          NUM        00000H   _SAVERSVD
+          NUM        00000H   _OLDFUNC
+          NUM        00000H   _RL78_2
+          NUM        00000H   _XMAC
+          NUM        00000H   _XMULDIV
+          NUM        00000H   _XMUL
+          NUM        00000H   _FLASH
+          NUM        00000H   _RAMFUNC
+          NUM        00001H   _MIRROR
+          NUM        00001H   _ESCOPY
+          NUM        00001H   _LIBCNSTFAR
+          NUM        00001H   _ORGFUNC
+          NUM        00001H   _CODEFAR
+          NUM        00000H   _DATAFAR
+          NUM        00000H   _DHRYSTONE
+          NUM        00001H   _PATCH01
+          NUM        02000H   ITBLTOP
+          CSEG                @@VECT54
+@rom
+          MOD                 @vect56
+          NUM        00001H   MIRROR
+          NUM        00000H   _STATIC
+          NUM        00000H   _PASCAL
+          NUM        00000H   _SAVERSVD
+          NUM        00000H   _OLDFUNC
+          NUM        00000H   _RL78_2
+          NUM        00000H   _XMAC
+          NUM        00000H   _XMULDIV
+          NUM        00000H   _XMUL
+          NUM        00000H   _FLASH
+          NUM        00000H   _RAMFUNC
+          NUM        00001H   _MIRROR
+          NUM        00001H   _ESCOPY
+          NUM        00001H   _LIBCNSTFAR
+          NUM        00001H   _ORGFUNC
+          NUM        00001H   _CODEFAR
+          NUM        00000H   _DATAFAR
+          NUM        00000H   _DHRYSTONE
+          NUM        00001H   _PATCH01
+          NUM        02000H   ITBLTOP
+          CSEG                @@VECT56
+@rom
+          MOD                 @vect58
+          NUM        00001H   MIRROR
+          NUM        00000H   _STATIC
+          NUM        00000H   _PASCAL
+          NUM        00000H   _SAVERSVD
+          NUM        00000H   _OLDFUNC
+          NUM        00000H   _RL78_2
+          NUM        00000H   _XMAC
+          NUM        00000H   _XMULDIV
+          NUM        00000H   _XMUL
+          NUM        00000H   _FLASH
+          NUM        00000H   _RAMFUNC
+          NUM        00001H   _MIRROR
+          NUM        00001H   _ESCOPY
+          NUM        00001H   _LIBCNSTFAR
+          NUM        00001H   _ORGFUNC
+          NUM        00001H   _CODEFAR
+          NUM        00000H   _DATAFAR
+          NUM        00000H   _DHRYSTONE
+          NUM        00001H   _PATCH01
+          NUM        02000H   ITBLTOP
+          CSEG                @@VECT58
+@rom
+          MOD                 @vect5a
+          NUM        00001H   MIRROR
+          NUM        00000H   _STATIC
+          NUM        00000H   _PASCAL
+          NUM        00000H   _SAVERSVD
+          NUM        00000H   _OLDFUNC
+          NUM        00000H   _RL78_2
+          NUM        00000H   _XMAC
+          NUM        00000H   _XMULDIV
+          NUM        00000H   _XMUL
+          NUM        00000H   _FLASH
+          NUM        00000H   _RAMFUNC
+          NUM        00001H   _MIRROR
+          NUM        00001H   _ESCOPY
+          NUM        00001H   _LIBCNSTFAR
+          NUM        00001H   _ORGFUNC
+          NUM        00001H   _CODEFAR
+          NUM        00000H   _DATAFAR
+          NUM        00000H   _DHRYSTONE
+          NUM        00001H   _PATCH01
+          NUM        02000H   ITBLTOP
+          CSEG                @@VECT5A
+@rom
+          MOD                 @vect5c
+          NUM        00001H   MIRROR
+          NUM        00000H   _STATIC
+          NUM        00000H   _PASCAL
+          NUM        00000H   _SAVERSVD
+          NUM        00000H   _OLDFUNC
+          NUM        00000H   _RL78_2
+          NUM        00000H   _XMAC
+          NUM        00000H   _XMULDIV
+          NUM        00000H   _XMUL
+          NUM        00000H   _FLASH
+          NUM        00000H   _RAMFUNC
+          NUM        00001H   _MIRROR
+          NUM        00001H   _ESCOPY
+          NUM        00001H   _LIBCNSTFAR
+          NUM        00001H   _ORGFUNC
+          NUM        00001H   _CODEFAR
+          NUM        00000H   _DATAFAR
+          NUM        00000H   _DHRYSTONE
+          NUM        00001H   _PATCH01
+          NUM        02000H   ITBLTOP
+          CSEG                @@VECT5C
+@rom
+          MOD                 @vect5e
+          NUM        00001H   MIRROR
+          NUM        00000H   _STATIC
+          NUM        00000H   _PASCAL
+          NUM        00000H   _SAVERSVD
+          NUM        00000H   _OLDFUNC
+          NUM        00000H   _RL78_2
+          NUM        00000H   _XMAC
+          NUM        00000H   _XMULDIV
+          NUM        00000H   _XMUL
+          NUM        00000H   _FLASH
+          NUM        00000H   _RAMFUNC
+          NUM        00001H   _MIRROR
+          NUM        00001H   _ESCOPY
+          NUM        00001H   _LIBCNSTFAR
+          NUM        00001H   _ORGFUNC
+          NUM        00001H   _CODEFAR
+          NUM        00000H   _DATAFAR
+          NUM        00000H   _DHRYSTONE
+          NUM        00001H   _PATCH01
+          NUM        02000H   ITBLTOP
+          CSEG                @@VECT5E
+@rom
+          MOD                 @vect60
+          NUM        00001H   MIRROR
+          NUM        00000H   _STATIC
+          NUM        00000H   _PASCAL
+          NUM        00000H   _SAVERSVD
+          NUM        00000H   _OLDFUNC
+          NUM        00000H   _RL78_2
+          NUM        00000H   _XMAC
+          NUM        00000H   _XMULDIV
+          NUM        00000H   _XMUL
+          NUM        00000H   _FLASH
+          NUM        00000H   _RAMFUNC
+          NUM        00001H   _MIRROR
+          NUM        00001H   _ESCOPY
+          NUM        00001H   _LIBCNSTFAR
+          NUM        00001H   _ORGFUNC
+          NUM        00001H   _CODEFAR
+          NUM        00000H   _DATAFAR
+          NUM        00000H   _DHRYSTONE
+          NUM        00001H   _PATCH01
+          NUM        02000H   ITBLTOP
+          CSEG                @@VECT60
+@rom
+          MOD                 @vect62
+          NUM        00001H   MIRROR
+          NUM        00000H   _STATIC
+          NUM        00000H   _PASCAL
+          NUM        00000H   _SAVERSVD
+          NUM        00000H   _OLDFUNC
+          NUM        00000H   _RL78_2
+          NUM        00000H   _XMAC
+          NUM        00000H   _XMULDIV
+          NUM        00000H   _XMUL
+          NUM        00000H   _FLASH
+          NUM        00000H   _RAMFUNC
+          NUM        00001H   _MIRROR
+          NUM        00001H   _ESCOPY
+          NUM        00001H   _LIBCNSTFAR
+          NUM        00001H   _ORGFUNC
+          NUM        00001H   _CODEFAR
+          NUM        00000H   _DATAFAR
+          NUM        00000H   _DHRYSTONE
+          NUM        00001H   _PATCH01
+          NUM        02000H   ITBLTOP
+          CSEG                @@VECT62
+@rom
+          MOD                 @vect64
+          NUM        00001H   MIRROR
+          NUM        00000H   _STATIC
+          NUM        00000H   _PASCAL
+          NUM        00000H   _SAVERSVD
+          NUM        00000H   _OLDFUNC
+          NUM        00000H   _RL78_2
+          NUM        00000H   _XMAC
+          NUM        00000H   _XMULDIV
+          NUM        00000H   _XMUL
+          NUM        00000H   _FLASH
+          NUM        00000H   _RAMFUNC
+          NUM        00001H   _MIRROR
+          NUM        00001H   _ESCOPY
+          NUM        00001H   _LIBCNSTFAR
+          NUM        00001H   _ORGFUNC
+          NUM        00001H   _CODEFAR
+          NUM        00000H   _DATAFAR
+          NUM        00000H   _DHRYSTONE
+          NUM        00001H   _PATCH01
+          NUM        02000H   ITBLTOP
+          CSEG                @@VECT64
+@rom
+          MOD                 @vect66
+          NUM        00001H   MIRROR
+          NUM        00000H   _STATIC
+          NUM        00000H   _PASCAL
+          NUM        00000H   _SAVERSVD
+          NUM        00000H   _OLDFUNC
+          NUM        00000H   _RL78_2
+          NUM        00000H   _XMAC
+          NUM        00000H   _XMULDIV
+          NUM        00000H   _XMUL
+          NUM        00000H   _FLASH
+          NUM        00000H   _RAMFUNC
+          NUM        00001H   _MIRROR
+          NUM        00001H   _ESCOPY
+          NUM        00001H   _LIBCNSTFAR
+          NUM        00001H   _ORGFUNC
+          NUM        00001H   _CODEFAR
+          NUM        00000H   _DATAFAR
+          NUM        00000H   _DHRYSTONE
+          NUM        00001H   _PATCH01
+          NUM        02000H   ITBLTOP
+          CSEG                @@VECT66
+@rom
+          MOD                 @vect68
+          NUM        00001H   MIRROR
+          NUM        00000H   _STATIC
+          NUM        00000H   _PASCAL
+          NUM        00000H   _SAVERSVD
+          NUM        00000H   _OLDFUNC
+          NUM        00000H   _RL78_2
+          NUM        00000H   _XMAC
+          NUM        00000H   _XMULDIV
+          NUM        00000H   _XMUL
+          NUM        00000H   _FLASH
+          NUM        00000H   _RAMFUNC
+          NUM        00001H   _MIRROR
+          NUM        00001H   _ESCOPY
+          NUM        00001H   _LIBCNSTFAR
+          NUM        00001H   _ORGFUNC
+          NUM        00001H   _CODEFAR
+          NUM        00000H   _DATAFAR
+          NUM        00000H   _DHRYSTONE
+          NUM        00001H   _PATCH01
+          NUM        02000H   ITBLTOP
+          CSEG                @@VECT68
+@rom
+          MOD                 @vect6a
+          NUM        00001H   MIRROR
+          NUM        00000H   _STATIC
+          NUM        00000H   _PASCAL
+          NUM        00000H   _SAVERSVD
+          NUM        00000H   _OLDFUNC
+          NUM        00000H   _RL78_2
+          NUM        00000H   _XMAC
+          NUM        00000H   _XMULDIV
+          NUM        00000H   _XMUL
+          NUM        00000H   _FLASH
+          NUM        00000H   _RAMFUNC
+          NUM        00001H   _MIRROR
+          NUM        00001H   _ESCOPY
+          NUM        00001H   _LIBCNSTFAR
+          NUM        00001H   _ORGFUNC
+          NUM        00001H   _CODEFAR
+          NUM        00000H   _DATAFAR
+          NUM        00000H   _DHRYSTONE
+          NUM        00001H   _PATCH01
+          NUM        02000H   ITBLTOP
+          CSEG                @@VECT6A
+@rom
+          MOD                 @vect6c
+          NUM        00001H   MIRROR
+          NUM        00000H   _STATIC
+          NUM        00000H   _PASCAL
+          NUM        00000H   _SAVERSVD
+          NUM        00000H   _OLDFUNC
+          NUM        00000H   _RL78_2
+          NUM        00000H   _XMAC
+          NUM        00000H   _XMULDIV
+          NUM        00000H   _XMUL
+          NUM        00000H   _FLASH
+          NUM        00000H   _RAMFUNC
+          NUM        00001H   _MIRROR
+          NUM        00001H   _ESCOPY
+          NUM        00001H   _LIBCNSTFAR
+          NUM        00001H   _ORGFUNC
+          NUM        00001H   _CODEFAR
+          NUM        00000H   _DATAFAR
+          NUM        00000H   _DHRYSTONE
+          NUM        00001H   _PATCH01
+          NUM        02000H   ITBLTOP
+          CSEG                @@VECT6C
+@rom
+          MOD                 @vect6e
+          NUM        00001H   MIRROR
+          NUM        00000H   _STATIC
+          NUM        00000H   _PASCAL
+          NUM        00000H   _SAVERSVD
+          NUM        00000H   _OLDFUNC
+          NUM        00000H   _RL78_2
+          NUM        00000H   _XMAC
+          NUM        00000H   _XMULDIV
+          NUM        00000H   _XMUL
+          NUM        00000H   _FLASH
+          NUM        00000H   _RAMFUNC
+          NUM        00001H   _MIRROR
+          NUM        00001H   _ESCOPY
+          NUM        00001H   _LIBCNSTFAR
+          NUM        00001H   _ORGFUNC
+          NUM        00001H   _CODEFAR
+          NUM        00000H   _DATAFAR
+          NUM        00000H   _DHRYSTONE
+          NUM        00001H   _PATCH01
+          NUM        02000H   ITBLTOP
+          CSEG                @@VECT6E
+@rom
+          MOD                 @vect70
+          NUM        00001H   MIRROR
+          NUM        00000H   _STATIC
+          NUM        00000H   _PASCAL
+          NUM        00000H   _SAVERSVD
+          NUM        00000H   _OLDFUNC
+          NUM        00000H   _RL78_2
+          NUM        00000H   _XMAC
+          NUM        00000H   _XMULDIV
+          NUM        00000H   _XMUL
+          NUM        00000H   _FLASH
+          NUM        00000H   _RAMFUNC
+          NUM        00001H   _MIRROR
+          NUM        00001H   _ESCOPY
+          NUM        00001H   _LIBCNSTFAR
+          NUM        00001H   _ORGFUNC
+          NUM        00001H   _CODEFAR
+          NUM        00000H   _DATAFAR
+          NUM        00000H   _DHRYSTONE
+          NUM        00001H   _PATCH01
+          NUM        02000H   ITBLTOP
+          CSEG                @@VECT70
+@rom
+          MOD                 @vect72
+          NUM        00001H   MIRROR
+          NUM        00000H   _STATIC
+          NUM        00000H   _PASCAL
+          NUM        00000H   _SAVERSVD
+          NUM        00000H   _OLDFUNC
+          NUM        00000H   _RL78_2
+          NUM        00000H   _XMAC
+          NUM        00000H   _XMULDIV
+          NUM        00000H   _XMUL
+          NUM        00000H   _FLASH
+          NUM        00000H   _RAMFUNC
+          NUM        00001H   _MIRROR
+          NUM        00001H   _ESCOPY
+          NUM        00001H   _LIBCNSTFAR
+          NUM        00001H   _ORGFUNC
+          NUM        00001H   _CODEFAR
+          NUM        00000H   _DATAFAR
+          NUM        00000H   _DHRYSTONE
+          NUM        00001H   _PATCH01
+          NUM        02000H   ITBLTOP
+          CSEG                @@VECT72
+@rom
+          MOD                 @vect74
+          NUM        00001H   MIRROR
+          NUM        00000H   _STATIC
+          NUM        00000H   _PASCAL
+          NUM        00000H   _SAVERSVD
+          NUM        00000H   _OLDFUNC
+          NUM        00000H   _RL78_2
+          NUM        00000H   _XMAC
+          NUM        00000H   _XMULDIV
+          NUM        00000H   _XMUL
+          NUM        00000H   _FLASH
+          NUM        00000H   _RAMFUNC
+          NUM        00001H   _MIRROR
+          NUM        00001H   _ESCOPY
+          NUM        00001H   _LIBCNSTFAR
+          NUM        00001H   _ORGFUNC
+          NUM        00001H   _CODEFAR
+          NUM        00000H   _DATAFAR
+          NUM        00000H   _DHRYSTONE
+          NUM        00001H   _PATCH01
+          NUM        02000H   ITBLTOP
+          CSEG                @@VECT74
+@rom
+          MOD                 @vect76
+          NUM        00001H   MIRROR
+          NUM        00000H   _STATIC
+          NUM        00000H   _PASCAL
+          NUM        00000H   _SAVERSVD
+          NUM        00000H   _OLDFUNC
+          NUM        00000H   _RL78_2
+          NUM        00000H   _XMAC
+          NUM        00000H   _XMULDIV
+          NUM        00000H   _XMUL
+          NUM        00000H   _FLASH
+          NUM        00000H   _RAMFUNC
+          NUM        00001H   _MIRROR
+          NUM        00001H   _ESCOPY
+          NUM        00001H   _LIBCNSTFAR
+          NUM        00001H   _ORGFUNC
+          NUM        00001H   _CODEFAR
+          NUM        00000H   _DATAFAR
+          NUM        00000H   _DHRYSTONE
+          NUM        00001H   _PATCH01
+          NUM        02000H   ITBLTOP
+          CSEG                @@VECT76
+@rom
+          MOD                 @vect78
+          NUM        00001H   MIRROR
+          NUM        00000H   _STATIC
+          NUM        00000H   _PASCAL
+          NUM        00000H   _SAVERSVD
+          NUM        00000H   _OLDFUNC
+          NUM        00000H   _RL78_2
+          NUM        00000H   _XMAC
+          NUM        00000H   _XMULDIV
+          NUM        00000H   _XMUL
+          NUM        00000H   _FLASH
+          NUM        00000H   _RAMFUNC
+          NUM        00001H   _MIRROR
+          NUM        00001H   _ESCOPY
+          NUM        00001H   _LIBCNSTFAR
+          NUM        00001H   _ORGFUNC
+          NUM        00001H   _CODEFAR
+          NUM        00000H   _DATAFAR
+          NUM        00000H   _DHRYSTONE
+          NUM        00001H   _PATCH01
+          NUM        02000H   ITBLTOP
+          CSEG                @@VECT78
+@rom
+          MOD                 @vect7a
+          NUM        00001H   MIRROR
+          NUM        00000H   _STATIC
+          NUM        00000H   _PASCAL
+          NUM        00000H   _SAVERSVD
+          NUM        00000H   _OLDFUNC
+          NUM        00000H   _RL78_2
+          NUM        00000H   _XMAC
+          NUM        00000H   _XMULDIV
+          NUM        00000H   _XMUL
+          NUM        00000H   _FLASH
+          NUM        00000H   _RAMFUNC
+          NUM        00001H   _MIRROR
+          NUM        00001H   _ESCOPY
+          NUM        00001H   _LIBCNSTFAR
+          NUM        00001H   _ORGFUNC
+          NUM        00001H   _CODEFAR
+          NUM        00000H   _DATAFAR
+          NUM        00000H   _DHRYSTONE
+          NUM        00001H   _PATCH01
+          NUM        02000H   ITBLTOP
+          CSEG                @@VECT7A
+@rom
+          MOD                 @vect7c
+          NUM        00001H   MIRROR
+          NUM        00000H   _STATIC
+          NUM        00000H   _PASCAL
+          NUM        00000H   _SAVERSVD
+          NUM        00000H   _OLDFUNC
+          NUM        00000H   _RL78_2
+          NUM        00000H   _XMAC
+          NUM        00000H   _XMULDIV
+          NUM        00000H   _XMUL
+          NUM        00000H   _FLASH
+          NUM        00000H   _RAMFUNC
+          NUM        00001H   _MIRROR
+          NUM        00001H   _ESCOPY
+          NUM        00001H   _LIBCNSTFAR
+          NUM        00001H   _ORGFUNC
+          NUM        00001H   _CODEFAR
+          NUM        00000H   _DATAFAR
+          NUM        00000H   _DHRYSTONE
+          NUM        00001H   _PATCH01
+          NUM        02000H   ITBLTOP
+          CSEG                @@VECT7C
+@rom
+          MOD                 @vect7e
+          NUM        00001H   MIRROR
+          NUM        00000H   _STATIC
+          NUM        00000H   _PASCAL
+          NUM        00000H   _SAVERSVD
+          NUM        00000H   _OLDFUNC
+          NUM        00000H   _RL78_2
+          NUM        00000H   _XMAC
+          NUM        00000H   _XMULDIV
+          NUM        00000H   _XMUL
+          NUM        00000H   _FLASH
+          NUM        00000H   _RAMFUNC
+          NUM        00001H   _MIRROR
+          NUM        00001H   _ESCOPY
+          NUM        00001H   _LIBCNSTFAR
+          NUM        00001H   _ORGFUNC
+          NUM        00001H   _CODEFAR
+          NUM        00000H   _DATAFAR
+          NUM        00000H   _DHRYSTONE
+          NUM        00001H   _PATCH01
+          NUM        02000H   ITBLTOP
+          CSEG                @@VECT7E
+@rom
+          MOD                 memcpy_f
+          CSEG                @@LCODEL
+@rom
+          MOD                 memset_f
+          CSEG                @@LCODEL
+@rom
+          MOD                 @rom
+          CSEG                @@R_INIT
+          CSEG                @@RLINIT
+          CSEG                @@R_INIS
+          DSEG                @@INIT
+          DSEG                @@INITL
+          DSEG                @@DATA
+          DSEG                @@DATAL
+          DSEG                @@INIS
+          DSEG                @@DATS
+exit
+          MOD                 exit
+          CSEG                @LECODEL
+@rome
+          MOD                 @rome
+          CSEG                @ER_INIT
+          CSEG                @ERLINIT
+          CSEG                @ER_INIS
+          DSEG                @EINIT
+          DSEG                @EINITL
+          DSEG                @EDATA
+          DSEG                @EDATAL
+          DSEG                @EINIS
+          DSEG                @EDATS
+
+
+
+*** Public symbol list ***
+
+MODULE    ATTR       VALUE    NAME
+
+@cstarte
+          ADDR       0205CH   _@cstarte
+          ADDR       020E4H   _@cende
+r_fsl_praxis01_flash_main
+                     02122H   _main
+@rom
+          NUM        FFE20H   _@STBEG
+          NUM        FFD4CH   _@STEND
+          ADDR       00EC5H   _stkinit
+exit
+          ADDR       020E4H   _exit
+@rome
+          ADDR       02122H   E?R_INIT
+          ADDR       02004H   E?RLINIT
+          ADDR       02004H   E?R_INIS
+          ADDR       FFA4CH   E?DATA
+          ADDR       FFD4CH   E?DATAL
+          ADDR       FFD4CH   E?DATS
+r_fsl_praxis01_flash_main
+                     021B4H   _R_MAIN_UserInit
+                     021D3H   _delay1ms
+                     FFA4CH   _tx_2_data
+                     FFACCH   _rx_2_data
+                     FFB4CH   _tx_1_data
+                     FFBCCH   _rx_1_data
+                     FFC4CH   _tx_0_data
+                     FFCCCH   _rx_0_data
+          SABIT      FFE21H.0 _Uart2IsSending
+                     FF9D6H   _prDuwLedTime
+                     FF9DAH   _prDuhSwNum
+r_systeminit
+                     021F8H   _R_Systeminit
+r_cg_serial
+                     02484H   _R_UART1_Receive
+                     025C2H   _R_UART2_Receive
+                     FF9FEH   _g_uart0_rx_count
+                     FFA00H   _g_uart0_rx_length
+r_cg_serial_user
+          SABIT      FFE21H.1 _updata_comflag
+r_cg_wdt
+                     02DC3H   _R_WDT_Restart
+@rom
+                     00AC0H   _R_FDL_ExecuteErase
+                     00ADAH   _R_FDL_Write_E2Prom
+                     008D9H   _Reset_Force
+r_cg_serial
+                     02302H   _R_UART0_Start
+                     02438H   _R_UART1_Start
+                     02576H   _R_UART2_Start
+r_cg_intc
+                     02E0CH   _R_INTC1_Start
+                     02E1AH   _R_INTC2_Start
+r_cg_timer
+                     02F09H   _R_TAU0_Channel0_Start
+r_cg_cgc_user
+                     0225FH   _R_CGC_Get_ResetSource
+r_cg_cgc
+                     0224EH   _R_CGC_Create
+r_cg_port
+                     02E72H   _R_PORT_Create
+r_cg_serial
+                     0226BH   _R_SAU0_Create
+                     024E3H   _R_SAU1_Create
+                     02621H   _R_IICA0_Create
+r_cg_timer
+                     02E9AH   _R_TAU0_Create
+r_cg_intc
+                     02DC9H   _R_INTC_Create
+r_cg_serial
+                     02282H   _R_UART0_Create
+                     0232DH   _R_UART0_Stop
+                     0234EH   _R_UART0_Receive
+                     02374H   _R_UART0_Send
+                     023A8H   _R_UART1_Create
+                     02463H   _R_UART1_Stop
+                     024AFH   _R_UART1_Send
+                     024F6H   _R_UART2_Create
+                     025A1H   _R_UART2_Stop
+                     025EDH   _R_UART2_Send
+                     0267AH   _R_IICA0_Stop
+                     0267FH   _R_IICA0_StopCondition
+                     02684H   _R_IICA0_Master_Send
+                     026D0H   _R_IICA0_Master_Receive
+                     FF9F8H   _gp_uart0_tx_address
+                     FF9FAH   _g_uart0_tx_count
+                     FF9FCH   _gp_uart0_rx_address
+                     FFA02H   _gp_uart1_tx_address
+                     FFA04H   _g_uart1_tx_count
+                     FFA06H   _gp_uart1_rx_address
+                     FFA08H   _g_uart1_rx_count
+                     FFA0AH   _g_uart1_rx_length
+                     FFA0CH   _gp_uart2_tx_address
+                     FFA0EH   _g_uart2_tx_count
+                     FFA10H   _gp_uart2_rx_address
+                     FFA12H   _g_uart2_rx_count
+                     FFA14H   _g_uart2_rx_length
+                     FFA16H   _g_iica0_master_status_flag
+                     FFA17H   _g_iica0_slave_status_flag
+                     FFA18H   _gp_iica0_rx_address
+                     FFA1AH   _g_iica0_rx_len
+                     FFA1CH   _g_iica0_rx_cnt
+                     FFA1EH   _gp_iica0_tx_address
+                     FFA20H   _g_iica0_tx_cnt
+r_cg_serial_user
+                     02D37H   _r_uart0_reset
+                     02D4EH   _r_uart1_reset
+                     02D67H   _r_uart2_reset
+                     02D80H   _r_uart1_header_init
+                     02D97H   _r_uart2_header_init
+                     FFA22H   _Rx_buffer
+                     FF9DCH   _Uart0Alive
+                     FF9DEH   _Uart1Num
+                     FF9DFH   _Uart2Num
+                     FFA40H   _repeat_temp
+@rom
+          ADDR       FFEDEH   _@RTARG6
+          ADDR       FFEDCH   _@RTARG4
+          ADDR       FFEDAH   _@RTARG2
+          ADDR       FFED8H   _@RTARG0
+          ADDR       FFED6H   _@SEGDE
+          ADDR       FFED4H   _@SEGAX
+r_cg_wdt
+                     02DB3H   _R_WDT_Create
+r_cg_intc
+                     02E13H   _R_INTC1_Stop
+                     02E21H   _R_INTC2_Stop
+r_cg_intc_user
+                     FFA42H   _debug_gpio
+                     FF9E0H   _temp1
+                     FF9E2H   _vga1_det
+                     FF9E6H   _temp2
+                     FF9E8H   _vga2_det
+r_cg_timer
+                     02F1AH   _R_TAU0_Channel0_Stop
+r_cg_timer_user
+                     FF9ECH   _timer1
+                     FF9EDH   _timer2
+                     FF9EEH   _vga2_state
+                     FF9EFH   _pre_vga2_state
+                     FFA44H   _pre_vga2_det
+                     FF9F0H   _vga1_state
+                     FF9F1H   _pre_vga1_state
+                     FFA48H   _pre_vga1_det
+                     FF9F2H   _Pre_Uart0Alive
+                     FF9F4H   _pre_pin13_state
+                     FF9F5H   _pin13_state
+                     FF9F6H   _pre_pin25_state
+                     FF9F7H   _pin25_state
+@rom
+                     0027AH   _prBootWriteProgram
+                     00643H   _prFslStart
+                     0066CH   _prFslEnd
+                     00671H   _prFslErrorCheck
+                     006BBH   _prUartInit
+                     00777H   _prUartEnd
+                     00784H   _prUartRcvMsg
+                     0082CH   _prUartRcvData
+                     0084BH   _prUartSendMsg
+                     00891H   _prUartSendData
+                     008ACH   _prLED1brink
+                     008F3H   _hdwinit
+                     0092BH   _boot_main
+                     0099AH   _prBootTargetStart
+                     009A1H   _Delay
+                     009BAH   _prBootTargetEnd
+                     00A09H   _prWait10clcok
+                     00205H   _prIntComWdt
+                     0020AH   _prIntComSwIntp0
+                     00A14H   _R_FDL_Init
+                     00A27H   _R_FDL_Erase
+                     00A55H   _R_FDL_Read
+                     00A79H   _R_FDL_Write
+                     00AB3H   _R_FDL_ExecuteWrite
+                     00ACDH   _R_FDL_ExecuteRead
+                     00AF7H   _r_pfdl_user
+          ADDR       000D8H   _@cstart
+          ADDR       00182H   _@cend
+          ADDR       FF798H   _@BRKADR
+          ADDR       FF79AH   _@MEMTOP
+          ADDR       FF7BAH   _@MEMBTM
+          ADDR       FF700H   _@FNCTBL
+          ADDR       FF780H   _@FNCENT
+          ADDR       FF782H   _@SEED
+          ADDR       FF786H   _@DIVR
+          ADDR       FF78AH   _@LDIVR
+          ADDR       FF792H   _@TOKPTR
+          ADDR       FF796H   _errno
+          NUM        000C0H   _@SADSIZ
+          ADDR       FFE20H   _@SADBEG
+          ADDR       00004H   _@vect04
+          ADDR       00006H   _@vect06
+          ADDR       00008H   _@vect08
+          ADDR       0000AH   _@vect0a
+          ADDR       0000CH   _@vect0c
+          ADDR       0000EH   _@vect0e
+          ADDR       00010H   _@vect10
+          ADDR       00012H   _@vect12
+          ADDR       00014H   _@vect14
+          ADDR       00016H   _@vect16
+          ADDR       00018H   _@vect18
+          ADDR       0001AH   _@vect1a
+          ADDR       0001CH   _@vect1c
+          ADDR       0001EH   _@vect1e
+          ADDR       00020H   _@vect20
+          ADDR       00022H   _@vect22
+          ADDR       00024H   _@vect24
+          ADDR       00026H   _@vect26
+          ADDR       00028H   _@vect28
+          ADDR       0002AH   _@vect2a
+          ADDR       0002CH   _@vect2c
+          ADDR       0002EH   _@vect2e
+          ADDR       00030H   _@vect30
+          ADDR       00032H   _@vect32
+          ADDR       00034H   _@vect34
+          ADDR       00036H   _@vect36
+          ADDR       00038H   _@vect38
+          ADDR       0003AH   _@vect3a
+          ADDR       0003CH   _@vect3c
+          ADDR       0003EH   _@vect3e
+          ADDR       00040H   _@vect40
+          ADDR       00042H   _@vect42
+          ADDR       00044H   _@vect44
+          ADDR       00046H   _@vect46
+          ADDR       00048H   _@vect48
+          ADDR       0004AH   _@vect4a
+          ADDR       0004CH   _@vect4c
+          ADDR       0004EH   _@vect4e
+          ADDR       00050H   _@vect50
+          ADDR       00052H   _@vect52
+          ADDR       00054H   _@vect54
+          ADDR       00056H   _@vect56
+          ADDR       00058H   _@vect58
+          ADDR       0005AH   _@vect5a
+          ADDR       0005CH   _@vect5c
+          ADDR       0005EH   _@vect5e
+          ADDR       00060H   _@vect60
+          ADDR       00062H   _@vect62
+          ADDR       00064H   _@vect64
+          ADDR       00066H   _@vect66
+          ADDR       00068H   _@vect68
+          ADDR       0006AH   _@vect6a
+          ADDR       0006CH   _@vect6c
+          ADDR       0006EH   _@vect6e
+          ADDR       00070H   _@vect70
+          ADDR       00072H   _@vect72
+          ADDR       00074H   _@vect74
+          ADDR       00076H   _@vect76
+          ADDR       00078H   _@vect78
+          ADDR       0007AH   _@vect7a
+          ADDR       0007CH   _@vect7c
+          ADDR       0007EH   _@vect7e
+          NUM        00000H   _@MAA
+          ADDR       0027AH   _?R_INIT
+          ADDR       000C4H   _?RLINIT
+          ADDR       000C4H   _?R_INIS
+          ADDR       FF7CEH   _?DATA
+          ADDR       FF9D6H   _?DATAL
+          ADDR       FF9D6H   _?DATS
+          ADDR       00F3BH   _memset_f
+          ADDR       FFED9H   _@RTARG1
+          ADDR       001A3H   @@lulsh
+          ADDR       001F1H   @@lubor
+          ADDR       00182H   @@luadd
+          ADDR       00191H   @@lusub
+          ADDR       001BEH   @@lursh
+          ADDR       00D90H   _FSL_BlankCheck
+          ADDR       00D94H   _FSL_Erase
+          ADDR       00F09H   _memcpy_f
+          ADDR       00D9CH   _FSL_Write
+          SABIT      FFE20H.0 _updata_finsh
+                     FF7C0H   _g_write_address
+                     FF7BAH   _g_write_value
+          ADDR       00D98H   _FSL_IVerify
+          ADDR       00DD2H   _FSL_SetFlashShieldWindow
+          ADDR       00B5EH   _FSL_Init
+          ADDR       00BC0H   _FSL_Open
+          ADDR       00BCCH   _FSL_PrepareFunctions
+          ADDR       00BF6H   _FSL_PrepareExtFunctions
+          ADDR       00BC6H   _FSL_Close
+                     FF7D4H   _prDubBootMode
+          ADDR       00E14H   _FSL_ForceReset
+                     FF7C2H   _g_read_value
+          ADDR       001DDH   @@lscmp
+          ADDR       00E16H   _PFDL_Open
+          ADDR       00E32H   _PFDL_Execute
+          ADDR       00E99H   _PFDL_Handler
+          ADDR       00E9EH   _PFDL_Close
+                     FF7C8H   _pfdl_version
+                     FF7CCH   _flag_ram_clash
+          ADDR       00EACH   _PFDL_GetVersionString
+          ADDR       00BE2H   _FSL_Prepare_common
+          ADDR       00C10H   _ASM_BCD_Start
+          ADDR       00D10H   _ASM_BCD_End
+          ADDR       00D10H   _ASM_BECD_Start
+          ADDR       00D90H   _ASM_BECD_End
+          ADDR       00DC6H   _ASM_RCD_Check_Flow
+          ADDR       00DAAH   _ASM_RCD_Check_Ext_Flow
+          ADDR       00DB1H   _ASM_RCD_Check_Status_Flow
+          ADDR       00DB8H   _ASM_RCD_Check_StandBy_Flow
+          ADDR       00DBFH   _ASM_RCD_Check_WakeUp_Flow
+          ADDR       00E16H   PFDL_Open
+          ADDR       00E9EH   PFDL_Close
+          ADDR       00E32H   PFDL_Execute
+          ADDR       00E99H   PFDL_Handler
+          ADDR       00EACH   PFDL_GetVersionString
+          ADDR       00EB3H   _PFDL_VERSION_STRING
+          ADDR       00182H   @@lsadd
+          ADDR       00191H   @@lssub
+          ADDR       FFEDBH   _@RTARG3
+          ADDR       001A3H   @@lslsh
+          ADDR       001F1H   @@lsbor
+          ADDR       FF7D6H   _?INIT
+          ADDR       FF9D6H   _?INITL
+          ADDR       FF9D6H   _?INIS
+          ADDR       FFED5H   _@SEGBC
+          ADDR       FFED7H   _@SEGHL
+          ADDR       FFEDDH   _@RTARG5
+          ADDR       FFEDFH   _@RTARG7
+          ADDR       FFED8H   @@CPR1
+          ADDR       FFED8H   @@FPRS
+          ADDR       FFEDCH   @@FPRXP
+          ADDR       FFEDCH   @@FPRXD
+          ADDR       FFEDDH   @@FPRXS
+          ADDR       FFEDEH   @@FPRFP
+          ADDR       FFEDEH   @@FPRF1
+          ADDR       FFEDFH   @@FPRF2
+@rome
+          ADDR       FF9F8H   E?INIT
+          ADDR       FFD4CH   E?INITL
+          ADDR       FFD4CH   E?INIS
+
+
+ Target chip : R5F100BC
+ Device file : V1.14
+

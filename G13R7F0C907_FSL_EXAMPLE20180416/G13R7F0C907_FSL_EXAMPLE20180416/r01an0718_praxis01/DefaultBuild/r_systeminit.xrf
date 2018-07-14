@@ -1,0 +1,1403 @@
+
+
+
+78K0R C Compiler V2.72 Cross reference List                                                               Date:30 Jun 2018 Page:   1
+
+Command   : -cf100bc -yC:\Program Files (x86)\Renesas Electronics\CS+\CACX\Device\RL78\Devicefile r_systeminit.c -oDefaultBuild -_ms
+            goff -nq -i. -iinc -zpsf -mm -zz02000h -zt02000h -mi0 -xDefaultBuild -g2
+In-file   : r_systeminit.c
+Xref-file : DefaultBuild\r_systeminit.xrf
+Para-file : 
+Inc-file  : [ 1] r_cg_macrodriver.h
+            [ 2] r_cg_cgc.h
+            [ 3] r_cg_port.h
+            [ 4] r_cg_intc.h
+            [ 5] r_cg_serial.h
+            [ 6] r_cg_timer.h
+            [ 7] r_cg_wdt.h
+            [ 8] r_cg_userdefine.h
+
+ATTRIB MODIFY TYPE    SYMBOL          DEFINE   REFERENCE
+
+EXTERN RWSFR  uchar   PIOR                        66
+EXTERN RWSFR  uchar   IAWCTL                      76
+EXTERN RWSFR  bit     DFLEN                       78
+EXTYP         char    int8_t             72: 1
+EXTYP         uchar   uint8_t            73: 1
+EXTYP         short   int16_t            74: 1
+EXTYP         ushort  uint16_t           75: 1
+EXTYP         long    int32_t            76: 1
+EXTYP         ulong   uint32_t           77: 1
+EXTYP         ushort  MD_STATUS          78: 1
+MEMBER NEAR   int     HIOCLK            156: 2
+MEMBER NEAR   int     SYSX1CLK          157: 2
+MEMBER NEAR   int     SYSEXTCLK         158: 2
+MEMBER NEAR   int     SUBXT1CLK         159: 2
+MEMBER NEAR   int     SUBEXTCLK         161: 2
+EXTYP         enum    clock_mode_t      161: 2
+EXTERN FAR    func    R_CGC_Create               166: 2    68
+EXTERN FAR    func    R_CGC_Get_ResetSource
+                                                 167: 2    67
+EXTERN FAR    func    R_PORT_Create              202: 3    69
+EXTERN FAR    func    R_INTC_Create               81: 4    74
+EXTERN FAR    func    R_INTC1_Start               82: 4
+EXTERN FAR    func    R_INTC1_Stop                83: 4
+EXTERN FAR    func    R_INTC2_Start               84: 4
+EXTERN FAR    func    R_INTC2_Stop                85: 4
+EXTERN FAR    func    R_SAU0_Create              395: 5    70
+EXTERN FAR    func    R_UART0_Create             396: 5
+EXTERN FAR    func    R_UART0_Start              397: 5
+EXTERN FAR    func    R_UART0_Stop               398: 5
+EXTERN FAR    func    R_UART0_Send               399: 5
+EXTERN FAR    func    R_UART0_Receive            400: 5
+EXSTC  FAR    func    r_uart0_callback_error
+                                        401: 5
+EXSTC  FAR    func    r_uart0_callback_receiveend
+                                        402: 5
+EXSTC  FAR    func    r_uart0_callback_sendend
+                                        403: 5
+EXSTC  FAR    func    r_uart0_callback_softwareoverrun
+                                        404: 5
+EXTERN FAR    func    R_UART1_Create             405: 5
+EXTERN FAR    func    R_UART1_Start              406: 5
+EXTERN FAR    func    R_UART1_Stop               407: 5
+EXTERN FAR    func    R_UART1_Send               408: 5
+EXTERN FAR    func    R_UART1_Receive            409: 5
+EXSTC  FAR    func    r_uart1_callback_error
+                                        410: 5
+EXSTC  FAR    func    r_uart1_callback_receiveend
+                                        411: 5
+EXSTC  FAR    func    r_uart1_callback_sendend
+                                        412: 5
+EXSTC  FAR    func    r_uart1_callback_softwareoverrun
+                                        413: 5
+EXTERN FAR    func    R_SAU1_Create              414: 5    71
+EXTERN FAR    func    R_UART2_Create             415: 5
+EXTERN FAR    func    R_UART2_Start              416: 5
+EXTERN FAR    func    R_UART2_Stop               417: 5
+EXTERN FAR    func    R_UART2_Send               418: 5
+EXTERN FAR    func    R_UART2_Receive            419: 5
+EXSTC  FAR    func    r_uart2_callback_error
+                                        420: 5
+EXSTC  FAR    func    r_uart2_callback_receiveend
+                                        421: 5
+EXSTC  FAR    func    r_uart2_callback_sendend
+                                        422: 5
+EXSTC  FAR    func    r_uart2_callback_softwareoverrun
+                                        423: 5
+EXTERN FAR    func    R_IICA0_Create             424: 5    72
+EXTERN FAR    func    R_IICA0_Master_Send
+                                                 425: 5
+EXTERN FAR    func    R_IICA0_Master_Receive
+                                                 426: 5
+EXTERN FAR    func    R_IICA0_Stop               427: 5
+EXTERN FAR    func    R_IICA0_StopCondition
+                                                 428: 5
+EXSTC  FAR    func    r_iica0_callback_master_sendend
+                                        429: 5
+EXSTC  FAR    func    r_iica0_callback_master_receiveend
+                                        430: 5
+EXSTC  FAR    func    r_iica0_callback_master_error
+                                        431: 5
+EXSTC  FAR    func    iica0_master_handler
+                                        432: 5
+EXSTC  FAR    func    iica0_slave_handler
+                                        433: 5
+EXTERN FAR    func    r_uart1_header_init
+                                                 436: 5
+EXTERN FAR    func    r_uart2_header_init
+                                                 437: 5
+EXTERN FAR    func    r_uart0_reset              438: 5
+EXTERN FAR    func    r_uart1_reset              439: 5
+EXTERN FAR    func    r_uart2_reset              440: 5
+EXTERN FAR    func    R_TAU0_Create              408: 6    73
+EXTERN FAR    func    R_TAU0_Channel0_Start
+                                                 409: 6
+EXTERN FAR    func    R_TAU0_Channel0_Stop
+                                                 410: 6
+EXTERN FAR    func    R_WDT_Create                47: 7
+EXTERN FAR    func    R_WDT_Restart               48: 7
+EXTERN FAR    func    R_Systeminit       62       53
+AUTO1  VLT    ulong   w_count            64       79       79       79
+INLINE        func    NOP                         81
+              #define STATUS_H           30: 1
+              #define MD_STATUSBASE      50: 1
+              #define MD_OK              51: 1
+              #define MD_SPT             52: 1
+              #define MD_NACK            53: 1
+              #define MD_BUSY1           54: 1
+              #define MD_BUSY2           55: 1
+              #define MD_OVERRUN         56: 1
+              #define MD_ERRORBASE       59: 1
+              #define MD_ERROR           60: 1
+              #define MD_ARGERROR        61: 1
+              #define MD_ERROR1          62: 1
+              #define MD_ERROR2          63: 1
+              #define MD_ERROR3          64: 1
+              #define MD_ERROR4          65: 1
+              #define __TYPEDEF__        79: 1
+              #define CGC_H              30: 2
+              #define _C0_CGC_HISYS_PIN
+                                         39: 2
+              #define _00_CGC_HISYS_PORT
+                                         40: 2
+              #define _40_CGC_HISYS_OSC
+                                         41: 2
+              #define _80_CGC_HISYS_PORT1
+                                         42: 2
+              #define _C0_CGC_HISYS_EXT
+                                         43: 2
+              #define _30_CGC_SUB_PIN    45: 2
+              #define _00_CGC_SUB_PORT
+                                         46: 2
+              #define _10_CGC_SUB_OSC    47: 2
+              #define _20_CGC_SUB_PORT1
+                                         48: 2
+              #define _30_CGC_SUB_EXT    49: 2
+              #define _00_CGC_SUBMODE_DEFAULT
+                                         51: 2
+              #define _00_CGC_SUBMODE_LOW
+                                         52: 2
+              #define _02_CGC_SUBMODE_NORMAL
+                                         53: 2
+              #define _04_CGC_SUBMODE_ULOW
+                                         54: 2
+              #define _00_CGC_SYSOSC_DEFAULT
+                                         56: 2
+              #define _00_CGC_SYSOSC_UNDER10M
+                                         57: 2
+              #define _01_CGC_SYSOSC_OVER10M
+                                         58: 2
+              #define _00_CGC_HISYS_OPER
+                                         64: 2
+              #define _80_CGC_HISYS_STOP
+                                         65: 2
+              #define _00_CGC_SUB_OPER
+                                         67: 2
+              #define _40_CGC_SUB_STOP
+                                         68: 2
+              #define _00_CGC_HIO_OPER
+                                         70: 2
+              #define _01_CGC_HIO_STOP
+                                         71: 2
+              #define _00_CGC_OSCSTAB_STA0
+                                         77: 2
+              #define _80_CGC_OSCSTAB_STA8
+                                         78: 2
+              #define _C0_CGC_OSCSTAB_STA9
+                                         79: 2
+              #define _E0_CGC_OSCSTAB_STA10
+                                         80: 2
+              #define _F0_CGC_OSCSTAB_STA11
+                                         81: 2
+              #define _F8_CGC_OSCSTAB_STA13
+                                         82: 2
+              #define _FC_CGC_OSCSTAB_STA15
+                                         83: 2
+              #define _FE_CGC_OSCSTAB_STA17
+                                         84: 2
+              #define _FF_CGC_OSCSTAB_STA18
+                                         85: 2
+              #define _00_CGC_OSCSTAB_SEL8
+                                         91: 2
+              #define _01_CGC_OSCSTAB_SEL9
+                                         92: 2
+              #define _02_CGC_OSCSTAB_SEL10
+                                         93: 2
+              #define _03_CGC_OSCSTAB_SEL11
+                                         94: 2
+              #define _04_CGC_OSCSTAB_SEL13
+                                         95: 2
+              #define _05_CGC_OSCSTAB_SEL15
+                                         96: 2
+              #define _06_CGC_OSCSTAB_SEL17
+                                         97: 2
+              #define _07_CGC_OSCSTAB_SEL18
+                                         98: 2
+              #define _00_CGC_CPUCLK_MAIN
+                                        104: 2
+              #define _80_CGC_CPUCLK_SUB
+                                        105: 2
+              #define _00_CGC_CPUCLK_SELMAIN
+                                        107: 2
+              #define _40_CGC_CPUCLK_SELSUB
+                                        108: 2
+              #define _00_CGC_MAINCLK_HIO
+                                        110: 2
+              #define _20_CGC_MAINCLK_HISYS
+                                        111: 2
+              #define _00_CGC_MAINCLK_SELHIO
+                                        113: 2
+              #define _10_CGC_MAINCLK_SELHISYS
+                                        114: 2
+              #define _00_CGC_SUBINHALT_ON
+                                        120: 2
+              #define _80_CGC_SUBINHALT_OFF
+                                        121: 2
+              #define _00_CGC_RTC_CLK_FSUB
+                                        123: 2
+              #define _10_CGC_RTC_CLK_FIL
+                                        124: 2
+              #define _00_CGC_ILLEGAL_ACCESS_OFF
+                                        130: 2
+              #define _80_CGC_ILLEGAL_ACCESS_ON
+                                        131: 2
+              #define _00_CGC_RAM_GUARD_OFF
+                                        133: 2
+              #define _10_CGC_RAM_GUARD_ARAE0
+                                        134: 2
+              #define _20_CGC_RAM_GUARD_ARAE1
+                                        135: 2
+              #define _30_CGC_RAM_GUARD_ARAE2
+                                        136: 2
+              #define _00_CGC_PORT_GUARD_OFF
+                                        138: 2
+              #define _04_CGC_PORT_GUARD_ON
+                                        139: 2
+              #define _00_CGC_INT_GUARD_OFF
+                                        141: 2
+              #define _02_CGC_INT_GUARD_ON
+                                        142: 2
+              #define _00_CGC_CSC_GUARD_OFF
+                                        144: 2
+              #define _01_CGC_CSC_GUARD_ON
+                                        145: 2
+              #define PORT_H             30: 3
+              #define _01_PMn0_NOT_USE
+                                         39: 3
+              #define _01_PMn0_MODE_INPUT
+                                         40: 3
+              #define _00_PMn0_MODE_OUTPUT
+                                         41: 3
+              #define _02_PMn1_NOT_USE
+                                         42: 3
+              #define _02_PMn1_MODE_INPUT
+                                         43: 3
+              #define _00_PMn1_MODE_OUTPUT
+                                         44: 3
+              #define _04_PMn2_NOT_USE
+                                         45: 3
+              #define _04_PMn2_MODE_INPUT
+                                         46: 3
+              #define _00_PMn2_MODE_OUTPUT
+                                         47: 3
+              #define _08_PMn3_NOT_USE
+                                         48: 3
+              #define _08_PMn3_MODE_INPUT
+                                         49: 3
+              #define _00_PMn3_MODE_OUTPUT
+                                         50: 3
+              #define _10_PMn4_NOT_USE
+                                         51: 3
+              #define _10_PMn4_MODE_INPUT
+                                         52: 3
+              #define _00_PMn4_MODE_OUTPUT
+                                         53: 3
+              #define _20_PMn5_NOT_USE
+                                         54: 3
+              #define _20_PMn5_MODE_INPUT
+                                         55: 3
+              #define _00_PMn5_MODE_OUTPUT
+                                         56: 3
+              #define _40_PMn6_NOT_USE
+                                         57: 3
+              #define _40_PMn6_MODE_INPUT
+                                         58: 3
+              #define _00_PMn6_MODE_OUTPUT
+                                         59: 3
+              #define _80_PMn7_NOT_USE
+                                         60: 3
+              #define _80_PMn7_MODE_INPUT
+                                         61: 3
+              #define _00_PMn7_MODE_OUTPUT
+                                         62: 3
+              #define _00_Pn0_OUTPUT_0
+                                         68: 3
+              #define _01_Pn0_OUTPUT_1
+                                         69: 3
+              #define _00_Pn1_OUTPUT_0
+                                         70: 3
+              #define _02_Pn1_OUTPUT_1
+                                         71: 3
+              #define _00_Pn2_OUTPUT_0
+                                         72: 3
+              #define _04_Pn2_OUTPUT_1
+                                         73: 3
+              #define _00_Pn3_OUTPUT_0
+                                         74: 3
+              #define _08_Pn3_OUTPUT_1
+                                         75: 3
+              #define _00_Pn4_OUTPUT_0
+                                         76: 3
+              #define _10_Pn4_OUTPUT_1
+                                         77: 3
+              #define _00_Pn5_OUTPUT_0
+                                         78: 3
+              #define _20_Pn5_OUTPUT_1
+                                         79: 3
+              #define _00_Pn6_OUTPUT_0
+                                         80: 3
+              #define _40_Pn6_OUTPUT_1
+                                         81: 3
+              #define _00_Pn7_OUTPUT_0
+                                         82: 3
+              #define _80_Pn7_OUTPUT_1
+                                         83: 3
+              #define _00_PUn0_PULLUP_OFF
+                                         89: 3
+              #define _01_PUn0_PULLUP_ON
+                                         90: 3
+              #define _00_PUn1_PULLUP_OFF
+                                         91: 3
+              #define _02_PUn1_PULLUP_ON
+                                         92: 3
+              #define _00_PUn2_PULLUP_OFF
+                                         93: 3
+              #define _04_PUn2_PULLUP_ON
+                                         94: 3
+              #define _00_PUn3_PULLUP_OFF
+                                         95: 3
+              #define _08_PUn3_PULLUP_ON
+                                         96: 3
+              #define _00_PUn4_PULLUP_OFF
+                                         97: 3
+              #define _10_PUn4_PULLUP_ON
+                                         98: 3
+              #define _00_PUn5_PULLUP_OFF
+                                         99: 3
+              #define _20_PUn5_PULLUP_ON
+                                        100: 3
+              #define _00_PUn6_PULLUP_OFF
+                                        101: 3
+              #define _40_PUn6_PULLUP_ON
+                                        102: 3
+              #define _00_PUn7_PULLUP_OFF
+                                        103: 3
+              #define _80_PUn7_PULLUP_ON
+                                        104: 3
+              #define _00_PIMn0_TTL_OFF
+                                        110: 3
+              #define _01_PIMn0_TTL_ON
+                                        111: 3
+              #define _00_PIMn1_TTL_OFF
+                                        112: 3
+              #define _02_PIMn1_TTL_ON
+                                        113: 3
+              #define _00_PIMn2_TTL_OFF
+                                        114: 3
+              #define _04_PIMn2_TTL_ON
+                                        115: 3
+              #define _00_PIMn3_TTL_OFF
+                                        116: 3
+              #define _08_PIMn3_TTL_ON
+                                        117: 3
+              #define _00_PIMn4_TTL_OFF
+                                        118: 3
+              #define _10_PIMn4_TTL_ON
+                                        119: 3
+              #define _00_PIMn5_TTL_OFF
+                                        120: 3
+              #define _20_PIMn5_TTL_ON
+                                        121: 3
+              #define _00_PIMn6_TTL_OFF
+                                        122: 3
+              #define _40_PIMn6_TTL_ON
+                                        123: 3
+              #define _00_PIMn7_TTL_OFF
+                                        124: 3
+              #define _80_PIMn7_TTL_ON
+                                        125: 3
+              #define _00_POMn0_NCH_OFF
+                                        131: 3
+              #define _01_POMn0_NCH_ON
+                                        132: 3
+              #define _00_POMn1_NCH_OFF
+                                        133: 3
+              #define _02_POMn1_NCH_ON
+                                        134: 3
+              #define _00_POMn2_NCH_OFF
+                                        135: 3
+              #define _04_POMn2_NCH_ON
+                                        136: 3
+              #define _00_POMn3_NCH_OFF
+                                        137: 3
+              #define _08_POMn3_NCH_ON
+                                        138: 3
+              #define _00_POMn4_NCH_OFF
+                                        139: 3
+              #define _10_POMn4_NCH_ON
+                                        140: 3
+              #define _00_POMn5_NCH_OFF
+                                        141: 3
+              #define _20_POMn5_NCH_ON
+                                        142: 3
+              #define _00_POMn6_NCH_OFF
+                                        143: 3
+              #define _40_POMn6_NCH_ON
+                                        144: 3
+              #define _00_POMn7_NCH_OFF
+                                        145: 3
+              #define _80_POMn7_NCH_ON
+                                        146: 3
+              #define _01_PMCn0_NOT_USE
+                                        152: 3
+              #define _00_PMCn0_DI_ON   153: 3
+              #define _02_PMCn1_NOT_USE
+                                        154: 3
+              #define _00_PMCn1_DI_ON   155: 3
+              #define _04_PMCn2_NOT_USE
+                                        156: 3
+              #define _00_PMCn2_DI_ON   157: 3
+              #define _08_PMCn3_NOT_USE
+                                        158: 3
+              #define _00_PMCn3_DI_ON   159: 3
+              #define _10_PMCn4_NOT_USE
+                                        160: 3
+              #define _00_PMCn4_DI_ON   161: 3
+              #define _20_PMCn5_NOT_USE
+                                        162: 3
+              #define _00_PMCn5_DI_ON   163: 3
+              #define _40_PMCn6_NOT_USE
+                                        164: 3
+              #define _00_PMCn6_DI_ON   165: 3
+              #define _80_PMCn7_NOT_USE
+                                        166: 3
+              #define _00_PMCn7_DI_ON   167: 3
+              #define _00_ADPC_DI_OFF   173: 3
+              #define _04_ADPC_DI_ON    174: 3
+              #define _03_ADPC_DI_ON    175: 3
+              #define _02_ADPC_DI_ON    176: 3
+              #define _01_ADPC_DI_ON    177: 3
+              #define _FC_PM0_DEFAULT   182: 3
+              #define _F0_PM2_DEFAULT   183: 3
+              #define _FC_PM3_DEFAULT   184: 3
+              #define _FE_PM4_DEFAULT   185: 3
+              #define _FC_PM5_DEFAULT   186: 3
+              #define _F8_PM6_DEFAULT   187: 3
+              #define _FE_PM7_DEFAULT   188: 3
+              #define _FE_PM12_DEFAULT
+                                        189: 3
+              #define _7F_PM14_DEFAULT
+                                        190: 3
+              #define _FC_PMC0_DEFAULT
+                                        191: 3
+              #define _FE_PMC12_DEFAULT
+                                        192: 3
+              #define _7F_PMC14_DEFAULT
+                                        193: 3
+              #define INTC_H             30: 4
+              #define _01_INTP0_EDGE_RISING_SEL
+                                         40: 4
+              #define _00_INTP0_EDGE_RISING_UNSEL
+                                         41: 4
+              #define _02_INTP1_EDGE_RISING_SEL
+                                         42: 4
+              #define _00_INTP1_EDGE_RISING_UNSEL
+                                         43: 4
+              #define _04_INTP2_EDGE_RISING_SEL
+                                         44: 4
+              #define _00_INTP2_EDGE_RISING_UNSEL
+                                         45: 4
+              #define _08_INTP3_EDGE_RISING_SEL
+                                         46: 4
+              #define _00_INTP3_EDGE_RISING_UNSEL
+                                         47: 4
+              #define _10_INTP4_EDGE_RISING_SEL
+                                         48: 4
+              #define _00_INTP4_EDGE_RISING_UNSEL
+                                         49: 4
+              #define _20_INTP5_EDGE_RISING_SEL
+                                         50: 4
+              #define _00_INTP5_EDGE_RISING_UNSEL
+                                         51: 4
+              #define _01_INTP0_EDGE_FALLING_SEL
+                                         57: 4
+              #define _00_INTP0_EDGE_FALLING_UNSEL
+                                         58: 4
+              #define _02_INTP1_EDGE_FALLING_SEL
+                                         59: 4
+              #define _00_INTP1_EDGE_FALLING_UNSEL
+                                         60: 4
+              #define _04_INTP2_EDGE_FALLING_SEL
+                                         61: 4
+              #define _00_INTP2_EDGE_FALLING_UNSEL
+                                         62: 4
+              #define _08_INTP3_EDGE_FALLING_SEL
+                                         63: 4
+              #define _00_INTP3_EDGE_FALLING_UNSEL
+                                         64: 4
+              #define _10_INTP4_EDGE_FALLING_SEL
+                                         65: 4
+              #define _00_INTP4_EDGE_FALLING_UNSEL
+                                         66: 4
+              #define _20_INTP5_EDGE_FALLING_SEL
+                                         67: 4
+              #define _00_INTP5_EDGE_FALLING_UNSEL
+                                         68: 4
+              #define SERIAL_H           30: 5
+              #define _0000_SAU_CK00_FCLK_0
+                                         39: 5
+              #define _0001_SAU_CK00_FCLK_1
+                                         40: 5
+              #define _0002_SAU_CK00_FCLK_2
+                                         41: 5
+              #define _0003_SAU_CK00_FCLK_3
+                                         42: 5
+              #define _0004_SAU_CK00_FCLK_4
+                                         43: 5
+              #define _0005_SAU_CK00_FCLK_5
+                                         44: 5
+              #define _0006_SAU_CK00_FCLK_6
+                                         45: 5
+              #define _0007_SAU_CK00_FCLK_7
+                                         46: 5
+              #define _0008_SAU_CK00_FCLK_8
+                                         47: 5
+              #define _0009_SAU_CK00_FCLK_9
+                                         48: 5
+              #define _000A_SAU_CK00_FCLK_10
+                                         49: 5
+              #define _000B_SAU_CK00_FCLK_11
+                                         50: 5
+              #define _000C_SAU_CK00_FCLK_12
+                                         51: 5
+              #define _000D_SAU_CK00_FCLK_13
+                                         52: 5
+              #define _000E_SAU_CK00_FCLK_14
+                                         53: 5
+              #define _000F_SAU_CK00_FCLK_15
+                                         54: 5
+              #define _0000_SAU_CK01_FCLK_0
+                                         56: 5
+              #define _0010_SAU_CK01_FCLK_1
+                                         57: 5
+              #define _0020_SAU_CK01_FCLK_2
+                                         58: 5
+              #define _0030_SAU_CK01_FCLK_3
+                                         59: 5
+              #define _0040_SAU_CK01_FCLK_4
+                                         60: 5
+              #define _0050_SAU_CK01_FCLK_5
+                                         61: 5
+              #define _0060_SAU_CK01_FCLK_6
+                                         62: 5
+              #define _0070_SAU_CK01_FCLK_7
+                                         63: 5
+              #define _0080_SAU_CK01_FCLK_8
+                                         64: 5
+              #define _0090_SAU_CK01_FCLK_9
+                                         65: 5
+              #define _00A0_SAU_CK01_FCLK_10
+                                         66: 5
+              #define _00B0_SAU_CK01_FCLK_11
+                                         67: 5
+              #define _00C0_SAU_CK01_FCLK_12
+                                         68: 5
+              #define _00D0_SAU_CK01_FCLK_13
+                                         69: 5
+              #define _00E0_SAU_CK01_FCLK_14
+                                         70: 5
+              #define _00F0_SAU_CK01_FCLK_15
+                                         71: 5
+              #define _0020_SAU_SMRMN_INITIALVALUE
+                                         76: 5
+              #define _0000_SAU_CLOCK_SELECT_CK00
+                                         78: 5
+              #define _8000_SAU_CLOCK_SELECT_CK01
+                                         79: 5
+              #define _0000_SAU_CLOCK_MODE_CKS
+                                         81: 5
+              #define _4000_SAU_CLOCK_MODE_TI0N
+                                         82: 5
+              #define _0000_SAU_TRIGGER_SOFTWARE
+                                         84: 5
+              #define _0100_SAU_TRIGGER_RXD
+                                         85: 5
+              #define _0000_SAU_EDGE_FALL
+                                         87: 5
+              #define _0040_SAU_EDGE_RISING
+                                         88: 5
+              #define _0000_SAU_MODE_CSI
+                                         90: 5
+              #define _0002_SAU_MODE_UART
+                                         91: 5
+              #define _0004_SAU_MODE_IIC
+                                         92: 5
+              #define _0000_SAU_TRANSFER_END
+                                         94: 5
+              #define _0001_SAU_BUFFER_EMPTY
+                                         95: 5
+              #define _0000_SAU_NOT_COMMUNICATION
+                                        101: 5
+              #define _4000_SAU_RECEPTION
+                                        102: 5
+              #define _8000_SAU_TRANSMISSION
+                                        103: 5
+              #define _C000_SAU_RECEPTION_TRANSMISSION
+                                        104: 5
+              #define _0000_SAU_TIMING_1
+                                        106: 5
+              #define _1000_SAU_TIMING_2
+                                        107: 5
+              #define _2000_SAU_TIMING_3
+                                        108: 5
+              #define _3000_SAU_TIMING_4
+                                        109: 5
+              #define _0000_SAU_INTSRE_MASK
+                                        111: 5
+              #define _0400_SAU_INTSRE_ENABLE
+                                        112: 5
+              #define _0000_SAU_PARITY_NONE
+                                        114: 5
+              #define _0100_SAU_PARITY_ZERO
+                                        115: 5
+              #define _0200_SAU_PARITY_EVEN
+                                        116: 5
+              #define _0300_SAU_PARITY_ODD
+                                        117: 5
+              #define _0000_SAU_MSB     119: 5
+              #define _0080_SAU_LSB     120: 5
+              #define _0000_SAU_STOP_NONE
+                                        122: 5
+              #define _0010_SAU_STOP_1
+                                        123: 5
+              #define _0020_SAU_STOP_2
+                                        124: 5
+              #define _0005_SAU_LENGTH_9
+                                        126: 5
+              #define _0006_SAU_LENGTH_7
+                                        127: 5
+              #define _0007_SAU_LENGTH_8
+                                        128: 5
+              #define _0000_SAU_CHANNEL0_NORMAL
+                                        134: 5
+              #define _0001_SAU_CHANNEL0_INVERTED
+                                        135: 5
+              #define _0000_SAU_CHANNEL1_NORMAL
+                                        136: 5
+              #define _0002_SAU_CHANNEL1_INVERTED
+                                        137: 5
+              #define _0000_SAU_CHANNEL2_NORMAL
+                                        138: 5
+              #define _0004_SAU_CHANNEL2_INVERTED
+                                        139: 5
+              #define _0000_SAU_CHANNEL3_NORMAL
+                                        140: 5
+              #define _0008_SAU_CHANNEL3_INVERTED
+                                        141: 5
+              #define _00_SAU_RXD3_FILTER_OFF
+                                        147: 5
+              #define _40_SAU_RXD3_FILTER_ON
+                                        148: 5
+              #define _00_SAU_RXD2_FILTER_OFF
+                                        149: 5
+              #define _10_SAU_RXD2_FILTER_ON
+                                        150: 5
+              #define _00_SAU_RXD1_FILTER_OFF
+                                        151: 5
+              #define _04_SAU_RXD1_FILTER_ON
+                                        152: 5
+              #define _00_SAU_RXD0_FILTER_OFF
+                                        153: 5
+              #define _01_SAU_RXD0_FILTER_ON
+                                        154: 5
+              #define _0040_SAU_UNDER_EXECUTE
+                                        160: 5
+              #define _0020_SAU_VALID_STORED
+                                        162: 5
+              #define _0004_SAU_FRAM_ERROR
+                                        164: 5
+              #define _0002_SAU_PARITY_ERROR
+                                        166: 5
+              #define _0001_SAU_OVERRUN_ERROR
+                                        168: 5
+              #define _0000_SAU_CH0_START_TRG_OFF
+                                        174: 5
+              #define _0001_SAU_CH0_START_TRG_ON
+                                        175: 5
+              #define _0000_SAU_CH1_START_TRG_OFF
+                                        177: 5
+              #define _0002_SAU_CH1_START_TRG_ON
+                                        178: 5
+              #define _0000_SAU_CH2_START_TRG_OFF
+                                        180: 5
+              #define _0004_SAU_CH2_START_TRG_ON
+                                        181: 5
+              #define _0000_SAU_CH3_START_TRG_OFF
+                                        183: 5
+              #define _0008_SAU_CH3_START_TRG_ON
+                                        184: 5
+              #define _0000_SAU_CH0_STOP_TRG_OFF
+                                        190: 5
+              #define _0001_SAU_CH0_STOP_TRG_ON
+                                        191: 5
+              #define _0000_SAU_CH1_STOP_TRG_OFF
+                                        193: 5
+              #define _0002_SAU_CH1_STOP_TRG_ON
+                                        194: 5
+              #define _0000_SAU_CH2_STOP_TRG_OFF
+                                        196: 5
+              #define _0004_SAU_CH2_STOP_TRG_ON
+                                        197: 5
+              #define _0000_SAU_CH3_STOP_TRG_OFF
+                                        199: 5
+              #define _0008_SAU_CH3_STOP_TRG_ON
+                                        200: 5
+              #define _0001_SAU_SIRMN_OVCTMN
+                                        206: 5
+              #define _0002_SAU_SIRMN_PECTMN
+                                        208: 5
+              #define _0004_SAU_SIRMN_FECTMN
+                                        210: 5
+              #define _0001_SAU_CH0_OUTPUT_ENABLE
+                                        216: 5
+              #define _0000_SAU_CH0_OUTPUT_DISABLE
+                                        217: 5
+              #define _0002_SAU_CH1_OUTPUT_ENABLE
+                                        219: 5
+              #define _0000_SAU_CH1_OUTPUT_DISABLE
+                                        220: 5
+              #define _0004_SAU_CH2_OUTPUT_ENABLE
+                                        222: 5
+              #define _0000_SAU_CH2_OUTPUT_DISABLE
+                                        223: 5
+              #define _0008_SAU_CH3_OUTPUT_ENABLE
+                                        225: 5
+              #define _0000_SAU_CH3_OUTPUT_DISABLE
+                                        226: 5
+              #define _0000_SAU_CH0_DATA_OUTPUT_0
+                                        232: 5
+              #define _0001_SAU_CH0_DATA_OUTPUT_1
+                                        233: 5
+              #define _0000_SAU_CH1_DATA_OUTPUT_0
+                                        235: 5
+              #define _0002_SAU_CH1_DATA_OUTPUT_1
+                                        236: 5
+              #define _0000_SAU_CH2_DATA_OUTPUT_0
+                                        238: 5
+              #define _0004_SAU_CH2_DATA_OUTPUT_1
+                                        239: 5
+              #define _0000_SAU_CH3_DATA_OUTPUT_0
+                                        241: 5
+              #define _0008_SAU_CH3_DATA_OUTPUT_1
+                                        242: 5
+              #define _0000_SAU_CH0_CLOCK_OUTPUT_0
+                                        244: 5
+              #define _0100_SAU_CH0_CLOCK_OUTPUT_1
+                                        245: 5
+              #define _0000_SAU_CH1_CLOCK_OUTPUT_0
+                                        247: 5
+              #define _0200_SAU_CH1_CLOCK_OUTPUT_1
+                                        248: 5
+              #define _0000_SAU_CH2_CLOCK_OUTPUT_0
+                                        250: 5
+              #define _0400_SAU_CH2_CLOCK_OUTPUT_1
+                                        251: 5
+              #define _0000_SAU_CH3_CLOCK_OUTPUT_0
+                                        253: 5
+              #define _0800_SAU_CH3_CLOCK_OUTPUT_1
+                                        254: 5
+              #define _0000_SAU_CH0_SNOOZE_OFF
+                                        260: 5
+              #define _0001_SAU_CH0_SNOOZE_ON
+                                        261: 5
+              #define _00_SAU_IIC_MASTER_FLAG_CLEAR
+                                        264: 5
+              #define _01_SAU_IIC_SEND_FLAG
+                                        265: 5
+              #define _02_SAU_IIC_RECEIVE_FLAG
+                                        266: 5
+              #define _04_SAU_IIC_SENDED_ADDRESS_FLAG
+                                        267: 5
+              #define _00_SAU_SSI00_UNUSED
+                                        273: 5
+              #define _80_SAU_SSI00_USED
+                                        274: 5
+              #define _00_IICA_OPERATION_DISABLE
+                                        280: 5
+              #define _80_IICA_OPERATION_ENABLE
+                                        281: 5
+              #define _00_IICA_COMMUNICATION_NORMAL
+                                        283: 5
+              #define _40_IICA_COMMUNICATION_EXIT
+                                        284: 5
+              #define _00_IICA_WAIT_NOTCANCEL
+                                        286: 5
+              #define _20_IICA_WAIT_CANCEL
+                                        287: 5
+              #define _00_IICA_STOPINT_DISABLE
+                                        289: 5
+              #define _10_IICA_STOPINT_ENABLE
+                                        290: 5
+              #define _00_IICA_WAITINT_CLK8FALLING
+                                        292: 5
+              #define _08_IICA_WAITINT_CLK9FALLING
+                                        293: 5
+              #define _00_IICA_ACK_DISABLE
+                                        295: 5
+              #define _04_IICA_ACK_ENABLE
+                                        296: 5
+              #define _00_IICA_START_NOTGENERATE
+                                        298: 5
+              #define _02_IICA_START_GENERATE
+                                        299: 5
+              #define _00_IICA_STOP_NOTGENERATE
+                                        301: 5
+              #define _01_IICA_STOP_GENERATE
+                                        302: 5
+              #define _00_IICA_STATUS_NOTMASTER
+                                        308: 5
+              #define _80_IICA_STATUS_MASTER
+                                        309: 5
+              #define _00_IICA_ARBITRATION_NO
+                                        311: 5
+              #define _40_IICA_ARBITRATION_LOSS
+                                        312: 5
+              #define _00_IICA_EXTCODE_NOT
+                                        314: 5
+              #define _20_IICA_EXTCODE_RECEIVED
+                                        315: 5
+              #define _00_IICA_ADDRESS_NOTMATCH
+                                        317: 5
+              #define _10_IICA_ADDRESS_MATCH
+                                        318: 5
+              #define _00_IICA_STATUS_RECEIVE
+                                        320: 5
+              #define _08_IICA_STATUS_TRANSMIT
+                                        321: 5
+              #define _00_IICA_ACK_NOTDETECTED
+                                        323: 5
+              #define _04_IICA_ACK_DETECTED
+                                        324: 5
+              #define _00_IICA_START_NOTDETECTED
+                                        326: 5
+              #define _02_IICA_START_DETECTED
+                                        327: 5
+              #define _00_IICA_STOP_NOTDETECTED
+                                        329: 5
+              #define _01_IICA_STOP_DETECTED
+                                        330: 5
+              #define _00_IICA_STARTFLAG_GENERATE
+                                        336: 5
+              #define _80_IICA_STARTFLAG_UNSUCCESSFUL
+                                        337: 5
+              #define _00_IICA_BUS_RELEASE
+                                        339: 5
+              #define _40_IICA_BUS_COMMUNICATION
+                                        340: 5
+              #define _00_IICA_START_WITHSTOP
+                                        342: 5
+              #define _02_IICA_START_WITHOUTSTOP
+                                        343: 5
+              #define _00_IICA_RESERVATION_ENABLE
+                                        345: 5
+              #define _01_IICA_RESERVATION_DISABLE
+                                        346: 5
+              #define _00_IICA_WAKEUP_STOP
+                                        352: 5
+              #define _80_IICA_WAKEUP_ENABLE
+                                        353: 5
+              #define _00_IICA_SCL_LOW
+                                        355: 5
+              #define _20_IICA_SCL_HIGH
+                                        356: 5
+              #define _00_IICA_SDA_LOW
+                                        358: 5
+              #define _10_IICA_SDA_HIGH
+                                        359: 5
+              #define _00_IICA_MODE_STANDARD
+                                        361: 5
+              #define _08_IICA_MODE_HIGHSPEED
+                                        362: 5
+              #define _00_IICA_FILTER_OFF
+                                        364: 5
+              #define _04_IICA_FILTER_ON
+                                        365: 5
+              #define _00_IICA_fCLK     367: 5
+              #define _01_IICA_fCLK_HALF
+                                        368: 5
+              #define _80_IICA_ADDRESS_COMPLETE
+                                        370: 5
+              #define _00_IICA_MASTER_FLAG_CLEAR
+                                        371: 5
+              #define _9A00_UART0_RECEIVE_DIVISOR
+                                        376: 5
+              #define _9A00_UART0_TRANSMIT_DIVISOR
+                                        377: 5
+              #define _CE00_UART0_RECEIVE_DIVISOR
+                                        378: 5
+              #define _CE00_UART0_TRANSMIT_DIVISOR
+                                        379: 5
+              #define _CE00_UART1_RECEIVE_DIVISOR
+                                        380: 5
+              #define _CE00_UART1_TRANSMIT_DIVISOR
+                                        381: 5
+              #define _CE00_UART2_RECEIVE_DIVISOR
+                                        382: 5
+              #define _CE00_UART2_TRANSMIT_DIVISOR
+                                        383: 5
+              #define _10_IICA0_MASTERADDRESS
+                                        384: 5
+              #define _55_IICA0_IICWH_VALUE
+                                        385: 5
+              #define _4C_IICA0_IICWL_VALUE
+                                        386: 5
+              #define TAU_H              30: 6
+              #define _00_TAU0_CLOCK_STOP
+                                         39: 6
+              #define _01_TAU0_CLOCK_SUPPLY
+                                         40: 6
+              #define _0000_TAU_CKM0_FCLK_0
+                                         46: 6
+              #define _0001_TAU_CKM0_FCLK_1
+                                         47: 6
+              #define _0002_TAU_CKM0_FCLK_2
+                                         48: 6
+              #define _0003_TAU_CKM0_FCLK_3
+                                         49: 6
+              #define _0004_TAU_CKM0_FCLK_4
+                                         50: 6
+              #define _0005_TAU_CKM0_FCLK_5
+                                         51: 6
+              #define _0006_TAU_CKM0_FCLK_6
+                                         52: 6
+              #define _0007_TAU_CKM0_FCLK_7
+                                         53: 6
+              #define _0008_TAU_CKM0_FCLK_8
+                                         54: 6
+              #define _0009_TAU_CKM0_FCLK_9
+                                         55: 6
+              #define _000A_TAU_CKM0_FCLK_10
+                                         56: 6
+              #define _000B_TAU_CKM0_FCLK_11
+                                         57: 6
+              #define _000C_TAU_CKM0_FCLK_12
+                                         58: 6
+              #define _000D_TAU_CKM0_FCLK_13
+                                         59: 6
+              #define _000E_TAU_CKM0_FCLK_14
+                                         60: 6
+              #define _000F_TAU_CKM0_FCLK_15
+                                         61: 6
+              #define _0000_TAU_CKM1_FCLK_0
+                                         63: 6
+              #define _0010_TAU_CKM1_FCLK_1
+                                         64: 6
+              #define _0020_TAU_CKM1_FCLK_2
+                                         65: 6
+              #define _0030_TAU_CKM1_FCLK_3
+                                         66: 6
+              #define _0040_TAU_CKM1_FCLK_4
+                                         67: 6
+              #define _0050_TAU_CKM1_FCLK_5
+                                         68: 6
+              #define _0060_TAU_CKM1_FCLK_6
+                                         69: 6
+              #define _0070_TAU_CKM1_FCLK_7
+                                         70: 6
+              #define _0080_TAU_CKM1_FCLK_8
+                                         71: 6
+              #define _0090_TAU_CKM1_FCLK_9
+                                         72: 6
+              #define _00A0_TAU_CKM1_FCLK_10
+                                         73: 6
+              #define _00B0_TAU_CKM1_FCLK_11
+                                         74: 6
+              #define _00C0_TAU_CKM1_FCLK_12
+                                         75: 6
+              #define _00D0_TAU_CKM1_FCLK_13
+                                         76: 6
+              #define _00E0_TAU_CKM1_FCLK_14
+                                         77: 6
+              #define _00F0_TAU_CKM1_FCLK_15
+                                         78: 6
+              #define _0000_TAU_CKM2_FCLK_1
+                                         80: 6
+              #define _0100_TAU_CKM2_FCLK_2
+                                         81: 6
+              #define _0200_TAU_CKM2_FCLK_4
+                                         82: 6
+              #define _0300_TAU_CKM2_FCLK_6
+                                         83: 6
+              #define _0000_TAU_CKM3_FCLK_8
+                                         85: 6
+              #define _1000_TAU_CKM3_FCLK_10
+                                         86: 6
+              #define _2000_TAU_CKM3_FCLK_12
+                                         87: 6
+              #define _3000_TAU_CKM3_FCLK_14
+                                         88: 6
+              #define _0000_TAU_CLOCK_SELECT_CKM0
+                                         94: 6
+              #define _8000_TAU_CLOCK_SELECT_CKM1
+                                         95: 6
+              #define _4000_TAU_CLOCK_SELECT_CKM2
+                                         96: 6
+              #define _C000_TAU_CLOCK_SELECT_CKM3
+                                         97: 6
+              #define _0000_TAU_CLOCK_MODE_CKS
+                                         99: 6
+              #define _1000_TAU_CLOCK_MODE_TIMN
+                                        100: 6
+              #define _0000_TAU_COMBINATION_SLAVE
+                                        102: 6
+              #define _0000_TAU_COMBINATION_MASTER
+                                        103: 6
+              #define _0800_TAU_COMBINATION_MASTER
+                                        104: 6
+              #define _0000_TAU_16BITS_MODE
+                                        106: 6
+              #define _0800_TAU_8BITS_MODE
+                                        107: 6
+              #define _0000_TAU_TRIGGER_SOFTWARE
+                                        109: 6
+              #define _0100_TAU_TRIGGER_TIMN_VALID
+                                        110: 6
+              #define _0200_TAU_TRIGGER_TIMN_BOTH
+                                        111: 6
+              #define _0400_TAU_TRIGGER_MASTER_INT
+                                        112: 6
+              #define _0000_TAU_TIMN_EDGE_FALLING
+                                        114: 6
+              #define _0040_TAU_TIMN_EDGE_RISING
+                                        115: 6
+              #define _0080_TAU_TIMN_EDGE_BOTH_LOW
+                                        116: 6
+              #define _00C0_TAU_TIMN_EDGE_BOTH_HIGH
+                                        117: 6
+              #define _0000_TAU_MODE_INTERVAL_TIMER
+                                        119: 6
+              #define _0004_TAU_MODE_CAPTURE
+                                        120: 6
+              #define _0006_TAU_MODE_EVENT_COUNT
+                                        121: 6
+              #define _0008_TAU_MODE_ONE_COUNT
+                                        122: 6
+              #define _000C_TAU_MODE_HIGHLOW_MEASURE
+                                        123: 6
+              #define _0001_TAU_MODE_PWM_MASTER
+                                        124: 6
+              #define _0009_TAU_MODE_PWM_SLAVE
+                                        125: 6
+              #define _0008_TAU_MODE_ONESHOT
+                                        126: 6
+              #define _0000_TAU_START_INT_UNUSED
+                                        128: 6
+              #define _0001_TAU_START_INT_USED
+                                        129: 6
+              #define _0000_TAU_OVERFLOW_NOT_OCCURS
+                                        135: 6
+              #define _0001_TAU_OVERFLOW_OCCURS
+                                        136: 6
+              #define _0000_TAU_CH0_OPERATION_STOP
+                                        142: 6
+              #define _0001_TAU_CH0_OPERATION_ENABLE
+                                        143: 6
+              #define _0000_TAU_CH1_OPERATION_STOP
+                                        145: 6
+              #define _0002_TAU_CH1_OPERATION_ENABLE
+                                        146: 6
+              #define _0000_TAU_CH2_OPERATION_STOP
+                                        148: 6
+              #define _0004_TAU_CH2_OPERATION_ENABLE
+                                        149: 6
+              #define _0000_TAU_CH3_OPERATION_STOP
+                                        151: 6
+              #define _0008_TAU_CH3_OPERATION_ENABLE
+                                        152: 6
+              #define _0000_TAU_CH4_OPERATION_STOP
+                                        154: 6
+              #define _0010_TAU_CH4_OPERATION_ENABLE
+                                        155: 6
+              #define _0000_TAU_CH5_OPERATION_STOP
+                                        157: 6
+              #define _0020_TAU_CH5_OPERATION_ENABLE
+                                        158: 6
+              #define _0000_TAU_CH6_OPERATION_STOP
+                                        160: 6
+              #define _0040_TAU_CH6_OPERATION_ENABLE
+                                        161: 6
+              #define _0000_TAU_CH7_OPERATION_STOP
+                                        163: 6
+              #define _0080_TAU_CH7_OPERATION_ENABLE
+                                        164: 6
+              #define _0000_TAU_CH1_H8_OPERATION_STOP
+                                        166: 6
+              #define _0200_TAU_CH1_H8_OPERATION_ENABLE
+                                        167: 6
+              #define _0000_TAU_CH3_H8_OPERATION_STOP
+                                        169: 6
+              #define _0800_TAU_CH3_H8_OPERATION_ENABLE
+                                        170: 6
+              #define _0000_TAU_CH0_START_TRG_OFF
+                                        176: 6
+              #define _0001_TAU_CH0_START_TRG_ON
+                                        177: 6
+              #define _0000_TAU_CH1_START_TRG_OFF
+                                        179: 6
+              #define _0002_TAU_CH1_START_TRG_ON
+                                        180: 6
+              #define _0000_TAU_CH2_START_TRG_OFF
+                                        182: 6
+              #define _0004_TAU_CH2_START_TRG_ON
+                                        183: 6
+              #define _0000_TAU_CH3_START_TRG_OFF
+                                        185: 6
+              #define _0008_TAU_CH3_START_TRG_ON
+                                        186: 6
+              #define _0000_TAU_CH4_START_TRG_OFF
+                                        188: 6
+              #define _0010_TAU_CH4_START_TRG_ON
+                                        189: 6
+              #define _0000_TAU_CH5_START_TRG_OFF
+                                        191: 6
+              #define _0020_TAU_CH5_START_TRG_ON
+                                        192: 6
+              #define _0000_TAU_CH6_START_TRG_OFF
+                                        194: 6
+              #define _0040_TAU_CH6_START_TRG_ON
+                                        195: 6
+              #define _0000_TAU_CH7_START_TRG_OFF
+                                        197: 6
+              #define _0080_TAU_CH7_START_TRG_ON
+                                        198: 6
+              #define _0000_TAU_CH1_H8_START_TRG_OFF
+                                        200: 6
+              #define _0200_TAU_CH1_H8_START_TRG_ON
+                                        201: 6
+              #define _0000_TAU_CH3_H8_START_TRG_OFF
+                                        203: 6
+              #define _0800_TAU_CH3_H8_START_TRG_ON
+                                        204: 6
+              #define _0000_TAU_CH0_STOP_TRG_OFF
+                                        210: 6
+              #define _0001_TAU_CH0_STOP_TRG_ON
+                                        211: 6
+              #define _0000_TAU_CH1_STOP_TRG_OFF
+                                        213: 6
+              #define _0002_TAU_CH1_STOP_TRG_ON
+                                        214: 6
+              #define _0000_TAU_CH2_STOP_TRG_OFF
+                                        216: 6
+              #define _0004_TAU_CH2_STOP_TRG_ON
+                                        217: 6
+              #define _0000_TAU_CH3_STOP_TRG_OFF
+                                        219: 6
+              #define _0008_TAU_CH3_STOP_TRG_ON
+                                        220: 6
+              #define _0000_TAU_CH4_STOP_TRG_OFF
+                                        222: 6
+              #define _0010_TAU_CH4_STOP_TRG_ON
+                                        223: 6
+              #define _0000_TAU_CH5_STOP_TRG_OFF
+                                        225: 6
+              #define _0020_TAU_CH5_STOP_TRG_ON
+                                        226: 6
+              #define _0000_TAU_CH6_STOP_TRG_OFF
+                                        228: 6
+              #define _0040_TAU_CH6_STOP_TRG_ON
+                                        229: 6
+              #define _0000_TAU_CH7_STOP_TRG_OFF
+                                        231: 6
+              #define _0080_TAU_CH7_STOP_TRG_ON
+                                        232: 6
+              #define _0000_TAU_CH1_H8_STOP_TRG_OFF
+                                        234: 6
+              #define _0200_TAU_CH1_H8_STOP_TRG_ON
+                                        235: 6
+              #define _0000_TAU_CH3_H8_STOP_TRG_OFF
+                                        237: 6
+              #define _0800_TAU_CH3_H8_STOP_TRG_ON
+                                        238: 6
+              #define _00_TAU_CH5_INPUT_TI05
+                                        244: 6
+              #define _01_TAU_CH5_INPUT_TI05
+                                        245: 6
+              #define _02_TAU_CH5_INPUT_TI05
+                                        246: 6
+              #define _03_TAU_CH5_INPUT_TI05
+                                        247: 6
+              #define _04_TAU_CH5_INPUT_FIL
+                                        248: 6
+              #define _05_TAU_CH5_INPUT_FSUB
+                                        249: 6
+              #define _0001_TAU_CH0_OUTPUT_ENABLE
+                                        255: 6
+              #define _0000_TAU_CH0_OUTPUT_DISABLE
+                                        256: 6
+              #define _0002_TAU_CH1_OUTPUT_ENABLE
+                                        258: 6
+              #define _0000_TAU_CH1_OUTPUT_DISABLE
+                                        259: 6
+              #define _0004_TAU_CH2_OUTPUT_ENABLE
+                                        261: 6
+              #define _0000_TAU_CH2_OUTPUT_DISABLE
+                                        262: 6
+              #define _0008_TAU_CH3_OUTPUT_ENABLE
+                                        264: 6
+              #define _0000_TAU_CH3_OUTPUT_DISABLE
+                                        265: 6
+              #define _0010_TAU_CH4_OUTPUT_ENABLE
+                                        267: 6
+              #define _0000_TAU_CH4_OUTPUT_DISABLE
+                                        268: 6
+              #define _0020_TAU_CH5_OUTPUT_ENABLE
+                                        270: 6
+              #define _0000_TAU_CH5_OUTPUT_DISABLE
+                                        271: 6
+              #define _0040_TAU_CH6_OUTPUT_ENABLE
+                                        273: 6
+              #define _0000_TAU_CH6_OUTPUT_DISABLE
+                                        274: 6
+              #define _0080_TAU_CH7_OUTPUT_ENABLE
+                                        276: 6
+              #define _0000_TAU_CH7_OUTPUT_DISABLE
+                                        277: 6
+              #define _0000_TAU_CH0_OUTPUT_VALUE_0
+                                        283: 6
+              #define _0001_TAU_CH0_OUTPUT_VALUE_1
+                                        284: 6
+              #define _0000_TAU_CH1_OUTPUT_VALUE_0
+                                        286: 6
+              #define _0002_TAU_CH1_OUTPUT_VALUE_1
+                                        287: 6
+              #define _0000_TAU_CH2_OUTPUT_VALUE_0
+                                        289: 6
+              #define _0004_TAU_CH2_OUTPUT_VALUE_1
+                                        290: 6
+              #define _0000_TAU_CH3_OUTPUT_VALUE_0
+                                        292: 6
+              #define _0008_TAU_CH3_OUTPUT_VALUE_1
+                                        293: 6
+              #define _0000_TAU_CH4_OUTPUT_VALUE_0
+                                        295: 6
+              #define _0010_TAU_CH4_OUTPUT_VALUE_1
+                                        296: 6
+              #define _0000_TAU_CH5_OUTPUT_VALUE_0
+                                        298: 6
+              #define _0020_TAU_CH5_OUTPUT_VALUE_1
+                                        299: 6
+              #define _0000_TAU_CH6_OUTPUT_VALUE_0
+                                        301: 6
+              #define _0040_TAU_CH6_OUTPUT_VALUE_1
+                                        302: 6
+              #define _0000_TAU_CH7_OUTPUT_VALUE_0
+                                        304: 6
+              #define _0080_TAU_CH7_OUTPUT_VALUE_1
+                                        305: 6
+              #define _0000_TAU_CH1_OUTPUT_LEVEL_H
+                                        311: 6
+              #define _0002_TAU_CH1_OUTPUT_LEVEL_L
+                                        312: 6
+              #define _0000_TAU_CH2_OUTPUT_LEVEL_H
+                                        314: 6
+              #define _0004_TAU_CH2_OUTPUT_LEVEL_L
+                                        315: 6
+              #define _0000_TAU_CH3_OUTPUT_LEVEL_H
+                                        317: 6
+              #define _0008_TAU_CH3_OUTPUT_LEVEL_L
+                                        318: 6
+              #define _0000_TAU_CH4_OUTPUT_LEVEL_H
+                                        320: 6
+              #define _0010_TAU_CH4_OUTPUT_LEVEL_L
+                                        321: 6
+              #define _0000_TAU_CH5_OUTPUT_LEVEL_H
+                                        323: 6
+              #define _0020_TAU_CH5_OUTPUT_LEVEL_L
+                                        324: 6
+              #define _0000_TAU_CH6_OUTPUT_LEVEL_H
+                                        326: 6
+              #define _0040_TAU_CH6_OUTPUT_LEVEL_L
+                                        327: 6
+              #define _0000_TAU_CH7_OUTPUT_LEVEL_H
+                                        329: 6
+              #define _0080_TAU_CH7_OUTPUT_LEVEL_L
+                                        330: 6
+              #define _0000_TAU_CH1_OUTPUT_TOGGLE
+                                        336: 6
+              #define _0002_TAU_CH1_OUTPUT_COMBIN
+                                        337: 6
+              #define _0000_TAU_CH2_OUTPUT_TOGGLE
+                                        339: 6
+              #define _0004_TAU_CH2_OUTPUT_COMBIN
+                                        340: 6
+              #define _0000_TAU_CH3_OUTPUT_TOGGLE
+                                        342: 6
+              #define _0008_TAU_CH3_OUTPUT_COMBIN
+                                        343: 6
+              #define _0000_TAU_CH4_OUTPUT_TOGGLE
+                                        345: 6
+              #define _0010_TAU_CH4_OUTPUT_COMBIN
+                                        346: 6
+              #define _0000_TAU_CH5_OUTPUT_TOGGLE
+                                        348: 6
+              #define _0020_TAU_CH5_OUTPUT_COMBIN
+                                        349: 6
+              #define _0000_TAU_CH6_OUTPUT_TOGGLE
+                                        351: 6
+              #define _0040_TAU_CH6_OUTPUT_COMBIN
+                                        352: 6
+              #define _0000_TAU_CH7_OUTPUT_TOGGLE
+                                        354: 6
+              #define _0080_TAU_CH7_OUTPUT_COMBIN
+                                        355: 6
+              #define _00_TAU_CH7_NO_INPUT
+                                        361: 6
+              #define _02_TAU_CH7_RXD3_INPUT
+                                        362: 6
+              #define _00_TAU_CH7_NOISE_OFF
+                                        368: 6
+              #define _80_TAU_CH7_NOISE_ON
+                                        369: 6
+              #define _00_TAU_CH6_NOISE_OFF
+                                        371: 6
+              #define _40_TAU_CH6_NOISE_ON
+                                        372: 6
+              #define _00_TAU_CH5_NOISE_OFF
+                                        374: 6
+              #define _20_TAU_CH5_NOISE_ON
+                                        375: 6
+              #define _00_TAU_CH4_NOISE_OFF
+                                        377: 6
+              #define _10_TAU_CH4_NOISE_ON
+                                        378: 6
+              #define _00_TAU_CH3_NOISE_OFF
+                                        380: 6
+              #define _08_TAU_CH3_NOISE_ON
+                                        381: 6
+              #define _00_TAU_CH2_NOISE_OFF
+                                        383: 6
+              #define _04_TAU_CH2_NOISE_ON
+                                        384: 6
+              #define _00_TAU_CH1_NOISE_OFF
+                                        386: 6
+              #define _02_TAU_CH1_NOISE_ON
+                                        387: 6
+              #define _00_TAU_CH0_NOISE_OFF
+                                        389: 6
+              #define _01_TAU_CH0_NOISE_ON
+                                        390: 6
+              #define _C34F_TAU_TDR00_VALUE
+                                        397: 6
+              #define _0040_TAU0_CHANNEL0_DIVISOR
+                                        399: 6
+              #define WDT_H              30: 7
+              #define _USER_DEF_H        30: 8
+              #define TRUE               37: 8
+              #define FALSE              38: 8
+              #define TX2_BUFFER_LENTH
+                                         39: 8
+              #define RX2_BUFFER_LENTH
+                                         40: 8
+              #define TX1_BUFFER_LENTH
+                                         41: 8
+              #define RX1_BUFFER_LENTH
+                                         42: 8
+              #define TX0_BUFFER_LENTH
+                                         43: 8
+              #define RX0_BUFFER_LENTH
+                                         44: 8
+
+
+ Target chip : R5F100BC
+ Device file : V1.14 

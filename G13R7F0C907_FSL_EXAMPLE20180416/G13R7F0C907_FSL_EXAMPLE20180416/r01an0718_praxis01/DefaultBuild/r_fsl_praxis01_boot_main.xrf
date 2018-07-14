@@ -1,0 +1,492 @@
+
+
+
+78K0R C Compiler V2.72 Cross reference List                                                               Date:30 Jun 2018 Page:   1
+
+Command   : -cf100bc -yC:\Program Files (x86)\Renesas Electronics\CS+\CACX\Device\RL78\Devicefile src\boot\r_fsl_praxis01_boot_main.
+            c -oDefaultBuild -_msgoff -nq -i. -iT04FDL\lib -iinc -iFSLT01_V220_R5F100xE_REN110 -iFSLT01_V220_R5F100xE_REN110\lib -iF
+            SLT01_V220_R5F100xE_REN110\smp -zps -mm -zz02000h -zt02000h -mi0 -xDefaultBuild -g2
+In-file   : src\boot\r_fsl_praxis01_boot_main.c
+Xref-file : DefaultBuild\r_fsl_praxis01_boot_main.xrf
+Para-file : 
+Inc-file  : [ 1] inc\r_fsl_praxis01_com.h
+            [ 2] C:\Program Files (x86)\Renesas Electronics\CS+\CACX\CA78K0R\V1.72\Bin\..\inc78k0r\stddef.h
+            [ 3] C:\Program Files (x86)\Renesas Electronics\CS+\CACX\CA78K0R\V1.72\Bin\..\inc78k0r\string.h
+            [ 4] .\r_cg_cgc.h
+            [ 5] T04FDL\lib\pfdl_types.h
+            [ 6] T04FDL\lib\pfdl.h
+            [ 7] .\r_pfdl.h
+            [ 8] T04FDL\lib\pfdl_types.h
+
+ATTRIB MODIFY TYPE    SYMBOL          DEFINE   REFERENCE
+
+EXTERN RWSFR  uchar   P0                         117      117
+EXTERN RWSFR  uchar   P6                         240      244      255
+EXTERN RWSFR  uchar   PM0                        117      117
+EXTERN RWSFR  uchar   EGP0                       127
+EXTERN RWSFR  uchar   EGN0                       127
+EXTERN RWSFR  uchar   CMC                        107
+EXTERN RWSFR  bit     HIOSTOP                    113
+EXTERN RWSFR  bit     MSTOP                      108
+EXTERN RWSFR  bit     MCM0                       110
+EXTERN RWSFR  uchar   WDTE                       137      305
+EXTERN RWSFR  bit     PIF0                       127
+EXTERN RWSFR  bit     WDTIMK                     137
+EXTERN RWSFR  bit     PMK0                       127
+EXTERN RWSFR  bit     PPR00                      127
+EXTERN RWSFR  bit     PPR10                      127
+EXTERN RWSFR  uchar   PU0                        117
+EXTERN RWSFR  uchar   OSMC                       111
+EXTERN VECT   func    prIntComWdt       303       53
+EXTERN VECT   func    prIntComSwIntp0   319       54
+EXTYP         char    int8_t             47: 1
+EXTYP         uchar   uint8_t            48: 1
+EXTYP         short   int16_t            49: 1
+EXTYP         ushort  uint16_t           50: 1
+EXTYP         long    int32_t            51: 1
+EXTYP         ulong   uint32_t           52: 1
+EXTYP         uint    _Bool              53: 1
+EXTERN FAR    func    prBootWriteProgram
+                                                 254: 1   172
+EXTERN FAR    func    prUartInit                 257: 1
+EXTERN FAR    func    prUartEnd                  258: 1
+EXTERN FAR    func    prUartRcvData              259: 1
+EXTERN FAR    func    prUartSendData             260: 1
+EXTERN FAR    func    prUartRcvMsg               261: 1
+EXTERN FAR    func    prUartSendMsg              262: 1
+EXTERN FAR    func    prWait10clcok     276      265: 1   213      249
+EXTERN FAR    func    prSendMsgAsciiData
+                                                 268: 1   323
+EXTERN NEAR   uchar   prDubBootMode              271: 1   198      321
+EXTYP         int     ptrdiff_t          13: 2
+EXTYP         uint    size_t             14: 2
+EXTERN FAR    func    memcpy                      16: 3
+EXTERN FAR    func    memmove                     18: 3
+EXTERN FAR    func    strcpy                      19: 3
+EXTERN FAR    func    strncpy                     20: 3
+EXTERN FAR    func    strcat                      21: 3
+EXTERN FAR    func    strncat                     22: 3
+EXTERN FAR    func    memcmp                      23: 3
+EXTERN FAR    func    strcmp                      24: 3
+EXTERN FAR    func    strncmp                     25: 3
+EXTERN FAR    func    memchr                      26: 3
+EXTERN FAR    func    strchr                      27: 3
+EXTERN FAR    func    strcspn                     28: 3
+EXTERN FAR    func    strpbrk                     29: 3
+EXTERN FAR    func    strrchr                     30: 3
+EXTERN FAR    func    strspn                      31: 3
+EXTERN FAR    func    strstr                      32: 3
+EXTERN FAR    func    strtok                      33: 3
+EXTERN FAR    func    memset                      35: 3
+EXTERN FAR    func    strerror                    37: 3
+EXTERN FAR    func    strlen                      38: 3
+EXTERN FAR    func    strcoll                     39: 3
+EXTERN FAR    func    strxfrm                     40: 3
+EXTERN FAR    func    memcpy_n                    43: 3
+EXTERN FAR    func    memmove_n                   45: 3
+EXTERN FAR    func    strcpy_n                    46: 3
+EXTERN FAR    func    strncpy_n                   47: 3
+EXTERN FAR    func    strcat_n                    48: 3
+EXTERN FAR    func    strncat_n                   49: 3
+EXTERN FAR    func    memcmp_n                    50: 3
+EXTERN FAR    func    strcmp_n                    51: 3
+EXTERN FAR    func    strncmp_n                   52: 3
+EXTERN FAR    func    memchr_n                    53: 3
+EXTERN FAR    func    strchr_n                    54: 3
+EXTERN FAR    func    strcspn_n                   55: 3
+EXTERN FAR    func    strpbrk_n                   56: 3
+EXTERN FAR    func    strrchr_n                   57: 3
+EXTERN FAR    func    strspn_n                    58: 3
+EXTERN FAR    func    strstr_n                    59: 3
+EXTERN FAR    func    strtok_n                    60: 3
+EXTERN FAR    func    memset_n                    62: 3
+EXTERN FAR    func    strlen_n                    64: 3
+EXTERN FAR    func    strcoll_n                   65: 3
+EXTERN FAR    func    strxfrm_n                   66: 3
+EXTERN FAR    func    memcpy_f                    69: 3
+EXTERN FAR    func    memmove_f                   71: 3
+EXTERN FAR    func    strcpy_f                    72: 3
+EXTERN FAR    func    strncpy_f                   73: 3
+EXTERN FAR    func    strcat_f                    74: 3
+EXTERN FAR    func    strncat_f                   75: 3
+EXTERN FAR    func    memcmp_f                    76: 3
+EXTERN FAR    func    strcmp_f                    77: 3
+EXTERN FAR    func    strncmp_f                   78: 3
+EXTERN FAR    func    memchr_f                    79: 3
+EXTERN FAR    func    strchr_f                    80: 3
+EXTERN FAR    func    strcspn_f                   81: 3
+EXTERN FAR    func    strpbrk_f                   82: 3
+EXTERN FAR    func    strrchr_f                   83: 3
+EXTERN FAR    func    strspn_f                    84: 3
+EXTERN FAR    func    strstr_f                    85: 3
+EXTERN FAR    func    strtok_f                    86: 3
+EXTERN FAR    func    memset_f                    88: 3
+EXTERN FAR    func    strlen_f                    90: 3
+EXTERN FAR    func    strcoll_f                   91: 3
+EXTERN FAR    func    strxfrm_f                   92: 3
+MEMBER NEAR   int     HIOCLK            156: 4
+MEMBER NEAR   int     SYSX1CLK          157: 4
+MEMBER NEAR   int     SYSEXTCLK         158: 4
+MEMBER NEAR   int     SUBXT1CLK         159: 4
+MEMBER NEAR   int     SUBEXTCLK         161: 4
+EXTYP         enum    clock_mode_t      161: 4
+EXTERN FAR    func    R_CGC_Create               166: 4
+EXTERN FAR    func    R_CGC_Get_ResetSource
+                                                 167: 4
+EXTYP         uchar   pfdl_u08           53: 5
+EXTYP         uint    pfdl_u16           54: 5
+EXTYP         ulong   pfdl_u32           55: 5
+MEMBER NEAR   int     PFDL_CMD_READ_BYTES
+                                         71: 5
+MEMBER NEAR   int     PFDL_CMD_IVERIFY_BYTES
+                                         72: 5
+MEMBER NEAR   int     PFDL_CMD_BLANKCHECK_BYTES
+                                         73: 5
+MEMBER NEAR   int     PFDL_CMD_WRITE_BYTES
+                                         74: 5
+MEMBER NEAR   int     PFDL_CMD_ERASE_BLOCK
+                                         76: 5
+EXTYP         enum    pfdl_command_t     76: 5
+MEMBER NEAR   int     PFDL_IDLE          82: 5
+MEMBER NEAR   int     PFDL_OK            83: 5
+MEMBER NEAR   int     PFDL_BUSY          84: 5
+MEMBER NEAR   int     PFDL_ERR_PROTECTION
+                                         86: 5
+MEMBER NEAR   int     PFDL_ERR_ERASE     87: 5
+MEMBER NEAR   int     PFDL_ERR_MARGIN    88: 5
+MEMBER NEAR   int     PFDL_ERR_WRITE     89: 5
+MEMBER NEAR   int     PFDL_ERR_PARAMETER
+                                         91: 5
+EXTYP         enum    pfdl_status_t      91: 5
+MEMBER        uint    index_u16          96: 5
+MEMBER        pointer data_pu08          97: 5
+MEMBER        uint    bytecount_u16      98: 5
+MEMBER        enum    command_enu        99: 5
+EXTYP         struct  pfdl_request_t    100: 5
+MEMBER        uchar   fx_MHz_u08        106: 5
+MEMBER        uchar   wide_voltage_mode_u08
+                                        107: 5
+EXTYP         struct  pfdl_descriptor_t
+                                        108: 5
+EXTERN FAR    func    PFDL_Open                   72: 6
+EXTERN FAR    func    PFDL_Close                  87: 6
+EXTERN FAR    func    PFDL_Execute               109: 6
+EXTERN FAR    func    PFDL_Handler               125: 6
+EXTERN FAR    func    PFDL_GetVersionString
+                                                 138: 6
+EXTERN FAR    func    R_FDL_Init                  12: 7
+EXTERN FAR    func    R_FDL_Erase                 13: 7
+EXTERN FAR    func    R_FDL_Read                  14: 7
+EXTERN FAR    func    R_FDL_Write                 15: 7
+EXTERN FAR    func    R_FDL_ChangeAddress
+                                                  16: 7
+EXTERN FAR    func    R_FDL_ExecuteWrite
+                                                  17: 7
+EXTERN FAR    func    R_FDL_ExecuteErase
+                                                  18: 7
+EXTERN FAR    func    R_FDL_ExecuteRead
+                                                  19: 7   164
+EXTERN FAR    func    R_FDL_FindAddress
+                                                  20: 7
+EXTERN FAR    func    R_FDL_Write_E2Prom
+                                                  21: 7
+EXTERN NEAR   array   g_write_value               81
+EXTERN NEAR   ushort  g_write_address             82      158
+EXTERN NEAR   array   g_read_value                83      159      160      161      162      163      166      166      166
+                                                 166      166
+EXTERN SREG   bit     updata_finsh       84      169
+EXTERN FAR    func    prBootTargetStart
+                                        188       89      170
+EXTERN FAR    func    prBootTargetEnd   227       90      174
+EXTERN FAR    func    UserApp_Main                91
+EXTERN FAR    func    Delay             208       92
+EXTERN FAR    func    hdwinit           104
+EXTERN FAR    func    boot_main         154
+AUTO1         array   buf               156
+AUTO2         uchar   dubRetCode        168      172      174
+INLINE        func    EI                         203
+AUTO1         uint    duw_i             210      211      211      211
+PARAM         uchar   dubEndMode        227      233
+AUTO1         ushort  duh_i             229      247      247      247
+AUTO1         uchar   dubLed1flag       230      237      239      243
+INLINE        func    NOP                        259      260      278      279      280      281      282      283      284
+                                                 285      286      287
+              #define bool               56: 1
+              #define B                  59: 1
+              #define UB                 60: 1   254: 1   259: 1   260: 1   261: 1   261: 1   261: 1   262: 1   262: 1   271: 1
+                                                  80       90      168      227      230
+              #define H                  61: 1
+              #define UH                 62: 1   229
+              #define W                  63: 1
+              #define UW                 64: 1
+              #define BOOL               65: 1
+              #define false              68: 1   230      233      237      243
+              #define true               69: 1   239
+              #define FALSE              70: 1
+              #define TRUE               71: 1
+              #define OFF                72: 1
+              #define ON                 73: 1
+              #define LOW                74: 1
+              #define HIGH               75: 1
+              #define PR_MAX_BLOCK_NUM
+                                         81: 1
+              #define PR_BLOCK_SIZE      82: 1
+              #define PR_WORD_SIZE       83: 1
+              #define PR_SW_ON           86: 1
+              #define PR_BOOT_MODE_UNKNOWN
+                                         89: 1    80
+              #define PR_BOOT_MODE_WRITE
+                                         90: 1   198
+              #define PR_BOOT_MODE_USER
+                                         91: 1   321
+              #define PR_MSG_FRAME_SOH
+                                         98: 1
+              #define PR_MSG_FRAME_STX
+                                         99: 1
+              #define PR_MSG_FRAME_ETB
+                                        100: 1
+              #define PR_MSG_FRAME_ETX
+                                        101: 1
+              #define PR_MSG_DFRAME_LEN
+                                        103: 1
+              #define PR_MSG_DFRAME_COMD
+                                        104: 1
+              #define PR_MSG_DFRAME_DATA
+                                        105: 1
+              #define PR_MSG_PACKET_SIZE
+                                        107: 1
+              #define PR_WRITE_SIZE     108: 1
+              #define PR_MSG_BLOCK_NUM
+                                        112: 1
+              #define PR_MSG_ADDR_HI    113: 1
+              #define PR_MSG_ADDR_MID   114: 1
+              #define PR_MSG_ADDR_LOW   115: 1
+              #define PR_MSG_SIZE_HI    116: 1
+              #define PR_MSG_SIZE_LOW   117: 1
+              #define PR_MSG_IVERIFY_BLOCK
+                                        118: 1
+              #define PR_MSG_ERASE_BLOCK
+                                        119: 1
+              #define PR_MSG_FSW_START_HI
+                                        120: 1
+              #define PR_MSG_FSW_START_LOW
+                                        121: 1
+              #define PR_MSG_FSW_END_HI
+                                        122: 1
+              #define PR_MSG_FSW_END_LOW
+                                        123: 1
+              #define PR_MSG_COMM_ERASE
+                                        127: 1
+              #define PR_MSG_COMM_WRITE
+                                        128: 1
+              #define PR_MSG_COMM_DATA
+                                        129: 1
+              #define PR_MSG_COMM_RESET
+                                        130: 1
+              #define PR_MSG_COMM_BOOTSWAP
+                                        131: 1
+              #define PR_MSG_COMM_IVERIFY
+                                        132: 1
+              #define PR_MSG_COMM_FSW_SET
+                                        133: 1
+              #define PR_MSG_COMM_WRITE_END
+                                        134: 1
+              #define PR_MSG_RET_NORM_END
+                                        138: 1
+              #define PR_MSG_RET_ERR_END
+                                        139: 1
+              #define PR_MSG_RET_PRM_ERR
+                                        140: 1
+              #define PR_MSG_RET_PROTECT_ERR
+                                        141: 1
+              #define PR_MSG_RET_ERASE_ERR
+                                        142: 1
+              #define PR_MSG_RET_B_CHK_ERR
+                                        143: 1
+              #define PR_MSG_RET_IVERIFY_ERR
+                                        144: 1
+              #define PR_MSG_RET_WRITE_ERR
+                                        145: 1
+              #define PR_MSG_RET_INT_ERR
+                                        146: 1
+              #define PR_MSG_RET_READ_ERR
+                                        147: 1
+              #define PR_MSG_RET_CHKSUM_ERR
+                                        148: 1
+              #define __QB_R5F100LE_TB__
+                                        156: 1   174: 1
+              #define PR_USE_OCD_MODE   157: 1   165: 1
+              #define PR_OCD_MONITOR_BLOCK
+                                        166: 1
+              #define PR_OCD_MONITOR_ADDR
+                                        167: 1
+              #define PR_TBLED1_INIT    177: 1
+              #define PR_TBLED1_ON      179: 1   240      255
+              #define PR_TBLED1_OFF     180: 1   244
+              #define PR_TBLED2_INIT    182: 1
+              #define PR_TBLED2_ON      184: 1
+              #define PR_TBLED2_OFF     185: 1
+              #define PR_SW1_INTP0_INIT
+                                        189: 1   127
+              #define PR_SW1_P137       191: 1
+              #define PR_UART0_INIT     195: 1   117
+              #define PR_LED_INIT       200: 1
+              #define PR_SW_INIT        201: 1   127
+              #define PR_AD_INIT        202: 1   132
+              #define PR_UART_PORT_INIT
+                                        203: 1   117
+              #define PR_LED1_ON        207: 1   240      255
+              #define PR_LED1_OFF       208: 1   244
+              #define PR_LED2_ON        209: 1
+              #define PR_LED2_OFF       210: 1
+              #define PR_BOOT_SW        221: 1
+              #define PR_WD_INT_ON      247: 1   137
+              #define PR_WD_INT_OFF     248: 1
+              #define offsetof           15: 2
+              #define NULL               17: 2
+              #define _STDDEF_H          20: 2
+              #define _STRING_H          94: 3
+              #define CGC_H              30: 4
+              #define _C0_CGC_HISYS_PIN
+                                         39: 4
+              #define _00_CGC_HISYS_PORT
+                                         40: 4   107
+              #define _40_CGC_HISYS_OSC
+                                         41: 4
+              #define _80_CGC_HISYS_PORT1
+                                         42: 4
+              #define _C0_CGC_HISYS_EXT
+                                         43: 4
+              #define _30_CGC_SUB_PIN    45: 4
+              #define _00_CGC_SUB_PORT
+                                         46: 4
+              #define _10_CGC_SUB_OSC    47: 4
+              #define _20_CGC_SUB_PORT1
+                                         48: 4
+              #define _30_CGC_SUB_EXT    49: 4
+              #define _00_CGC_SUBMODE_DEFAULT
+                                         51: 4
+              #define _00_CGC_SUBMODE_LOW
+                                         52: 4
+              #define _02_CGC_SUBMODE_NORMAL
+                                         53: 4
+              #define _04_CGC_SUBMODE_ULOW
+                                         54: 4
+              #define _00_CGC_SYSOSC_DEFAULT
+                                         56: 4   107
+              #define _00_CGC_SYSOSC_UNDER10M
+                                         57: 4
+              #define _01_CGC_SYSOSC_OVER10M
+                                         58: 4
+              #define _00_CGC_HISYS_OPER
+                                         64: 4
+              #define _80_CGC_HISYS_STOP
+                                         65: 4
+              #define _00_CGC_SUB_OPER
+                                         67: 4
+              #define _40_CGC_SUB_STOP
+                                         68: 4
+              #define _00_CGC_HIO_OPER
+                                         70: 4
+              #define _01_CGC_HIO_STOP
+                                         71: 4
+              #define _00_CGC_OSCSTAB_STA0
+                                         77: 4
+              #define _80_CGC_OSCSTAB_STA8
+                                         78: 4
+              #define _C0_CGC_OSCSTAB_STA9
+                                         79: 4
+              #define _E0_CGC_OSCSTAB_STA10
+                                         80: 4
+              #define _F0_CGC_OSCSTAB_STA11
+                                         81: 4
+              #define _F8_CGC_OSCSTAB_STA13
+                                         82: 4
+              #define _FC_CGC_OSCSTAB_STA15
+                                         83: 4
+              #define _FE_CGC_OSCSTAB_STA17
+                                         84: 4
+              #define _FF_CGC_OSCSTAB_STA18
+                                         85: 4
+              #define _00_CGC_OSCSTAB_SEL8
+                                         91: 4
+              #define _01_CGC_OSCSTAB_SEL9
+                                         92: 4
+              #define _02_CGC_OSCSTAB_SEL10
+                                         93: 4
+              #define _03_CGC_OSCSTAB_SEL11
+                                         94: 4
+              #define _04_CGC_OSCSTAB_SEL13
+                                         95: 4
+              #define _05_CGC_OSCSTAB_SEL15
+                                         96: 4
+              #define _06_CGC_OSCSTAB_SEL17
+                                         97: 4
+              #define _07_CGC_OSCSTAB_SEL18
+                                         98: 4
+              #define _00_CGC_CPUCLK_MAIN
+                                        104: 4
+              #define _80_CGC_CPUCLK_SUB
+                                        105: 4
+              #define _00_CGC_CPUCLK_SELMAIN
+                                        107: 4
+              #define _40_CGC_CPUCLK_SELSUB
+                                        108: 4
+              #define _00_CGC_MAINCLK_HIO
+                                        110: 4
+              #define _20_CGC_MAINCLK_HISYS
+                                        111: 4
+              #define _00_CGC_MAINCLK_SELHIO
+                                        113: 4
+              #define _10_CGC_MAINCLK_SELHISYS
+                                        114: 4
+              #define _00_CGC_SUBINHALT_ON
+                                        120: 4
+              #define _80_CGC_SUBINHALT_OFF
+                                        121: 4
+              #define _00_CGC_RTC_CLK_FSUB
+                                        123: 4
+              #define _10_CGC_RTC_CLK_FIL
+                                        124: 4
+              #define _00_CGC_ILLEGAL_ACCESS_OFF
+                                        130: 4
+              #define _80_CGC_ILLEGAL_ACCESS_ON
+                                        131: 4
+              #define _00_CGC_RAM_GUARD_OFF
+                                        133: 4
+              #define _10_CGC_RAM_GUARD_ARAE0
+                                        134: 4
+              #define _20_CGC_RAM_GUARD_ARAE1
+                                        135: 4
+              #define _30_CGC_RAM_GUARD_ARAE2
+                                        136: 4
+              #define _00_CGC_PORT_GUARD_OFF
+                                        138: 4
+              #define _04_CGC_PORT_GUARD_ON
+                                        139: 4
+              #define _00_CGC_INT_GUARD_OFF
+                                        141: 4
+              #define _02_CGC_INT_GUARD_ON
+                                        142: 4
+              #define _00_CGC_CSC_GUARD_OFF
+                                        144: 4
+              #define _01_CGC_CSC_GUARD_ON
+                                        145: 4
+              #define __PFDL_H_INCLUDED
+                                         47: 6
+              #define __PFDL_TYPES_H_INCLUDED
+                                         47: 5    46: 8
+              #define FLASH_START_ADDRESS
+                                          2: 7
+              #define TARGET_BLOCK        3: 7    23: 7   158
+              #define BLOCK_SIZE          4: 7   158
+              #define WRITE_SIZE          5: 7    81       83
+              #define MAX_VALUE           6: 7
+              #define MAX_ADDRESS         7: 7
+              #define PFDL_NG             8: 7
+              #define FDL_FRQ             9: 7
+              #define FDL_VOL            10: 7
+
+
+ Target chip : R5F100BC
+ Device file : V1.14 

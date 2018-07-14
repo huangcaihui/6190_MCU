@@ -1,0 +1,342 @@
+===============================================================================
+    Read me file for the RL78 Self-Programming Library T01
+===============================================================================
+
+The RL78 products are equipped with an internal firmware, which allows
+rewriting of the code flash memory without the use of an external programmer.
+Renesas provides the so called Self-Programming Library for RL78 devices, which
+offers an easy-to-use interface to the internal firmware functionality. By
+calling the Self-Programming Library functions from a user program, the 
+contents of the code flash memory can easily be rewritten in the field.
+
+
+========
+Contents
+========
+
+  1. Software Corrections and Updates
+  2. General Information
+  3. File Naming
+  4. Supported Devices
+  5. Operating Precautions
+  6. Support
+
+
+===================================
+1. Software Corrections and Updates
+===================================
+
+Installer Changes
+-----------------
+
+    V1.10
+    -----
+    library update for reduction of RAM consumption, including GNU support:
+        - RL78 FSL T01 V2.20 for RENESAS environment
+        - RL78 FSL T01 V2.20 for IAR environment
+        - RL78 FSL T01 V2.20 for GNU environment
+    - device list updated
+
+    E1.10a
+    ------
+    engineering release of FSL T01 containing the following libraries:
+        - RL78 FSL T01 E2.20b for GNU environment
+
+    V1.01
+    -----
+    library update for F14/F13/G14 support containing the following libraries:
+        - RL78 FSL T01 V2.10 for RENESAS environment
+        - RL78 FSL T01 V2.11 for IAR environment
+    - device list updated
+
+    V1.0.0
+    ------
+    first official release of FSL T01 containing the following libraries:
+        - RL78 FSL T01 V2.10 for RENESAS environment
+        - RL78 FSL T01 V2.10 for IAR environment
+
+Library Changes
+---------------
+
+    RENESAS
+    -------
+        V2.20
+        -----
+        - reduced memory consuption leading to a reduction of the size of
+          the prohibited RAM area for some devices
+        
+        V2.10
+        -----
+        - first official release of RL78 FSL T01
+    
+    IAR
+    ---
+        V2.20
+        -----
+        - reduced memory consuption leading to a reduction of the size of
+          the prohibited RAM area for some devices
+
+        V2.11
+        -----
+        - support for devices with rl78_2 core (F14/F13/G14) added
+          (IAR V1.20 only)
+        
+        V2.10
+        -----
+        - first official release of RL78 FSL T01
+    
+    GNU
+    ---
+        V2.20
+        ------
+        - first official GNU port of RL78 FSL T01
+
+        E2.20b
+        ------
+        - tested engineering sample of RL78 FSL T01 (initial GNU port)
+
+
+======================
+2. General Information
+======================
+
+The precompiled Self-Programming Library is delivered
+for the RENESAS, IAR and GNU development environments.
+
+Supported compilers are:
+
+RENESAS
+-------
+    Library created on RENESAS Compiler version:    V1.10
+    Library tested on RENESAS Compiler version:     V1.41
+
+IAR
+---
+    all listed devices
+    ------------------
+    Library created on IAR Compiler version:        V1.20
+    Library tested on IAR Compiler version:         V1.30
+    
+    G12, G13, I1A, F12, D1A, G1A, G1E, L12 only
+    -------------------------------------------
+    Library created on IAR Compiler version:        V1.10
+    Library tested on IAR Compiler version:         V1.10
+
+GNU
+---
+    Library created on GNU Compiler version:        V13.01
+    Library tested on GNU Compiler version:         V13.01
+
+
+========================================
+3. File Naming
+========================================
+
+Installer
+---------
+    The installer file has the name RENESAS_FSL_RL78_TxxE_V{x}.{y}{z}.exe
+    e.g. RENESAS_FSL_RL78_TxxE_V1.00.exe
+    
+    {x} This version digit will be incremented in case of major changes e.g. API
+        changes
+    {y} This version digit will be incremented in case of bug fixes and internal
+        improvements
+    {z} This version digit will be incremented in case of adding support of new
+        devices
+
+Library
+-------
+    <<Folder: / >>
+        release.txt                 <-  this information file
+
+    <<Folder: lib>>
+        fsl.h                       <-  FSL interface definition (C compiler)
+                                        DO NOT CHANGE PLEASE
+        fsl.inc                     <-  FSL interface definition (assembler)
+                                        (Renesas only)
+                                        DO NOT CHANGE PLEASE
+        fsl_types.h                 <-  FSL header file, FSL types definition
+                                        DO NOT CHANGE PLEASE
+        fsl.lib, fsl.r87, fsl.a     <-  pre-compiled library file
+                                        DO NOT CHANGE PLEASE
+
+    <<Folder: smp/C >>
+        fsl_sample_linker_file.dr       <-  sample linker file (Renesas only)
+                                            ADAPT DUE TO REQUIREMENTS
+        fsl_sample_linker_file_SCI.xcl  <-  sample linker file (IAR/GNU only)
+        fsl_sample_linker_file_SCI.ld       (status check internal mode)
+                                            ADAPT DUE TO REQUIREMENTS
+        fsl_sample_linker_file_SCU.xcl  <-  sample linker file (IAR/GNU only)
+        fsl_sample_linker_file_SCU.ld       (status check user mode)
+                                            ADAPT DUE TO REQUIREMENTS
+
+
+How to integrate
+----------------
+    1) copy all the files into your project subdirectory
+    2) add all fsl*.* files into your project (workbench or make-file)
+    3) adapt the sample linker file to your requirements
+    4) re-compile the project
+
+
+====================
+4. Supported Devices
+====================
+
+The following devices are covered by this package
+
+    RL78/D1A
+    --------
+    R5F10CxB
+    R5F10CxC
+    R5F10CxD
+    R5F10CxE
+    R5F10DxC
+    R5F10DxD
+    R5F10DxE
+    R5F10DxF
+    R5F10DxG
+    R5F10DxJ
+    R5F10TxJ
+    R5F10TxK
+    R5F10TxL
+    
+    RL78/F12
+    --------
+    R5F109x8
+    R5F109xA
+    R5F109xB
+    R5F109xC
+    R5F109xD
+    R5F109xE
+    
+    RL78/G12
+    --------
+    R5F102x7
+    R5F102x8
+    R5F102x9
+    R5F102xA
+    R5F103x7
+    R5F103x8
+    R5F103x9
+    R5F103xA
+    
+    RL78/G13
+    --------
+    R5F100xA
+    R5F100xC
+    R5F100xD
+    R5F100xE
+    R5F100xF
+    R5F100xG
+    R5F100xH
+    R5F100xJ
+    R5F100xK
+    R5F100xL
+    R5F101xA
+    R5F101xC
+    R5F101xD
+    R5F101xE
+    R5F101xF
+    R5F101xG
+    R5F101xH
+    R5F101xJ
+    R5F101xK
+    R5F101xL
+    
+    RL78/G14
+    --------
+    R5F104xA
+    R5F104xC
+    R5F104xD
+    R5F104xE
+    R5F104xF
+    R5F104xG
+    R5F104xH
+    R5F104xJ
+    
+    RL78/G1A
+    --------
+    R5F10ExA
+    R5F10ExC
+    R5F10ExD
+    R5F10ExE
+    
+    RL78/G1C
+    --------
+    R5F10JxC
+    R5F10KxC
+    
+    RL78/G1E
+    --------
+    R5F10FxC
+    R5F10FxD
+    R5F10FxE
+    
+    RL78/I1A
+    --------
+    R5F107xC
+    R5F107xE
+    
+    RL78/L12
+    --------
+    R5F10Rx8
+    R5F10RxA
+    R5F10RxB
+    R5F10RxC
+    
+    RL78/L13
+    --------
+    R5F10WxA
+    R5F10WxC
+    R5F10WxD
+    R5F10WxE
+    R5F10WxF
+    R5F10WxG
+    
+    RL78/R5F10L
+    --------
+    R5F10LGA
+    R5F10LGC
+    R5F10LGD
+    R5F10LGE
+    
+    RL78/R5F10U
+    --------
+    R5F10UGA
+    R5F10UGC
+    R5F10UGD
+    R5F10UGE
+
+
+========================
+5. Operating Precautions
+========================
+
+All devices and libraries
+-------------------------
+    - please refer to the related documentation (R01US0016EDxxxx)
+
+
+
+==========
+6. Support
+==========
+
+In case of any question please do not hesitate to contact:
+
+        Flash Support
+
+        Renesas Electronics Europe GmbH
+        Arcadiastr. 10
+        D-40472 Duesseldorf, Germany
+
+        email: application_support.flash-eu@lm.renesas.com
+
+
+===============================================================================
+  End of read me file for the RL78 Self-Programming Library
+===============================================================================
+
+
+

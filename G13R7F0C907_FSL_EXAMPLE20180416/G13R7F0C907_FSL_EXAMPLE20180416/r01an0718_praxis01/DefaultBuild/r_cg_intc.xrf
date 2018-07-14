@@ -1,0 +1,131 @@
+
+
+
+78K0R C Compiler V2.72 Cross reference List                                                               Date:30 Jun 2018 Page:   1
+
+Command   : -cf100bc -yC:\Program Files (x86)\Renesas Electronics\CS+\CACX\Device\RL78\Devicefile r_cg_intc.c -oDefaultBuild -_msgof
+            f -nq -i. -iinc -zpsf -mm -zz02000h -zt02000h -mi0 -xDefaultBuild -g2
+In-file   : r_cg_intc.c
+Xref-file : DefaultBuild\r_cg_intc.xrf
+Para-file : 
+Inc-file  : [ 1] r_cg_macrodriver.h
+            [ 2] r_cg_intc.h
+            [ 3] r_cg_userdefine.h
+
+ATTRIB MODIFY TYPE    SYMBOL          DEFINE   REFERENCE
+
+EXTERN RWSFR  uchar   PM5                         79       81
+EXTERN RWSFR  uchar   EGP0                        77
+EXTERN RWSFR  uchar   EGN0                        76
+EXTERN RWSFR  bit     PIF0                        59
+EXTERN RWSFR  bit     PIF1                        61       92      105
+EXTERN RWSFR  bit     PIF2                        63      116      129
+EXTERN RWSFR  bit     PIF3                        65
+EXTERN RWSFR  bit     PIF4                        67
+EXTERN RWSFR  bit     PIF5                        69
+EXTERN RWSFR  bit     PMK0                        58
+EXTERN RWSFR  bit     PMK1                        60       93      104
+EXTERN RWSFR  bit     PMK2                        62      117      128
+EXTERN RWSFR  bit     PMK3                        64
+EXTERN RWSFR  bit     PMK4                        66
+EXTERN RWSFR  bit     PMK5                        68
+EXTERN RWSFR  bit     PPR01                       72
+EXTERN RWSFR  bit     PPR02                       75
+EXTERN RWSFR  bit     PPR11                       71
+EXTERN RWSFR  bit     PPR12                       74
+EXTYP         char    int8_t             72: 1
+EXTYP         uchar   uint8_t            73: 1
+EXTYP         short   int16_t            74: 1
+EXTYP         ushort  uint16_t           75: 1
+EXTYP         long    int32_t            76: 1
+EXTYP         ulong   uint32_t           77: 1
+EXTYP         ushort  MD_STATUS          78: 1
+EXTERN FAR    func    R_INTC_Create      56       81: 2
+EXTERN FAR    func    R_INTC1_Start      90       82: 2
+EXTERN FAR    func    R_INTC1_Stop      102       83: 2
+EXTERN FAR    func    R_INTC2_Start     114       84: 2
+EXTERN FAR    func    R_INTC2_Stop      126       85: 2
+              #define STATUS_H           30: 1
+              #define MD_STATUSBASE      50: 1
+              #define MD_OK              51: 1
+              #define MD_SPT             52: 1
+              #define MD_NACK            53: 1
+              #define MD_BUSY1           54: 1
+              #define MD_BUSY2           55: 1
+              #define MD_OVERRUN         56: 1
+              #define MD_ERRORBASE       59: 1
+              #define MD_ERROR           60: 1
+              #define MD_ARGERROR        61: 1
+              #define MD_ERROR1          62: 1
+              #define MD_ERROR2          63: 1
+              #define MD_ERROR3          64: 1
+              #define MD_ERROR4          65: 1
+              #define __TYPEDEF__        79: 1
+              #define INTC_H             30: 2
+              #define _01_INTP0_EDGE_RISING_SEL
+                                         40: 2
+              #define _00_INTP0_EDGE_RISING_UNSEL
+                                         41: 2
+              #define _02_INTP1_EDGE_RISING_SEL
+                                         42: 2    77
+              #define _00_INTP1_EDGE_RISING_UNSEL
+                                         43: 2
+              #define _04_INTP2_EDGE_RISING_SEL
+                                         44: 2    77
+              #define _00_INTP2_EDGE_RISING_UNSEL
+                                         45: 2
+              #define _08_INTP3_EDGE_RISING_SEL
+                                         46: 2
+              #define _00_INTP3_EDGE_RISING_UNSEL
+                                         47: 2
+              #define _10_INTP4_EDGE_RISING_SEL
+                                         48: 2
+              #define _00_INTP4_EDGE_RISING_UNSEL
+                                         49: 2
+              #define _20_INTP5_EDGE_RISING_SEL
+                                         50: 2
+              #define _00_INTP5_EDGE_RISING_UNSEL
+                                         51: 2
+              #define _01_INTP0_EDGE_FALLING_SEL
+                                         57: 2
+              #define _00_INTP0_EDGE_FALLING_UNSEL
+                                         58: 2
+              #define _02_INTP1_EDGE_FALLING_SEL
+                                         59: 2    76
+              #define _00_INTP1_EDGE_FALLING_UNSEL
+                                         60: 2
+              #define _04_INTP2_EDGE_FALLING_SEL
+                                         61: 2    76
+              #define _00_INTP2_EDGE_FALLING_UNSEL
+                                         62: 2
+              #define _08_INTP3_EDGE_FALLING_SEL
+                                         63: 2
+              #define _00_INTP3_EDGE_FALLING_UNSEL
+                                         64: 2
+              #define _10_INTP4_EDGE_FALLING_SEL
+                                         65: 2
+              #define _00_INTP4_EDGE_FALLING_UNSEL
+                                         66: 2
+              #define _20_INTP5_EDGE_FALLING_SEL
+                                         67: 2
+              #define _00_INTP5_EDGE_FALLING_UNSEL
+                                         68: 2
+              #define _USER_DEF_H        30: 3
+              #define TRUE               37: 3
+              #define FALSE              38: 3
+              #define TX2_BUFFER_LENTH
+                                         39: 3
+              #define RX2_BUFFER_LENTH
+                                         40: 3
+              #define TX1_BUFFER_LENTH
+                                         41: 3
+              #define RX1_BUFFER_LENTH
+                                         42: 3
+              #define TX0_BUFFER_LENTH
+                                         43: 3
+              #define RX0_BUFFER_LENTH
+                                         44: 3
+
+
+ Target chip : R5F100BC
+ Device file : V1.14 

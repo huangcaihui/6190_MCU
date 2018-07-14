@@ -1,0 +1,337 @@
+---- g_read_value Matches (29 in 7 files) ----
+R_fsl_praxis01_boot_main - 副本.c (src\boot):extern uint8_t  g_read_value[WRITE_SIZE];
+R_fsl_praxis01_boot_main - 副本.c (src\boot):    g_read_value[0] = 0xff;
+R_fsl_praxis01_boot_main - 副本.c (src\boot):    g_read_value[1] = 0xff;
+R_fsl_praxis01_boot_main - 副本.c (src\boot):    g_read_value[2] = 0xff;
+R_fsl_praxis01_boot_main - 副本.c (src\boot):    g_read_value[3] = 0xff;
+R_fsl_praxis01_boot_main - 副本.c (src\boot):    g_read_value[4] = 0xff;
+R_fsl_praxis01_boot_main - 副本.c (src\boot):    if ((g_read_value[0] != 0x11)||(g_read_value[1] != 0x22)||(g_read_value[2] != 0x44)||(g_read_value[3] != 0x66)||(g_read_value[4] != 0x88))
+R_fsl_praxis01_boot_main.c (src\boot):extern uint8_t  g_read_value[WRITE_SIZE];
+R_fsl_praxis01_boot_main.c (src\boot):    g_read_value[0] = 0xff;
+R_fsl_praxis01_boot_main.c (src\boot):    g_read_value[1] = 0xff;
+R_fsl_praxis01_boot_main.c (src\boot):    g_read_value[2] = 0xff;
+R_fsl_praxis01_boot_main.c (src\boot):    g_read_value[3] = 0xff;
+R_fsl_praxis01_boot_main.c (src\boot):    g_read_value[4] = 0xff;
+R_fsl_praxis01_boot_main.c (src\boot):    if ((g_read_value[0] != 0x11)||(g_read_value[1] != 0x22)||(g_read_value[2] != 0x44)||(g_read_value[3] != 0x66)||(g_read_value[4] != 0x88))
+R_fsl_praxis01_boot_write - 副本.c (src\boot):extern uint8_t  g_read_value[WRITE_SIZE];
+R_fsl_praxis01_boot_write.c (src\boot):extern uint8_t  g_read_value[WRITE_SIZE];
+r_fsl_praxis01_boot_write——UART0.c (src\boot):extern uint8_t  g_read_value[WRITE_SIZE];
+R_pfdl.c:uint8_t  g_read_value[WRITE_SIZE];
+R_pfdl.c:    requester.data_pu08     = &g_read_value[0];    
+R_pfdl_user.c:extern uint8_t  g_read_value[WRITE_SIZE];
+R_pfdl_user.c:	    g_read_value[0] = 0xff;
+R_pfdl_user.c:	    g_read_value[1] = 0xff;
+R_pfdl_user.c:	    g_read_value[2] = 0xff;
+R_pfdl_user.c:	    g_read_value[3] = 0xff;
+R_pfdl_user.c:	    g_read_value[4] = 0xff;
+---- g_write_value Matches (63 in 7 files) ----
+R_fsl_praxis01_boot_main - 副本.c (src\boot):extern uint8_t  g_write_value[WRITE_SIZE];
+R_fsl_praxis01_boot_main.c (src\boot):extern uint8_t  g_write_value[WRITE_SIZE];
+R_fsl_praxis01_boot_write - 副本.c (src\boot):extern uint8_t  g_write_value[WRITE_SIZE];
+R_fsl_praxis01_boot_write - 副本.c (src\boot):				    g_write_value[0]   = 0x11;
+R_fsl_praxis01_boot_write - 副本.c (src\boot):				    g_write_value[1]   = 0x22;
+R_fsl_praxis01_boot_write - 副本.c (src\boot):				    g_write_value[2]   = 0x44;
+R_fsl_praxis01_boot_write - 副本.c (src\boot):				    g_write_value[3]   = 0x66;
+R_fsl_praxis01_boot_write - 副本.c (src\boot):				    g_write_value[4]   = 0x88;
+R_fsl_praxis01_boot_write - 副本.c (src\boot):			    g_write_value[0]   = 0x11;
+R_fsl_praxis01_boot_write - 副本.c (src\boot):			    g_write_value[1]   = 0x22;
+R_fsl_praxis01_boot_write - 副本.c (src\boot):			    g_write_value[2]   = 0x44;
+R_fsl_praxis01_boot_write - 副本.c (src\boot):			    g_write_value[3]   = 0x66;
+R_fsl_praxis01_boot_write - 副本.c (src\boot):			    g_write_value[4]   = 0x88;
+R_fsl_praxis01_boot_write - 副本.c (src\boot):		    g_write_value[0]   = 0x11;
+R_fsl_praxis01_boot_write - 副本.c (src\boot):		    g_write_value[1]   = 0x22;
+R_fsl_praxis01_boot_write - 副本.c (src\boot):		    g_write_value[2]   = 0x44;
+R_fsl_praxis01_boot_write - 副本.c (src\boot):		    g_write_value[3]   = 0x66;
+R_fsl_praxis01_boot_write - 副本.c (src\boot):		    g_write_value[4]   = 0x88;
+R_fsl_praxis01_boot_write.c (src\boot):extern uint8_t  g_write_value[WRITE_SIZE];
+R_fsl_praxis01_boot_write.c (src\boot):				    g_write_value[0]   = 0x11;
+R_fsl_praxis01_boot_write.c (src\boot):				    g_write_value[1]   = 0x22;
+R_fsl_praxis01_boot_write.c (src\boot):				    g_write_value[2]   = 0x44;
+R_fsl_praxis01_boot_write.c (src\boot):				    g_write_value[3]   = 0x66;
+R_fsl_praxis01_boot_write.c (src\boot):				    g_write_value[4]   = 0x88;
+R_fsl_praxis01_boot_write.c (src\boot):			    g_write_value[0]   = 0x11;
+R_fsl_praxis01_boot_write.c (src\boot):			    g_write_value[1]   = 0x22;
+R_fsl_praxis01_boot_write.c (src\boot):			    g_write_value[2]   = 0x44;
+R_fsl_praxis01_boot_write.c (src\boot):			    g_write_value[3]   = 0x66;
+R_fsl_praxis01_boot_write.c (src\boot):			    g_write_value[4]   = 0x88;
+R_fsl_praxis01_boot_write.c (src\boot):		    g_write_value[0]   = 0x11;
+R_fsl_praxis01_boot_write.c (src\boot):		    g_write_value[1]   = 0x22;
+R_fsl_praxis01_boot_write.c (src\boot):		    g_write_value[2]   = 0x44;
+R_fsl_praxis01_boot_write.c (src\boot):		    g_write_value[3]   = 0x66;
+R_fsl_praxis01_boot_write.c (src\boot):		    g_write_value[4]   = 0x88;
+r_fsl_praxis01_boot_write——UART0.c (src\boot):extern uint8_t  g_write_value[WRITE_SIZE];
+r_fsl_praxis01_boot_write——UART0.c (src\boot):				    g_write_value[0]   = 0x11;
+r_fsl_praxis01_boot_write——UART0.c (src\boot):				    g_write_value[1]   = 0x22;
+r_fsl_praxis01_boot_write——UART0.c (src\boot):				    g_write_value[2]   = 0x44;
+r_fsl_praxis01_boot_write——UART0.c (src\boot):				    g_write_value[3]   = 0x66;
+r_fsl_praxis01_boot_write——UART0.c (src\boot):				    g_write_value[4]   = 0x88;
+r_fsl_praxis01_boot_write——UART0.c (src\boot):			    g_write_value[0]   = 0x11;
+r_fsl_praxis01_boot_write——UART0.c (src\boot):			    g_write_value[1]   = 0x22;
+r_fsl_praxis01_boot_write——UART0.c (src\boot):			    g_write_value[2]   = 0x44;
+r_fsl_praxis01_boot_write——UART0.c (src\boot):			    g_write_value[3]   = 0x66;
+r_fsl_praxis01_boot_write——UART0.c (src\boot):			    g_write_value[4]   = 0x88;
+r_fsl_praxis01_boot_write——UART0.c (src\boot):		    g_write_value[0]   = 0x11;
+r_fsl_praxis01_boot_write——UART0.c (src\boot):		    g_write_value[1]   = 0x22;
+r_fsl_praxis01_boot_write——UART0.c (src\boot):		    g_write_value[2]   = 0x44;
+r_fsl_praxis01_boot_write——UART0.c (src\boot):		    g_write_value[3]   = 0x66;
+r_fsl_praxis01_boot_write——UART0.c (src\boot):		    g_write_value[4]   = 0x88;
+R_pfdl.c:uint8_t  g_write_value[WRITE_SIZE];
+R_pfdl.c:    requester.data_pu08     = &g_write_value[0];    
+R_pfdl.c:    g_write_value[0]   = 0x11;
+R_pfdl.c:    g_write_value[1]   = 0x22;
+R_pfdl.c:    g_write_value[2]   = 0x44;
+R_pfdl.c:    g_write_value[3]   = 0x66;
+R_pfdl.c:    g_write_value[4]   = 0x88;
+R_pfdl_user.c:extern uint8_t  g_write_value[WRITE_SIZE];
+R_pfdl_user.c:	    g_write_value[0]   = 0x10;
+R_pfdl_user.c:	    g_write_value[1]   = 0x12;
+R_pfdl_user.c:	    g_write_value[2]   = 0x14;
+R_pfdl_user.c:	    g_write_value[3]   = 0x16;
+R_pfdl_user.c:	    g_write_value[4]   = 0x18;
+---- R_FDL_Write_E2Prom Matches (4 in 3 files) ----
+R_fsl_praxis01_flash_main.c (src\flash):extern void  R_FDL_Write_E2Prom(void);
+R_fsl_praxis01_flash_main.c (src\flash):        //R_FDL_Write_E2Prom();
+R_pfdl.c:void R_FDL_Write_E2Prom(void)
+R_pfdl.h:void R_FDL_Write_E2Prom(void);
+---- r_pfdl_user Matches (1 in 1 files) ----
+R_pfdl_user.c:void r_pfdl_user(void)
+---- updata_comflag Matches (6 in 3 files) ----
+R_cg_serial_user.c:boolean updata_comflag;
+R_cg_serial_user.c:            updata_comflag = 1;
+R_cg_timer_user.c:                        updata_comflag = 1;
+R_fsl_praxis01_flash_main.c (src\flash):extern boolean updata_comflag;
+R_fsl_praxis01_flash_main.c (src\flash):    updata_comflag = 0;
+R_fsl_praxis01_flash_main.c (src\flash):	if(updata_comflag)
+---- prUartRcvData Matches (33 in 6 files) ----
+R_fsl_praxis01_boot_write - 副本.c (src\boot):    while( prUartRcvData() != PR_MSG_FRAME_SOH );
+R_fsl_praxis01_boot_write - 副本.c (src\boot):    *pubDataBuffer  =  prUartRcvData();
+R_fsl_praxis01_boot_write - 副本.c (src\boot):    *pubDataBuffer  =  prUartRcvData();
+R_fsl_praxis01_boot_write - 副本.c (src\boot):    *pubCommand  =  prUartRcvData();
+R_fsl_praxis01_boot_write - 副本.c (src\boot):        pubDataBuffer[ duh_i ]  = prUartRcvData();
+R_fsl_praxis01_boot_write - 副本.c (src\boot):    if( dubCheckSum == prUartRcvData() )
+R_fsl_praxis01_boot_write - 副本.c (src\boot):* Declaration       : UB prUartRcvData( void )
+R_fsl_praxis01_boot_write - 副本.c (src\boot):* Function Name     : prUartRcvData
+R_fsl_praxis01_boot_write - 副本.c (src\boot):UB   prUartRcvData( void )
+R_fsl_praxis01_boot_write - 副本.c (src\boot):* Calling Functions : prUartSendMsg, prUartSendData, prUartRcvMsg, prUartRcvData
+R_fsl_praxis01_boot_write.c (src\boot):    while( prUartRcvData() != PR_MSG_FRAME_SOH );
+R_fsl_praxis01_boot_write.c (src\boot):    *pubDataBuffer  =  prUartRcvData();
+R_fsl_praxis01_boot_write.c (src\boot):    *pubDataBuffer  =  prUartRcvData();
+R_fsl_praxis01_boot_write.c (src\boot):    *pubCommand  =  prUartRcvData();
+R_fsl_praxis01_boot_write.c (src\boot):        pubDataBuffer[ duh_i ]  = prUartRcvData();
+R_fsl_praxis01_boot_write.c (src\boot):    if( dubCheckSum == prUartRcvData() )
+R_fsl_praxis01_boot_write.c (src\boot):* Declaration       : UB prUartRcvData( void )
+R_fsl_praxis01_boot_write.c (src\boot):* Function Name     : prUartRcvData
+R_fsl_praxis01_boot_write.c (src\boot):UB   prUartRcvData( void )
+R_fsl_praxis01_boot_write.c (src\boot):* Calling Functions : prUartSendMsg, prUartSendData, prUartRcvMsg, prUartRcvData
+r_fsl_praxis01_boot_write——UART0.c (src\boot):    while( prUartRcvData() != PR_MSG_FRAME_SOH );
+r_fsl_praxis01_boot_write——UART0.c (src\boot):    *pubDataBuffer  =  prUartRcvData();
+r_fsl_praxis01_boot_write——UART0.c (src\boot):    *pubDataBuffer  =  prUartRcvData();
+r_fsl_praxis01_boot_write——UART0.c (src\boot):    *pubCommand  =  prUartRcvData();
+r_fsl_praxis01_boot_write——UART0.c (src\boot):        pubDataBuffer[ duh_i ]  = prUartRcvData();
+r_fsl_praxis01_boot_write——UART0.c (src\boot):    if( dubCheckSum == prUartRcvData() )
+r_fsl_praxis01_boot_write——UART0.c (src\boot):* Declaration       : UB prUartRcvData( void )
+r_fsl_praxis01_boot_write——UART0.c (src\boot):* Function Name     : prUartRcvData
+r_fsl_praxis01_boot_write——UART0.c (src\boot):UB   prUartRcvData( void )
+r_fsl_praxis01_boot_write——UART0.c (src\boot):* Calling Functions : prUartSendMsg, prUartSendData, prUartRcvMsg, prUartRcvData
+R_fsl_praxis01_com - 副本.h (inc):UB   prUartRcvData ( void );        /*  */
+R_fsl_praxis01_com.h (inc):UB   prUartRcvData ( void );        /*  */
+R_fsl_praxis01_com_uart1.h (inc):UB   prUartRcvData ( void );        /*  */
+---- updata_finsh Matches (25 in 5 files) ----
+R_fsl_praxis01_boot_main - 副本.c (src\boot):boolean updata_finsh;
+R_fsl_praxis01_boot_main - 副本.c (src\boot):	updata_finsh = 1;
+R_fsl_praxis01_boot_main.c (src\boot):boolean updata_finsh;
+R_fsl_praxis01_boot_main.c (src\boot):	updata_finsh = 1;
+R_fsl_praxis01_boot_write - 副本.c (src\boot):extern boolean updata_finsh;
+R_fsl_praxis01_boot_write - 副本.c (src\boot):				if(updata_finsh==1)
+R_fsl_praxis01_boot_write - 副本.c (src\boot):				    updata_finsh = 0;
+R_fsl_praxis01_boot_write - 副本.c (src\boot):			if(updata_finsh==1)
+R_fsl_praxis01_boot_write - 副本.c (src\boot):			    updata_finsh = 0;
+R_fsl_praxis01_boot_write - 副本.c (src\boot):                if(updata_finsh==1)
+R_fsl_praxis01_boot_write - 副本.c (src\boot):		    updata_finsh = 0;
+R_fsl_praxis01_boot_write.c (src\boot):extern boolean updata_finsh;
+R_fsl_praxis01_boot_write.c (src\boot):				if(updata_finsh==1)
+R_fsl_praxis01_boot_write.c (src\boot):				    updata_finsh = 0;
+R_fsl_praxis01_boot_write.c (src\boot):			if(updata_finsh==1)
+R_fsl_praxis01_boot_write.c (src\boot):			    updata_finsh = 0;
+R_fsl_praxis01_boot_write.c (src\boot):                if(updata_finsh==1)
+R_fsl_praxis01_boot_write.c (src\boot):		    updata_finsh = 0;
+r_fsl_praxis01_boot_write——UART0.c (src\boot):extern boolean updata_finsh;
+r_fsl_praxis01_boot_write——UART0.c (src\boot):				if(updata_finsh==1)
+r_fsl_praxis01_boot_write——UART0.c (src\boot):				    updata_finsh = 0;
+r_fsl_praxis01_boot_write——UART0.c (src\boot):			if(updata_finsh==1)
+r_fsl_praxis01_boot_write——UART0.c (src\boot):			    updata_finsh = 0;
+r_fsl_praxis01_boot_write——UART0.c (src\boot):                if(updata_finsh==1)
+r_fsl_praxis01_boot_write——UART0.c (src\boot):		    updata_finsh = 0;
+---- FSL_ForceReset Matches (11 in 5 files) ----
+
+Fsl.h (fslt01_v220_r5f100xe_ren110\lib):extern void  FSL_ForceReset(void);
+Fsl.h (lib):extern void  FSL_ForceReset(void);
+R_fsl_praxis01_boot_write - 副本.c (src\boot):                        FSL_ForceReset();
+R_fsl_praxis01_boot_write - 副本.c (src\boot):                    FSL_ForceReset();
+R_fsl_praxis01_boot_write - 副本.c (src\boot):		FSL_ForceReset();
+R_fsl_praxis01_boot_write.c (src\boot):                        FSL_ForceReset();
+R_fsl_praxis01_boot_write.c (src\boot):                    FSL_ForceReset();
+R_fsl_praxis01_boot_write.c (src\boot):		FSL_ForceReset();
+r_fsl_praxis01_boot_write——UART0.c (src\boot):                        FSL_ForceReset();
+r_fsl_praxis01_boot_write——UART0.c (src\boot):                    FSL_ForceReset();
+r_fsl_praxis01_boot_write——UART0.c (src\boot):		FSL_ForceReset();
+---- Reset_Force Matches (8 in 4 files) ----
+R_fsl_praxis01_boot_write - 副本.c (src\boot):void Reset_Force(void);
+R_fsl_praxis01_boot_write - 副本.c (src\boot):void Reset_Force(void)
+R_fsl_praxis01_boot_write.c (src\boot):void Reset_Force(void);
+R_fsl_praxis01_boot_write.c (src\boot):void Reset_Force(void)
+r_fsl_praxis01_boot_write——UART0.c (src\boot):void Reset_Force(void);
+r_fsl_praxis01_boot_write——UART0.c (src\boot):void Reset_Force(void)
+R_fsl_praxis01_flash_main.c (src\flash):extern void Reset_Force(void);
+R_fsl_praxis01_flash_main.c (src\flash):		Reset_Force();
+---- duwEndWriteAddress Matches (9 in 3 files) ----
+R_fsl_praxis01_boot_write - 副本.c (src\boot):    UW          duwEndWriteAddress   = 0;       /*  */
+R_fsl_praxis01_boot_write - 副本.c (src\boot):                    duwEndWriteAddress    = duwStartWriteAddress + duwWriteSize  - 1;
+R_fsl_praxis01_boot_write - 副本.c (src\boot):                    if( duwWriteAdressIndex <= duwEndWriteAddress )
+R_fsl_praxis01_boot_write.c (src\boot):    UW          duwEndWriteAddress   = 0;       /*  */
+R_fsl_praxis01_boot_write.c (src\boot):                    duwEndWriteAddress    = duwStartWriteAddress + duwWriteSize  - 1;
+R_fsl_praxis01_boot_write.c (src\boot):                    if( duwWriteAdressIndex <= duwEndWriteAddress )
+r_fsl_praxis01_boot_write——UART0.c (src\boot):    UW          duwEndWriteAddress   = 0;       /*  */
+r_fsl_praxis01_boot_write——UART0.c (src\boot):                    duwEndWriteAddress    = duwStartWriteAddress + duwWriteSize  - 1;
+r_fsl_praxis01_boot_write——UART0.c (src\boot):                    if( duwWriteAdressIndex <= duwEndWriteAddress )
+---- PR_MSG_COMM_WRITE Matches (6 in 6 files) ----
+R_fsl_praxis01_boot_write - 副本.c (src\boot):                case PR_MSG_COMM_WRITE:
+R_fsl_praxis01_boot_write.c (src\boot):                case PR_MSG_COMM_WRITE:
+r_fsl_praxis01_boot_write——UART0.c (src\boot):                case PR_MSG_COMM_WRITE:
+R_fsl_praxis01_com - 副本.h (inc):#define PR_MSG_COMM_WRITE           0x05    /*  */
+R_fsl_praxis01_com.h (inc):#define PR_MSG_COMM_WRITE           0x05    /*  */
+R_fsl_praxis01_com_uart1.h (inc):#define PR_MSG_COMM_WRITE           0x05    /*  */
+---- PR_USE_OCD_MODE Matches (24 in 6 files) ----
+R_fsl_praxis01_boot_write - 副本.c (src\boot):#ifdef PR_USE_OCD_MODE      /* Do nothing on monitor area in OCD mode. */
+R_fsl_praxis01_boot_write - 副本.c (src\boot):#ifdef PR_USE_OCD_MODE      /* Do nothing on monitor area in OCD mode. */
+R_fsl_praxis01_boot_write - 副本.c (src\boot):#ifdef PR_USE_OCD_MODE  /* Do nothing on monitor area in OCD mode. */
+R_fsl_praxis01_boot_write - 副本.c (src\boot):#ifdef PR_USE_OCD_MODE  /* Do nothing on monitor area in OCD mode. */
+R_fsl_praxis01_boot_write - 副本.c (src\boot):#ifdef PR_USE_OCD_MODE
+R_fsl_praxis01_boot_write - 副本.c (src\boot):#ifdef PR_USE_OCD_MODE
+R_fsl_praxis01_boot_write.c (src\boot):#ifdef PR_USE_OCD_MODE      /* Do nothing on monitor area in OCD mode. */
+R_fsl_praxis01_boot_write.c (src\boot):#ifdef PR_USE_OCD_MODE      /* Do nothing on monitor area in OCD mode. */
+R_fsl_praxis01_boot_write.c (src\boot):#ifdef PR_USE_OCD_MODE  /* Do nothing on monitor area in OCD mode. */
+R_fsl_praxis01_boot_write.c (src\boot):#ifdef PR_USE_OCD_MODE  /* Do nothing on monitor area in OCD mode. */
+R_fsl_praxis01_boot_write.c (src\boot):#ifdef PR_USE_OCD_MODE
+R_fsl_praxis01_boot_write.c (src\boot):#ifdef PR_USE_OCD_MODE
+r_fsl_praxis01_boot_write——UART0.c (src\boot):#ifdef PR_USE_OCD_MODE      /* Do nothing on monitor area in OCD mode. */
+r_fsl_praxis01_boot_write——UART0.c (src\boot):#ifdef PR_USE_OCD_MODE      /* Do nothing on monitor area in OCD mode. */
+r_fsl_praxis01_boot_write——UART0.c (src\boot):#ifdef PR_USE_OCD_MODE  /* Do nothing on monitor area in OCD mode. */
+r_fsl_praxis01_boot_write——UART0.c (src\boot):#ifdef PR_USE_OCD_MODE  /* Do nothing on monitor area in OCD mode. */
+r_fsl_praxis01_boot_write——UART0.c (src\boot):#ifdef PR_USE_OCD_MODE
+r_fsl_praxis01_boot_write——UART0.c (src\boot):#ifdef PR_USE_OCD_MODE
+R_fsl_praxis01_com - 副本.h (inc)://#define PR_USE_OCD_MODE                 /* wyf*/
+R_fsl_praxis01_com - 副本.h (inc):#ifdef PR_USE_OCD_MODE
+R_fsl_praxis01_com.h (inc):#define PR_USE_OCD_MODE                 /* wyf*/
+R_fsl_praxis01_com.h (inc):#ifdef PR_USE_OCD_MODE
+R_fsl_praxis01_com_uart1.h (inc)://#define PR_USE_OCD_MODE                 /* wyf*/
+R_fsl_praxis01_com_uart1.h (inc):#ifdef PR_USE_OCD_MODE
+---- 0x88 Matches (9 in 5 files) ----
+R_fsl_praxis01_boot_main - 副本.c (src\boot):    if ((g_read_value[0] != 0x11)||(g_read_value[1] != 0x22)||(g_read_value[2] != 0x44)||(g_read_value[3] != 0x66)||(g_read_value[4] != 0x88))
+R_fsl_praxis01_boot_main.c (src\boot):    if ((g_read_value[0] == 0x11)||(g_read_value[1] == 0x22)||(g_read_value[2] == 0x44)||(g_read_value[3] == 0x66)||(g_read_value[4] == 0x88))
+R_fsl_praxis01_boot_write - 副本.c (src\boot):				    g_write_value[4]   = 0x88;
+R_fsl_praxis01_boot_write - 副本.c (src\boot):			    g_write_value[4]   = 0x88;
+R_fsl_praxis01_boot_write - 副本.c (src\boot):		    g_write_value[4]   = 0x88;
+r_fsl_praxis01_boot_write——UART0.c (src\boot):				    g_write_value[4]   = 0x88;
+r_fsl_praxis01_boot_write——UART0.c (src\boot):			    g_write_value[4]   = 0x88;
+r_fsl_praxis01_boot_write——UART0.c (src\boot):		    g_write_value[4]   = 0x88;
+R_pfdl.c:    g_write_value[4]   = 0x88;
+---- g_write_value Matches (63 in 7 files) ----
+R_fsl_praxis01_boot_main - 副本.c (src\boot):extern uint8_t  g_write_value[WRITE_SIZE];
+R_fsl_praxis01_boot_main.c (src\boot):extern uint8_t  g_write_value[WRITE_SIZE];
+R_fsl_praxis01_boot_write - 副本.c (src\boot):extern uint8_t  g_write_value[WRITE_SIZE];
+R_fsl_praxis01_boot_write - 副本.c (src\boot):				    g_write_value[0]   = 0x11;
+R_fsl_praxis01_boot_write - 副本.c (src\boot):				    g_write_value[1]   = 0x22;
+R_fsl_praxis01_boot_write - 副本.c (src\boot):				    g_write_value[2]   = 0x44;
+R_fsl_praxis01_boot_write - 副本.c (src\boot):				    g_write_value[3]   = 0x66;
+R_fsl_praxis01_boot_write - 副本.c (src\boot):				    g_write_value[4]   = 0x88;
+R_fsl_praxis01_boot_write - 副本.c (src\boot):			    g_write_value[0]   = 0x11;
+R_fsl_praxis01_boot_write - 副本.c (src\boot):			    g_write_value[1]   = 0x22;
+R_fsl_praxis01_boot_write - 副本.c (src\boot):			    g_write_value[2]   = 0x44;
+R_fsl_praxis01_boot_write - 副本.c (src\boot):			    g_write_value[3]   = 0x66;
+R_fsl_praxis01_boot_write - 副本.c (src\boot):			    g_write_value[4]   = 0x88;
+R_fsl_praxis01_boot_write - 副本.c (src\boot):		    g_write_value[0]   = 0x11;
+R_fsl_praxis01_boot_write - 副本.c (src\boot):		    g_write_value[1]   = 0x22;
+R_fsl_praxis01_boot_write - 副本.c (src\boot):		    g_write_value[2]   = 0x44;
+R_fsl_praxis01_boot_write - 副本.c (src\boot):		    g_write_value[3]   = 0x66;
+R_fsl_praxis01_boot_write - 副本.c (src\boot):		    g_write_value[4]   = 0x88;
+R_fsl_praxis01_boot_write.c (src\boot):extern uint8_t  g_write_value[WRITE_SIZE];
+R_fsl_praxis01_boot_write.c (src\boot):				    g_write_value[0]   = 0xff;
+R_fsl_praxis01_boot_write.c (src\boot):				    g_write_value[1]   = 0xff;
+R_fsl_praxis01_boot_write.c (src\boot):				    g_write_value[2]   = 0xff;
+R_fsl_praxis01_boot_write.c (src\boot):				    g_write_value[3]   = 0xff;
+R_fsl_praxis01_boot_write.c (src\boot):				    g_write_value[4]   = 0xff;
+R_fsl_praxis01_boot_write.c (src\boot):			    g_write_value[0]   = 0xff;
+R_fsl_praxis01_boot_write.c (src\boot):			    g_write_value[1]   = 0xff;
+R_fsl_praxis01_boot_write.c (src\boot):			    g_write_value[2]   = 0xff;
+R_fsl_praxis01_boot_write.c (src\boot):			    g_write_value[3]   = 0xff;
+R_fsl_praxis01_boot_write.c (src\boot):			    g_write_value[4]   = 0xff;
+R_fsl_praxis01_boot_write.c (src\boot):		    g_write_value[0]   = 0xff;
+R_fsl_praxis01_boot_write.c (src\boot):		    g_write_value[1]   = 0xff;
+R_fsl_praxis01_boot_write.c (src\boot):		    g_write_value[2]   = 0xff;
+R_fsl_praxis01_boot_write.c (src\boot):		    g_write_value[3]   = 0xff;
+R_fsl_praxis01_boot_write.c (src\boot):		    g_write_value[4]   = 0xff;
+r_fsl_praxis01_boot_write——UART0.c (src\boot):extern uint8_t  g_write_value[WRITE_SIZE];
+r_fsl_praxis01_boot_write——UART0.c (src\boot):				    g_write_value[0]   = 0x11;
+r_fsl_praxis01_boot_write——UART0.c (src\boot):				    g_write_value[1]   = 0x22;
+r_fsl_praxis01_boot_write——UART0.c (src\boot):				    g_write_value[2]   = 0x44;
+r_fsl_praxis01_boot_write——UART0.c (src\boot):				    g_write_value[3]   = 0x66;
+r_fsl_praxis01_boot_write——UART0.c (src\boot):				    g_write_value[4]   = 0x88;
+r_fsl_praxis01_boot_write——UART0.c (src\boot):			    g_write_value[0]   = 0x11;
+r_fsl_praxis01_boot_write——UART0.c (src\boot):			    g_write_value[1]   = 0x22;
+r_fsl_praxis01_boot_write——UART0.c (src\boot):			    g_write_value[2]   = 0x44;
+r_fsl_praxis01_boot_write——UART0.c (src\boot):			    g_write_value[3]   = 0x66;
+r_fsl_praxis01_boot_write——UART0.c (src\boot):			    g_write_value[4]   = 0x88;
+r_fsl_praxis01_boot_write——UART0.c (src\boot):		    g_write_value[0]   = 0x11;
+r_fsl_praxis01_boot_write——UART0.c (src\boot):		    g_write_value[1]   = 0x22;
+r_fsl_praxis01_boot_write——UART0.c (src\boot):		    g_write_value[2]   = 0x44;
+r_fsl_praxis01_boot_write——UART0.c (src\boot):		    g_write_value[3]   = 0x66;
+r_fsl_praxis01_boot_write——UART0.c (src\boot):		    g_write_value[4]   = 0x88;
+R_pfdl.c:uint8_t  g_write_value[WRITE_SIZE];
+R_pfdl.c:    requester.data_pu08     = &g_write_value[0];    
+R_pfdl.c:    g_write_value[0]   = 0x11;
+R_pfdl.c:    g_write_value[1]   = 0x22;
+R_pfdl.c:    g_write_value[2]   = 0x44;
+R_pfdl.c:    g_write_value[3]   = 0x66;
+R_pfdl.c:    g_write_value[4]   = 0x88;
+R_pfdl_user.c:extern uint8_t  g_write_value[WRITE_SIZE];
+R_pfdl_user.c:	    g_write_value[0]   = 0x10;
+R_pfdl_user.c:	    g_write_value[1]   = 0x12;
+R_pfdl_user.c:	    g_write_value[2]   = 0x14;
+R_pfdl_user.c:	    g_write_value[3]   = 0x16;
+R_pfdl_user.c:	    g_write_value[4]   = 0x18;
+---- 0x44 Matches (9 in 5 files) ----
+R_fsl_praxis01_boot_main - 副本.c (src\boot):    if ((g_read_value[0] != 0x11)||(g_read_value[1] != 0x22)||(g_read_value[2] != 0x44)||(g_read_value[3] != 0x66)||(g_read_value[4] != 0x88))
+R_fsl_praxis01_boot_main.c (src\boot):    if ((g_read_value[0] == 0x11)||(g_read_value[1] == 0x22)||(g_read_value[2] == 0x44)||(g_read_value[3] == 0x66)||(g_read_value[4] == 0x88))
+R_fsl_praxis01_boot_write - 副本.c (src\boot):				    g_write_value[2]   = 0x44;
+R_fsl_praxis01_boot_write - 副本.c (src\boot):			    g_write_value[2]   = 0x44;
+R_fsl_praxis01_boot_write - 副本.c (src\boot):		    g_write_value[2]   = 0x44;
+r_fsl_praxis01_boot_write——UART0.c (src\boot):				    g_write_value[2]   = 0x44;
+r_fsl_praxis01_boot_write——UART0.c (src\boot):			    g_write_value[2]   = 0x44;
+r_fsl_praxis01_boot_write——UART0.c (src\boot):		    g_write_value[2]   = 0x44;
+R_pfdl.c:    g_write_value[2]   = 0x44;
+---- P1.5 Matches (4 in 3 files) ----
+R_cg_serial_user.c:		     P1.5 = 1;
+R_cg_serial_user.c:		     P1.5 = 0;
+R_fsl_praxis01_flash_main.c (src\flash):    P1.5 = 0;
+R_main.c:    P1.5 = 0;
+---- P6.2 Matches (19 in 8 files) ----
+R_cg_serial_user.c:		     P6.2 = 1;
+R_cg_serial_user.c:		     P6.2 = 0;
+R_fsl_praxis01_boot_main.asm (defaultbuild):	set1	P6.2						;[INF] 3, 2
+R_fsl_praxis01_boot_main.asm (defaultbuild):	clr1	P6.2						;[INF] 3, 2
+R_fsl_praxis01_boot_main.asm (defaultbuild):	set1	P6.2						;[INF] 3, 2
+R_fsl_praxis01_boot_main.asm (defaultbuild):	clr1	P6.2						;[INF] 3, 2
+R_fsl_praxis01_com - 副本.h (inc):#define PR_TBLED1_INIT()    P6.2 = 1, PM6.2 = 0
+R_fsl_praxis01_com - 副本.h (inc):#define PR_TBLED1_ON()      P6.2 = 0    /*  */
+R_fsl_praxis01_com - 副本.h (inc):#define PR_TBLED1_OFF()     P6.2 = 1    /*  */
+R_fsl_praxis01_com.h (inc):#define PR_TBLED1_INIT()    P6.2 = 1, PM6.2 = 0
+R_fsl_praxis01_com.h (inc):#define PR_TBLED1_ON()      P6.2 = 0    /*  */
+R_fsl_praxis01_com.h (inc):#define PR_TBLED1_OFF()     P6.2 = 1    /*  */
+R_fsl_praxis01_com_uart1.h (inc):#define PR_TBLED1_INIT()    P6.2 = 1, PM6.2 = 0
+R_fsl_praxis01_com_uart1.h (inc):#define PR_TBLED1_ON()      P6.2 = 0    /*  */
+R_fsl_praxis01_com_uart1.h (inc):#define PR_TBLED1_OFF()     P6.2 = 1    /*  */
+R_fsl_praxis01_flash_main.asm (defaultbuild):	set1	P6.2						;[INF] 3, 2
+R_fsl_praxis01_flash_main.asm (defaultbuild):	clr1	P6.2						;[INF] 3, 2
+R_fsl_praxis01_flash_main.c (src\flash):    P6.2 = 0;
+R_main.c:    P6.2 = 0;

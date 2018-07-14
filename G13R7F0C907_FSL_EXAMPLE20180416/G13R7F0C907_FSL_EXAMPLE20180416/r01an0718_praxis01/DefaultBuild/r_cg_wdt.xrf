@@ -1,0 +1,66 @@
+
+
+
+78K0R C Compiler V2.72 Cross reference List                                                               Date:30 Jun 2018 Page:   1
+
+Command   : -cf100bc -yC:\Program Files (x86)\Renesas Electronics\CS+\CACX\Device\RL78\Devicefile r_cg_wdt.c -oDefaultBuild -_msgoff
+             -nq -i. -iinc -zpsf -mm -zz02000h -zt02000h -mi0 -xDefaultBuild -g2
+In-file   : r_cg_wdt.c
+Xref-file : DefaultBuild\r_cg_wdt.xrf
+Para-file : 
+Inc-file  : [ 1] r_cg_macrodriver.h
+            [ 2] r_cg_wdt.h
+            [ 3] r_cg_userdefine.h
+
+ATTRIB MODIFY TYPE    SYMBOL          DEFINE   REFERENCE
+
+EXTERN RWSFR  uchar   WDTE                        74
+EXTERN RWSFR  bit     WDTIIF                      59
+EXTERN RWSFR  bit     WDTIMK                      58       63
+EXTERN RWSFR  bit     WDTIPR0                     62
+EXTERN RWSFR  bit     WDTIPR1                     61
+EXTYP         char    int8_t             72: 1
+EXTYP         uchar   uint8_t            73: 1
+EXTYP         short   int16_t            74: 1
+EXTYP         ushort  uint16_t           75: 1
+EXTYP         long    int32_t            76: 1
+EXTYP         ulong   uint32_t           77: 1
+EXTYP         ushort  MD_STATUS          78: 1
+EXTERN FAR    func    R_WDT_Create       56       47: 2
+EXTERN FAR    func    R_WDT_Restart      72       48: 2
+              #define STATUS_H           30: 1
+              #define MD_STATUSBASE      50: 1
+              #define MD_OK              51: 1
+              #define MD_SPT             52: 1
+              #define MD_NACK            53: 1
+              #define MD_BUSY1           54: 1
+              #define MD_BUSY2           55: 1
+              #define MD_OVERRUN         56: 1
+              #define MD_ERRORBASE       59: 1
+              #define MD_ERROR           60: 1
+              #define MD_ARGERROR        61: 1
+              #define MD_ERROR1          62: 1
+              #define MD_ERROR2          63: 1
+              #define MD_ERROR3          64: 1
+              #define MD_ERROR4          65: 1
+              #define __TYPEDEF__        79: 1
+              #define WDT_H              30: 2
+              #define _USER_DEF_H        30: 3
+              #define TRUE               37: 3
+              #define FALSE              38: 3
+              #define TX2_BUFFER_LENTH
+                                         39: 3
+              #define RX2_BUFFER_LENTH
+                                         40: 3
+              #define TX1_BUFFER_LENTH
+                                         41: 3
+              #define RX1_BUFFER_LENTH
+                                         42: 3
+              #define TX0_BUFFER_LENTH
+                                         43: 3
+              #define RX0_BUFFER_LENTH
+                                         44: 3
+
+
+ Target chip : R5F100BC
+ Device file : V1.14 

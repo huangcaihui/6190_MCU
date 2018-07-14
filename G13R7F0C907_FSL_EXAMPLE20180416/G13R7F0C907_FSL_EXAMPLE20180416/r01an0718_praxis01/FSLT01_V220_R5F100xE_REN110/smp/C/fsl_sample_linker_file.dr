@@ -1,0 +1,57 @@
+;=================================================================================================
+; Project      = Flash self-programming library, MF3 single voltage flash
+; Module       = fsl.inc
+; Device:      = RL78/G13 (R5F100LE)
+; Version      = V2.20
+;=================================================================================================
+;                                  COPYRIGHT
+;=================================================================================================
+; Copyright(c) 2010,2011,2012 Renesas Electronics Corporation
+;=================================================================================================
+; Purpose:
+;                Linker sample file, please modify according to your device
+;
+;=================================================================================================
+;
+; RENESAS ELECTRONICS CONFIDENTIAL AND PROPRIETARY.
+; This program must be used solely for the purpose for which it was furnished
+; by Renesas Electronics Corporation. No part of this program may be reproduced or
+; disclosed to others, in any form, without the prior written permission of
+; Renesas Electronics Corporation.
+;
+;=================================================================================================
+
+
+; User ROM area definition
+MEMORY ROM   : ( 000000H , 002000H )        ; Boot clusters
+MEMORY U_ROM : ( 002000H , 00E000H )        ; User program
+
+; Placement for user's program in ROM
+MERGE U_ROMPRG : = U_ROM                    ; User program without control flash
+
+; Placement for FSL in ROM
+MERGE FSL_FCD  : = U_ROM
+MERGE FSL_FECD : = U_ROM
+MERGE FSL_BCD  : = U_ROM
+MERGE FSL_BECD : = U_ROM
+
+
+; User RAM area definition
+; It is possible to use this memory area "RAM" as you like.
+; Please modify this area in order to match your device.
+; Ex.) MEMORY RAM : ( 0FF300H , 00B20H )    ; for device RAM size 4KB
+; * Don't include memory for self programming RAM.
+; * Don't rename this memory area except "RAM".
+MEMORY RAM : ( 0FF300H , 00B20H )           ; for device RAM size 4KB
+
+; Placement for user's program in RAM
+MERGE U_RAMPRG : = RAM                      ; User program with control flash
+MERGE U_RAMINT : = RAM                      ; User ISR in RAM
+
+; Placement for FSL in RAM
+MERGE FSL_RCD  : = RAM
+
+
+; SAddr RAM area definition
+; * Don't use this memory area for STACK memory.
+MEMORY RAM_SADDR : ( 0FFE20H , 001E0H )     ; RAM (saddr)

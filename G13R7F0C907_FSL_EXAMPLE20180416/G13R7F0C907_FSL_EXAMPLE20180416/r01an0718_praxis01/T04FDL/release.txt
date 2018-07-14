@@ -1,0 +1,321 @@
+===============================================================================
+    Read me file for the RL78 Flash Data Library T04
+===============================================================================
+
+The Flash Data Library T04 (Pico) offers the user an easy to use interface to
+directly access the data flash. This library aims at a reduced feature set in
+order to enable Data-Flash access on small devices. Hence, there is no EEPROM
+emulation library available from Renesas which operates on the Flash Data
+Library T04. Please refer to the documentation for a detailed description.
+
+The following features are supported by the Flash Data Library T04:
+
+Configurable size of user and EEL pool size:                NO
+Access authority check (user pool and EEL pool):            NO
+Access size (read, write, blank-check, verify):             1 to 1024 bytes
+Access size (erase):                                        1 block (1024 bytes)
+Operating modes:                                            Polling
+Request/Response-oriented dialog:                           NO
+Standby/wakeup feature:                                     NO
+Automatic suspend/resume of block-oriented commands:        NO
+Automatic priority control for user access:                 NO
+Automatic priority control for block- and
+                               byte/word-oriented commands: NO
+"Read at any time" capability:                              NO
+Secure open/close synchronization between FDL and EEL:      NO
+EEL support:                                                NO
+
+Please note that in addition to the Flash Data Library T04 there are other
+Flash Data Libraries available from Renesas with different feature sets and
+resource consumptions.
+
+The following libraries are also provided for download:
+
+- RL78 Flash Data Library T01        (Installer: RENESAS_FDL_RL78_T01E_Vx.xx)
+- RL78 Flash Data Library T02 (Tiny) (Installer: RENESAS_FDL_RL78_T02E_Vx.xx)
+
+
+========
+Contents
+========
+
+    1. Software Corrections and Updates
+    2. General Information
+    3. File Naming
+    4. Supported Devices
+    5. Operating Precautions
+    6. Support
+
+
+===================================
+1. Software Corrections and Updates
+===================================
+
+Installer Changes
+-----------------
+
+    V1.10
+    -----
+    first official GNU support for FDL T04 containing the following libraries:
+        - RL78 FDL T04 V1.04 for RENESAS environment
+        - RL78 FDL T04 V1.04 for IAR environment
+        - RL78 FDL T04 V1.04 for GNU environment
+    - device list updated
+    - consolidated readme file with library feature description
+    - corrected version information in header files (RENESAS environment)
+    - removed unused section FDL_DATA from sample linker file (IAR environment)
+
+    E1.10a
+    ------
+    engineering release of FDL T04 containing the following libraries:
+        - RL78 FDL T04 E1.04c for GNU environment
+          (implemented and tested on GNU compiler V13.01)
+    - device list updated
+
+    V1.00
+    -----
+    first official release of FDL T04  containing the following libraries:
+        - RL78 FDL T04 V1.04 for RENESAS environment
+        - RL78 FDL T04 V1.04 for IAR environment
+
+Library Changes
+---------------
+
+    RENESAS
+    -------
+        V1.04
+        -----
+        - first official release of RL78 FDL T04
+    
+    IAR
+    ---
+        V1.04
+        -----
+        - first official release of RL78 FDL T04
+    
+    GNU
+    ---
+        V1.04
+        ------
+        - first official GNU port of RL78 FDL T04
+        - sample linker file update: PFDL_COD section now mapped to 0x1000
+
+        E1.04c
+        ------
+        - tested engineering sample of RL78 FDL T04 (initial GNU port)
+
+
+======================
+2. General Information
+======================
+
+The precompiled Flash Data Library is delivered
+for the RENESAS, IAR and GNU development environments.
+
+Supported compilers are:
+
+RENESAS
+-------
+    Library created on RENESAS Compiler version:    V1.10
+    Library tested on RENESAS Compiler version:     V1.60
+IAR
+---
+    Library created on IAR Compiler version:        V1.20
+    Library tested on IAR Compiler version:         V1.20
+GNU
+---
+    Library created on GNU Compiler version:        V13.01
+    Library tested on GNU Compiler version:         V13.01
+
+
+========================================
+3. File Naming
+========================================
+
+Installer
+---------
+    The installer file has the name RENESAS_FDL_RL78_TxxE_V{x}.{y}{z}.exe
+    e.g. RENESAS_FDL_RL78_TxxE_V1.00.exe
+    
+    {x} This version digit will be incremented in case of major changes e.g. API
+        changes
+    {y} This version digit will be incremented in case of bug fixes and internal
+        improvements
+    {z} This version digit will be incremented in case of adding support of new
+        devices
+
+Library
+-------
+    <<Folder: / >>
+        release.txt                 <-  this information file
+  
+    <<Folder: lib >>
+        pfdl.h                      <-  FDL interface definition (C compiler)
+                                        DO NOT CHANGE PLEASE
+        pfdl.inc, pfdl_asm.h        <-  FDL interface definition (assembler)
+                                        DO NOT CHANGE PLEASE
+        pfdl_types.h                <-  FDL header file, FDL types definition
+                                        DO NOT CHANGE PLEASE
+        pfdl.lib, pfdl.r87, pfdl.a  <-  pre-compiled library file
+                                        DO NOT CHANGE PLEASE
+  
+    <<Folder: smp >>
+        pfdl_sample_linker_file.dr, <-  linker sample file
+        pfdl_sample_linker_file.xcl,    ADAPT DUE TO REQUIREMENTS
+        pfdl_sample_linker_file.ld
+
+How to integrate
+----------------
+    1) copy all the files into your project subdirectory
+    2) add all pfdl*.* files into your project (workbench or make-file)
+    3) adapt the sample linker file to your requirements
+       --> at least the segment PFDL_COD should be defined
+    4) re-compile the project
+
+
+====================
+4. Supported Devices
+====================
+
+The following devices are covered by this package
+
+    RL78/D1A
+    --------
+    R5F10CxB
+    R5F10CxC
+    R5F10CxD
+    R5F10CxE
+    R5F10DxC
+    R5F10DxD
+    R5F10DxE
+    R5F10DxF
+    R5F10DxG
+    R5F10DxJ
+    R5F10TxJ
+    R5F10TxK
+    R5F10TxL
+    
+    RL78/F12
+    --------
+    R5F109x8
+    R5F109xA
+    R5F109xB
+    R5F109xC
+    R5F109xD
+    R5F109xE
+    
+    RL78/G12
+    --------
+    R5F102x6
+    R5F102x7
+    R5F102x8
+    R5F102x9
+    R5F102xA
+    
+    RL78/G13
+    --------
+    R5F100xA
+    R5F100xC
+    R5F100xD
+    R5F100xE
+    R5F100xF
+    R5F100xG
+    R5F100xH
+    R5F100xJ
+    R5F100xK
+    R5F100xL
+    
+    RL78/G14
+    --------
+    R5F104xA
+    R5F104xC
+    R5F104xD
+    R5F104xE
+    R5F104xF
+    R5F104xG
+    R5F104xH
+    R5F104xJ
+    
+    RL78/G1A
+    --------
+    R5F10ExA
+    R5F10ExC
+    R5F10ExD
+    R5F10ExE
+    
+    RL78/G1C
+    --------
+    R5F10JxC
+    R5F10KxC
+    
+    RL78/G1E
+    --------
+    R5F10FxC
+    R5F10FxD
+    R5F10FxE
+    
+    RL78/I1A
+    --------
+    R5F107xC
+    R5F107xE
+    
+    RL78/L12
+    --------
+    R5F10Rx8
+    R5F10RxA
+    R5F10RxC
+    
+    RL78/L13
+    --------
+    R5F10WxA
+    R5F10WxC
+    R5F10WxD
+    R5F10WxE
+    R5F10WxF
+    R5F10WxG
+    
+    R5F10L
+    --------
+    R5F10LGA
+    R5F10LGC
+    R5F10LGD
+    R5F10LGE
+    
+    R5F10U
+    --------
+    R5F10UGA
+    R5F10UGC
+    R5F10UGD
+    R5F10UGE
+
+
+========================
+5. Operating Precautions
+========================
+
+All devices and libraries
+-------------------------
+    - please refer to the related documentation (R01US0055EDxxxx)
+
+
+==========
+6. Support
+==========
+
+In case of any question please do not hesitate to contact:
+
+        Flash Support
+
+        Renesas Electronics Europe GmbH
+        Arcadiastr. 10
+        D-40472 Duesseldorf, Germany
+
+        email: application_support.flash-eu@lm.renesas.com
+
+
+===============================================================================
+  End of read me file for the RL78 Flash Data Library T04
+===============================================================================
+
+
+

@@ -1,0 +1,143 @@
+
+
+
+78K0R C Compiler V2.72 Cross reference List                                                               Date:30 Jun 2018 Page:   1
+
+Command   : -cf100bc -yC:\Program Files (x86)\Renesas Electronics\CS+\CACX\Device\RL78\Devicefile r_pfdl.c -oDefaultBuild -_msgoff -
+            nq -i. -iT04FDL\lib -iinc -iFSLT01_V220_R5F100xE_REN110 -iFSLT01_V220_R5F100xE_REN110\lib -iFSLT01_V220_R5F100xE_REN110\
+            smp -zps -mm -zz02000h -zt02000h -mi0 -xDefaultBuild -g2
+In-file   : r_pfdl.c
+Xref-file : DefaultBuild\r_pfdl.xrf
+Para-file : 
+Inc-file  : [ 1] r_cg_macrodriver.h
+            [ 2] T04FDL\lib\pfdl_types.h
+            [ 3] T04FDL\lib\pfdl.h
+            [ 4] r_pfdl.h
+            [ 5] T04FDL\lib\pfdl_types.h
+            [ 6] r_cg_userdefine.h
+
+ATTRIB MODIFY TYPE    SYMBOL          DEFINE   REFERENCE
+
+EXTYP         char    int8_t             72: 1
+EXTYP         uchar   uint8_t            73: 1
+EXTYP         short   int16_t            74: 1
+EXTYP         ushort  uint16_t           75: 1
+EXTYP         long    int32_t            76: 1
+EXTYP         ulong   uint32_t           77: 1
+EXTYP         ushort  MD_STATUS          78: 1
+EXTYP         uchar   pfdl_u08           53: 2
+EXTYP         uint    pfdl_u16           54: 2
+EXTYP         ulong   pfdl_u32           55: 2
+MEMBER NEAR   int     PFDL_CMD_READ_BYTES
+                                         71: 2   111
+MEMBER NEAR   int     PFDL_CMD_IVERIFY_BYTES
+                                         72: 2
+MEMBER NEAR   int     PFDL_CMD_BLANKCHECK_BYTES
+                                         73: 2
+MEMBER NEAR   int     PFDL_CMD_WRITE_BYTES
+                                         74: 2   134
+MEMBER NEAR   int     PFDL_CMD_ERASE_BLOCK
+                                         76: 2    88
+EXTYP         enum    pfdl_command_t     76: 2
+MEMBER NEAR   int     PFDL_IDLE          82: 2
+MEMBER NEAR   int     PFDL_OK            83: 2
+MEMBER NEAR   int     PFDL_BUSY          84: 2    92      141
+MEMBER NEAR   int     PFDL_ERR_PROTECTION
+                                         86: 2
+MEMBER NEAR   int     PFDL_ERR_ERASE     87: 2
+MEMBER NEAR   int     PFDL_ERR_MARGIN    88: 2
+MEMBER NEAR   int     PFDL_ERR_WRITE     89: 2
+MEMBER NEAR   int     PFDL_ERR_PARAMETER
+                                         91: 2
+EXTYP         enum    pfdl_status_t      91: 2
+MEMBER        uint    index_u16          96: 2    89      112      135
+MEMBER        pointer data_pu08          97: 2   114      137
+MEMBER        uint    bytecount_u16      98: 2   113      136
+MEMBER        enum    command_enu        99: 2    88      111      134
+EXTYP         struct  pfdl_request_t    100: 2
+MEMBER        uchar   fx_MHz_u08        106: 2    68
+MEMBER        uchar   wide_voltage_mode_u08
+                                        107: 2    69
+EXTYP         struct  pfdl_descriptor_t
+                                        108: 2
+EXTERN FAR    func    PFDL_Open                   72: 3    70
+EXTERN FAR    func    PFDL_Close                  87: 3   164      181      188
+EXTERN FAR    func    PFDL_Execute               109: 3    90      115      138
+EXTERN FAR    func    PFDL_Handler               125: 3    94      143
+EXTERN FAR    func    PFDL_GetVersionString
+                                                 138: 3
+EXTERN FAR    func    R_FDL_Init         64       12: 4   162      179      186
+EXTERN FAR    func    R_FDL_Erase        83       13: 4   180
+EXTERN FAR    func    R_FDL_Read        106       14: 4   187
+EXTERN FAR    func    R_FDL_Write       128       15: 4   163
+EXTERN FAR    func    R_FDL_ChangeAddress
+                                                  16: 4
+EXTERN FAR    func    R_FDL_ExecuteWrite
+                                        160       17: 4   199
+EXTERN FAR    func    R_FDL_ExecuteErase
+                                        176       18: 4
+EXTERN FAR    func    R_FDL_ExecuteRead
+                                        184       19: 4
+EXTERN FAR    func    R_FDL_FindAddress
+                                                  20: 4
+EXTERN FAR    func    R_FDL_Write_E2Prom
+                                        191       21: 4
+EXTERN NEAR   array   g_write_value      54      137      194      195      196      197      198
+EXTERN NEAR   ushort  g_write_address    55      112      135      193
+EXTERN NEAR   array   g_read_value       56      114
+AUTO1         struct  descriptor         66       68       69       70
+AUTO1         struct  requester          85       88       89       90
+AUTO1         enum    ret                86       90       92       94       96
+AUTO1         struct  requester         108      111      112      113      114      115
+AUTO1         enum    ret               109
+AUTO1         struct  requester         130      134      135      136      137      138
+AUTO1         enum    ret               131      138      141      143      146
+              #define STATUS_H           30: 1
+              #define MD_STATUSBASE      50: 1
+              #define MD_OK              51: 1
+              #define MD_SPT             52: 1
+              #define MD_NACK            53: 1
+              #define MD_BUSY1           54: 1
+              #define MD_BUSY2           55: 1
+              #define MD_OVERRUN         56: 1
+              #define MD_ERRORBASE       59: 1
+              #define MD_ERROR           60: 1
+              #define MD_ARGERROR        61: 1
+              #define MD_ERROR1          62: 1
+              #define MD_ERROR2          63: 1
+              #define MD_ERROR3          64: 1
+              #define MD_ERROR4          65: 1
+              #define __TYPEDEF__        79: 1
+              #define __PFDL_H_INCLUDED
+                                         47: 3
+              #define __PFDL_TYPES_H_INCLUDED
+                                         47: 2    46: 5
+              #define _USER_DEF_H        30: 6
+              #define TRUE               37: 6
+              #define FALSE              38: 6
+              #define TX2_BUFFER_LENTH
+                                         39: 6
+              #define RX2_BUFFER_LENTH
+                                         40: 6
+              #define TX1_BUFFER_LENTH
+                                         41: 6
+              #define RX1_BUFFER_LENTH
+                                         42: 6
+              #define TX0_BUFFER_LENTH
+                                         43: 6
+              #define RX0_BUFFER_LENTH
+                                         44: 6
+              #define FLASH_START_ADDRESS
+                                          2: 4
+              #define TARGET_BLOCK        3: 4    23: 4    89      193
+              #define BLOCK_SIZE          4: 4   193
+              #define WRITE_SIZE          5: 4    54       56      113      136
+              #define MAX_VALUE           6: 4
+              #define MAX_ADDRESS         7: 4
+              #define PFDL_NG             8: 4
+              #define FDL_FRQ             9: 4    68
+              #define FDL_VOL            10: 4    69
+
+
+ Target chip : R5F100BC
+ Device file : V1.14 

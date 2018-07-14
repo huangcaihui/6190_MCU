@@ -1,0 +1,76 @@
+<CubeSuiteProject>
+  <ProductVersion>5.01.00.00</ProductVersion>
+  <Class Guid="68f4a651-b9cd-473b-a595-b00447132ffa">
+    <Instance Guid="00000000-0000-0000-0000-000000000000">
+      <FormatVersion>2.0</FormatVersion>
+      <FileVersion>5.1</FileVersion>
+      <ProjectGuid>0e26fbb7-0812-4521-a744-3c9f7b97aaad</ProjectGuid>
+      <ProjectItemGuid>e4bd68b8-b721-4f50-9092-b3e07e906ee0</ProjectItemGuid>
+      <FileCategoryGuid>313a0171-780b-4e9d-888c-68cab4965bbb</FileCategoryGuid>
+      <Property>fb98844b-2c27-4275-9804-f6e63e204da0</Property>
+      <ActiveProjectGuid>ad0f925f-d152-41e3-af5c-118217476814</ActiveProjectGuid>
+    </Instance>
+    <Instance Guid="bbf392be-9376-4aba-bf45-bd3546fe324a">
+      <DependentProjectsGuidsSourceProjectsCount>0</DependentProjectsGuidsSourceProjectsCount>
+      <Type>Data</Type>
+    </Instance>
+  </Class>
+  <Class Guid="9033e9fb-2b12-4437-a25e-27b28d42582b">
+    <Instance Guid="6991e13a-8e35-4caa-917b-31c1218dc6b9">
+      <Name>r_fsl_praxis01_boot</Name>
+      <RelativePath>r_fsl_praxis01_boot.mtsp</RelativePath>
+    </Instance>
+    <Instance Guid="ad0f925f-d152-41e3-af5c-118217476814">
+      <Name>r_fsl_praxis01_flash</Name>
+      <RelativePath>r_fsl_praxis01_flash.mtsp</RelativePath>
+    </Instance>
+  </Class>
+  <Class Guid="fb98844b-2c27-4275-9804-f6e63e204da0">
+    <Instance Guid="fb98844b-2c27-4275-9804-f6e63e204da0">
+      <MemoCount>0</MemoCount>
+    </Instance>
+  </Class>
+  <Class Guid="6750ad11-a84e-4756-9db4-04c15ef09e7a">
+    <Instance Guid="6750ad11-a84e-4756-9db4-04c15ef09e7a">
+      <ShowedTool>88fa8bfc-b547-4e4f-8372-d43a53350c0c</ShowedTool>
+    </Instance>
+  </Class>
+  <Class Guid="873c9a58-9bc5-439a-b476-78629a4553ed">
+    <Instance Guid="873c9a58-9bc5-439a-b476-78629a4553ed">
+      <ProjectDeviceChangedCounter>0</ProjectDeviceChangedCounter>
+    </Instance>
+  </Class>
+  <Class Guid="78a5c5cd-76cb-4bcc-a031-3020011fbc9a">
+    <Instance Guid="d8399d81-0d2c-45c0-b0cd-695e948fc8d8">
+      <MemoCount>0</MemoCount>
+    </Instance>
+  </Class>
+  <Class Guid="0d548289-d5e9-4893-9a8f-9374b13f19a9">
+    <Instance Guid="61474a43-6ae7-4c72-96ab-fca89c47e08f">
+      <MemoCount>0</MemoCount>
+    </Instance>
+    <Instance Guid="6a3e23b7-00a3-4ea6-87d0-326af1493dec">
+      <MemoCount>0</MemoCount>
+    </Instance>
+    <Instance Guid="01091b5b-6e01-45ee-ae0e-350a6b81a847">
+      <MemoCount>0</MemoCount>
+    </Instance>
+    <Instance Guid="701d4c81-9096-4a14-a5eb-18c19d50bbcf">
+      <MemoCount>0</MemoCount>
+    </Instance>
+    <Instance Guid="74ac8f3e-caaf-4d13-9be7-c6f7a753c046">
+      <MemoCount>0</MemoCount>
+    </Instance>
+    <Instance Guid="e551e7d6-f0fc-4dc2-8331-fb2bbceafbb6">
+      <MemoCount>0</MemoCount>
+    </Instance>
+    <Instance Guid="200a9839-391a-44fd-8e54-5bab93fc079e">
+      <MemoCount>0</MemoCount>
+    </Instance>
+  </Class>
+  <Class Guid="2a2c2a43-ecdb-4e88-80bd-e75f3e33db90">
+    <Instance Guid="2a2c2a43-ecdb-4e88-80bd-e75f3e33db90">
+      <ProductVersion>2.30.0.00</ProductVersion>
+    </Instance>
+  </Class>
+</CubeSuiteProject>

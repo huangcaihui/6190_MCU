@@ -1,0 +1,296 @@
+
+
+
+78K0R C Compiler V2.72 Cross reference List                                                               Date:30 Jun 2018 Page:   1
+
+Command   : -cf100bc -yC:\Program Files (x86)\Renesas Electronics\CS+\CACX\Device\RL78\Devicefile r_cg_port.c -oDefaultBuild -_msgof
+            f -nq -i. -iinc -zpsf -mm -zz02000h -zt02000h -mi0 -xDefaultBuild -g2
+In-file   : r_cg_port.c
+Xref-file : DefaultBuild\r_cg_port.xrf
+Para-file : 
+Inc-file  : [ 1] r_cg_macrodriver.h
+            [ 2] r_cg_port.h
+            [ 3] r_cg_userdefine.h
+
+ATTRIB MODIFY TYPE    SYMBOL          DEFINE   REFERENCE
+
+EXTERN RWSFR  uchar   P1                          58
+EXTERN RWSFR  uchar   P2                          59
+EXTERN RWSFR  uchar   P3                          60
+EXTERN RWSFR  uchar   P6                          61
+EXTERN RWSFR  uchar   P14                         62
+EXTERN RWSFR  uchar   PM1                         66
+EXTERN RWSFR  uchar   PM2                         68
+EXTERN RWSFR  uchar   PM3                         69
+EXTERN RWSFR  uchar   PM6                         70
+EXTERN RWSFR  uchar   PM12                        72
+EXTERN RWSFR  uchar   PM14                        73
+EXTERN RWSFR  uchar   PMC12                       63
+EXTERN RWSFR  uchar   PMC14                       64
+EXTERN RWSFR  uchar   ADPC                        65
+EXTYP         char    int8_t             72: 1
+EXTYP         uchar   uint8_t            73: 1
+EXTYP         short   int16_t            74: 1
+EXTYP         ushort  uint16_t           75: 1
+EXTYP         long    int32_t            76: 1
+EXTYP         ulong   uint32_t           77: 1
+EXTYP         ushort  MD_STATUS          78: 1
+EXTERN FAR    func    R_PORT_Create      56      202: 2
+              #define STATUS_H           30: 1
+              #define MD_STATUSBASE      50: 1
+              #define MD_OK              51: 1
+              #define MD_SPT             52: 1
+              #define MD_NACK            53: 1
+              #define MD_BUSY1           54: 1
+              #define MD_BUSY2           55: 1
+              #define MD_OVERRUN         56: 1
+              #define MD_ERRORBASE       59: 1
+              #define MD_ERROR           60: 1
+              #define MD_ARGERROR        61: 1
+              #define MD_ERROR1          62: 1
+              #define MD_ERROR2          63: 1
+              #define MD_ERROR3          64: 1
+              #define MD_ERROR4          65: 1
+              #define __TYPEDEF__        79: 1
+              #define PORT_H             30: 2
+              #define _01_PMn0_NOT_USE
+                                         39: 2    66       70
+              #define _01_PMn0_MODE_INPUT
+                                         40: 2    68       72
+              #define _00_PMn0_MODE_OUTPUT
+                                         41: 2    69
+              #define _02_PMn1_NOT_USE
+                                         42: 2    66       70
+              #define _02_PMn1_MODE_INPUT
+                                         43: 2
+              #define _00_PMn1_MODE_OUTPUT
+                                         44: 2    68       69
+              #define _04_PMn2_NOT_USE
+                                         45: 2    66
+              #define _04_PMn2_MODE_INPUT
+                                         46: 2
+              #define _00_PMn2_MODE_OUTPUT
+                                         47: 2    68       70
+              #define _08_PMn3_NOT_USE
+                                         48: 2    66       68
+              #define _08_PMn3_MODE_INPUT
+                                         49: 2
+              #define _00_PMn3_MODE_OUTPUT
+                                         50: 2
+              #define _10_PMn4_NOT_USE
+                                         51: 2    66
+              #define _10_PMn4_MODE_INPUT
+                                         52: 2
+              #define _00_PMn4_MODE_OUTPUT
+                                         53: 2
+              #define _20_PMn5_NOT_USE
+                                         54: 2
+              #define _20_PMn5_MODE_INPUT
+                                         55: 2
+              #define _00_PMn5_MODE_OUTPUT
+                                         56: 2    67
+              #define _40_PMn6_NOT_USE
+                                         57: 2    67
+              #define _40_PMn6_MODE_INPUT
+                                         58: 2
+              #define _00_PMn6_MODE_OUTPUT
+                                         59: 2
+              #define _80_PMn7_NOT_USE
+                                         60: 2    67
+              #define _80_PMn7_MODE_INPUT
+                                         61: 2
+              #define _00_PMn7_MODE_OUTPUT
+                                         62: 2    73
+              #define _00_Pn0_OUTPUT_0
+                                         68: 2
+              #define _01_Pn0_OUTPUT_1
+                                         69: 2    60
+              #define _00_Pn1_OUTPUT_0
+                                         70: 2    59       60
+              #define _02_Pn1_OUTPUT_1
+                                         71: 2
+              #define _00_Pn2_OUTPUT_0
+                                         72: 2    59       61
+              #define _04_Pn2_OUTPUT_1
+                                         73: 2
+              #define _00_Pn3_OUTPUT_0
+                                         74: 2
+              #define _08_Pn3_OUTPUT_1
+                                         75: 2
+              #define _00_Pn4_OUTPUT_0
+                                         76: 2
+              #define _10_Pn4_OUTPUT_1
+                                         77: 2
+              #define _00_Pn5_OUTPUT_0
+                                         78: 2    58
+              #define _20_Pn5_OUTPUT_1
+                                         79: 2
+              #define _00_Pn6_OUTPUT_0
+                                         80: 2
+              #define _40_Pn6_OUTPUT_1
+                                         81: 2
+              #define _00_Pn7_OUTPUT_0
+                                         82: 2    62
+              #define _80_Pn7_OUTPUT_1
+                                         83: 2
+              #define _00_PUn0_PULLUP_OFF
+                                         89: 2
+              #define _01_PUn0_PULLUP_ON
+                                         90: 2
+              #define _00_PUn1_PULLUP_OFF
+                                         91: 2
+              #define _02_PUn1_PULLUP_ON
+                                         92: 2
+              #define _00_PUn2_PULLUP_OFF
+                                         93: 2
+              #define _04_PUn2_PULLUP_ON
+                                         94: 2
+              #define _00_PUn3_PULLUP_OFF
+                                         95: 2
+              #define _08_PUn3_PULLUP_ON
+                                         96: 2
+              #define _00_PUn4_PULLUP_OFF
+                                         97: 2
+              #define _10_PUn4_PULLUP_ON
+                                         98: 2
+              #define _00_PUn5_PULLUP_OFF
+                                         99: 2
+              #define _20_PUn5_PULLUP_ON
+                                        100: 2
+              #define _00_PUn6_PULLUP_OFF
+                                        101: 2
+              #define _40_PUn6_PULLUP_ON
+                                        102: 2
+              #define _00_PUn7_PULLUP_OFF
+                                        103: 2
+              #define _80_PUn7_PULLUP_ON
+                                        104: 2
+              #define _00_PIMn0_TTL_OFF
+                                        110: 2
+              #define _01_PIMn0_TTL_ON
+                                        111: 2
+              #define _00_PIMn1_TTL_OFF
+                                        112: 2
+              #define _02_PIMn1_TTL_ON
+                                        113: 2
+              #define _00_PIMn2_TTL_OFF
+                                        114: 2
+              #define _04_PIMn2_TTL_ON
+                                        115: 2
+              #define _00_PIMn3_TTL_OFF
+                                        116: 2
+              #define _08_PIMn3_TTL_ON
+                                        117: 2
+              #define _00_PIMn4_TTL_OFF
+                                        118: 2
+              #define _10_PIMn4_TTL_ON
+                                        119: 2
+              #define _00_PIMn5_TTL_OFF
+                                        120: 2
+              #define _20_PIMn5_TTL_ON
+                                        121: 2
+              #define _00_PIMn6_TTL_OFF
+                                        122: 2
+              #define _40_PIMn6_TTL_ON
+                                        123: 2
+              #define _00_PIMn7_TTL_OFF
+                                        124: 2
+              #define _80_PIMn7_TTL_ON
+                                        125: 2
+              #define _00_POMn0_NCH_OFF
+                                        131: 2
+              #define _01_POMn0_NCH_ON
+                                        132: 2
+              #define _00_POMn1_NCH_OFF
+                                        133: 2
+              #define _02_POMn1_NCH_ON
+                                        134: 2
+              #define _00_POMn2_NCH_OFF
+                                        135: 2
+              #define _04_POMn2_NCH_ON
+                                        136: 2
+              #define _00_POMn3_NCH_OFF
+                                        137: 2
+              #define _08_POMn3_NCH_ON
+                                        138: 2
+              #define _00_POMn4_NCH_OFF
+                                        139: 2
+              #define _10_POMn4_NCH_ON
+                                        140: 2
+              #define _00_POMn5_NCH_OFF
+                                        141: 2
+              #define _20_POMn5_NCH_ON
+                                        142: 2
+              #define _00_POMn6_NCH_OFF
+                                        143: 2
+              #define _40_POMn6_NCH_ON
+                                        144: 2
+              #define _00_POMn7_NCH_OFF
+                                        145: 2
+              #define _80_POMn7_NCH_ON
+                                        146: 2
+              #define _01_PMCn0_NOT_USE
+                                        152: 2
+              #define _00_PMCn0_DI_ON   153: 2    63
+              #define _02_PMCn1_NOT_USE
+                                        154: 2
+              #define _00_PMCn1_DI_ON   155: 2
+              #define _04_PMCn2_NOT_USE
+                                        156: 2
+              #define _00_PMCn2_DI_ON   157: 2
+              #define _08_PMCn3_NOT_USE
+                                        158: 2
+              #define _00_PMCn3_DI_ON   159: 2
+              #define _10_PMCn4_NOT_USE
+                                        160: 2
+              #define _00_PMCn4_DI_ON   161: 2
+              #define _20_PMCn5_NOT_USE
+                                        162: 2
+              #define _00_PMCn5_DI_ON   163: 2
+              #define _40_PMCn6_NOT_USE
+                                        164: 2
+              #define _00_PMCn6_DI_ON   165: 2
+              #define _80_PMCn7_NOT_USE
+                                        166: 2
+              #define _00_PMCn7_DI_ON   167: 2    64
+              #define _00_ADPC_DI_OFF   173: 2
+              #define _04_ADPC_DI_ON    174: 2
+              #define _03_ADPC_DI_ON    175: 2
+              #define _02_ADPC_DI_ON    176: 2
+              #define _01_ADPC_DI_ON    177: 2    65
+              #define _FC_PM0_DEFAULT   182: 2
+              #define _F0_PM2_DEFAULT   183: 2    68
+              #define _FC_PM3_DEFAULT   184: 2    69
+              #define _FE_PM4_DEFAULT   185: 2
+              #define _FC_PM5_DEFAULT   186: 2
+              #define _F8_PM6_DEFAULT   187: 2    70
+              #define _FE_PM7_DEFAULT   188: 2
+              #define _FE_PM12_DEFAULT
+                                        189: 2    72
+              #define _7F_PM14_DEFAULT
+                                        190: 2    73
+              #define _FC_PMC0_DEFAULT
+                                        191: 2
+              #define _FE_PMC12_DEFAULT
+                                        192: 2    63
+              #define _7F_PMC14_DEFAULT
+                                        193: 2    64
+              #define _USER_DEF_H        30: 3
+              #define TRUE               37: 3
+              #define FALSE              38: 3
+              #define TX2_BUFFER_LENTH
+                                         39: 3
+              #define RX2_BUFFER_LENTH
+                                         40: 3
+              #define TX1_BUFFER_LENTH
+                                         41: 3
+              #define RX1_BUFFER_LENTH
+                                         42: 3
+              #define TX0_BUFFER_LENTH
+                                         43: 3
+              #define RX0_BUFFER_LENTH
+                                         44: 3
+
+
+ Target chip : R5F100BC
+ Device file : V1.14 

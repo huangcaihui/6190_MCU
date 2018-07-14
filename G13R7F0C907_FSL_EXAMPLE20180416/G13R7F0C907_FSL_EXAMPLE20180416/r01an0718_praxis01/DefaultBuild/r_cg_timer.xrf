@@ -1,0 +1,532 @@
+
+
+
+78K0R C Compiler V2.72 Cross reference List                                                               Date:30 Jun 2018 Page:   1
+
+Command   : -cf100bc -yC:\Program Files (x86)\Renesas Electronics\CS+\CACX\Device\RL78\Devicefile r_cg_timer.c -oDefaultBuild -_msgo
+            ff -nq -i. -iinc -zpsf -mm -zz02000h -zt02000h -mi0 -xDefaultBuild -g2
+In-file   : r_cg_timer.c
+Xref-file : DefaultBuild\r_cg_timer.xrf
+Para-file : 
+Inc-file  : [ 1] r_cg_macrodriver.h
+            [ 2] r_cg_timer.h
+            [ 3] r_cg_userdefine.h
+
+ATTRIB MODIFY TYPE    SYMBOL          DEFINE   REFERENCE
+
+EXTERN RWSFR  uint    TDR00                      101
+EXTERN RWSFR  bit     TMIF05                      88
+EXTERN RWSFR  bit     TMIF06                      91
+EXTERN RWSFR  bit     TMIF07                      94
+EXTERN RWSFR  bit     TMMK05                      87
+EXTERN RWSFR  bit     TMMK06                      90
+EXTERN RWSFR  bit     TMMK07                      93
+EXTERN RWSFR  bit     TMIF01H                     73
+EXTERN RWSFR  bit     TMIF03H                     82
+EXTERN RWSFR  bit     TMIF00                      67      114      130
+EXTERN RWSFR  bit     TMIF01                      70
+EXTERN RWSFR  bit     TMIF02                      76
+EXTERN RWSFR  bit     TMIF03                      79
+EXTERN RWSFR  bit     TMIF04                      85
+EXTERN RWSFR  bit     TMMK01H                     72
+EXTERN RWSFR  bit     TMMK03H                     81
+EXTERN RWSFR  bit     TMMK00                      66      115      129
+EXTERN RWSFR  bit     TMMK01                      69
+EXTERN RWSFR  bit     TMMK02                      75
+EXTERN RWSFR  bit     TMMK03                      78
+EXTERN RWSFR  bit     TMMK04                      84
+EXTERN RWSFR  bit     TMPR000                     97
+EXTERN RWSFR  bit     TMPR100                     96
+EXTERN RWSFR  bit     TAU0EN                      58
+EXTERN RWSFR  uint    TMR00                       99
+EXTERN RWSFR  uint    TS0                        116
+EXTERN RWSFR  uint    TT0                         61      127
+EXTERN RWSFR  uint    TPS0                        59
+EXTERN RWSFR  uint    TO0                        102
+EXTERN RWSFR  uint    TOE0                       103
+EXTYP         char    int8_t             72: 1
+EXTYP         uchar   uint8_t            73: 1
+EXTYP         short   int16_t            74: 1
+EXTYP         ushort  uint16_t           75: 1
+EXTYP         long    int32_t            76: 1
+EXTYP         ulong   uint32_t           77: 1
+EXTYP         ushort  MD_STATUS          78: 1
+EXTERN FAR    func    R_TAU0_Create      56      408: 2
+EXTERN FAR    func    R_TAU0_Channel0_Start
+                                        112      409: 2
+EXTERN FAR    func    R_TAU0_Channel0_Stop
+                                        125      410: 2
+              #define STATUS_H           30: 1
+              #define MD_STATUSBASE      50: 1
+              #define MD_OK              51: 1
+              #define MD_SPT             52: 1
+              #define MD_NACK            53: 1
+              #define MD_BUSY1           54: 1
+              #define MD_BUSY2           55: 1
+              #define MD_OVERRUN         56: 1
+              #define MD_ERRORBASE       59: 1
+              #define MD_ERROR           60: 1
+              #define MD_ARGERROR        61: 1
+              #define MD_ERROR1          62: 1
+              #define MD_ERROR2          63: 1
+              #define MD_ERROR3          64: 1
+              #define MD_ERROR4          65: 1
+              #define __TYPEDEF__        79: 1
+              #define TAU_H              30: 2
+              #define _00_TAU0_CLOCK_STOP
+                                         39: 2
+              #define _01_TAU0_CLOCK_SUPPLY
+                                         40: 2
+              #define _0000_TAU_CKM0_FCLK_0
+                                         46: 2
+              #define _0001_TAU_CKM0_FCLK_1
+                                         47: 2
+              #define _0002_TAU_CKM0_FCLK_2
+                                         48: 2
+              #define _0003_TAU_CKM0_FCLK_3
+                                         49: 2
+              #define _0004_TAU_CKM0_FCLK_4
+                                         50: 2
+              #define _0005_TAU_CKM0_FCLK_5
+                                         51: 2
+              #define _0006_TAU_CKM0_FCLK_6
+                                         52: 2    59
+              #define _0007_TAU_CKM0_FCLK_7
+                                         53: 2
+              #define _0008_TAU_CKM0_FCLK_8
+                                         54: 2
+              #define _0009_TAU_CKM0_FCLK_9
+                                         55: 2
+              #define _000A_TAU_CKM0_FCLK_10
+                                         56: 2
+              #define _000B_TAU_CKM0_FCLK_11
+                                         57: 2
+              #define _000C_TAU_CKM0_FCLK_12
+                                         58: 2
+              #define _000D_TAU_CKM0_FCLK_13
+                                         59: 2
+              #define _000E_TAU_CKM0_FCLK_14
+                                         60: 2
+              #define _000F_TAU_CKM0_FCLK_15
+                                         61: 2
+              #define _0000_TAU_CKM1_FCLK_0
+                                         63: 2    59
+              #define _0010_TAU_CKM1_FCLK_1
+                                         64: 2
+              #define _0020_TAU_CKM1_FCLK_2
+                                         65: 2
+              #define _0030_TAU_CKM1_FCLK_3
+                                         66: 2
+              #define _0040_TAU_CKM1_FCLK_4
+                                         67: 2
+              #define _0050_TAU_CKM1_FCLK_5
+                                         68: 2
+              #define _0060_TAU_CKM1_FCLK_6
+                                         69: 2
+              #define _0070_TAU_CKM1_FCLK_7
+                                         70: 2
+              #define _0080_TAU_CKM1_FCLK_8
+                                         71: 2
+              #define _0090_TAU_CKM1_FCLK_9
+                                         72: 2
+              #define _00A0_TAU_CKM1_FCLK_10
+                                         73: 2
+              #define _00B0_TAU_CKM1_FCLK_11
+                                         74: 2
+              #define _00C0_TAU_CKM1_FCLK_12
+                                         75: 2
+              #define _00D0_TAU_CKM1_FCLK_13
+                                         76: 2
+              #define _00E0_TAU_CKM1_FCLK_14
+                                         77: 2
+              #define _00F0_TAU_CKM1_FCLK_15
+                                         78: 2
+              #define _0000_TAU_CKM2_FCLK_1
+                                         80: 2    59
+              #define _0100_TAU_CKM2_FCLK_2
+                                         81: 2
+              #define _0200_TAU_CKM2_FCLK_4
+                                         82: 2
+              #define _0300_TAU_CKM2_FCLK_6
+                                         83: 2
+              #define _0000_TAU_CKM3_FCLK_8
+                                         85: 2    59
+              #define _1000_TAU_CKM3_FCLK_10
+                                         86: 2
+              #define _2000_TAU_CKM3_FCLK_12
+                                         87: 2
+              #define _3000_TAU_CKM3_FCLK_14
+                                         88: 2
+              #define _0000_TAU_CLOCK_SELECT_CKM0
+                                         94: 2    99
+              #define _8000_TAU_CLOCK_SELECT_CKM1
+                                         95: 2
+              #define _4000_TAU_CLOCK_SELECT_CKM2
+                                         96: 2
+              #define _C000_TAU_CLOCK_SELECT_CKM3
+                                         97: 2
+              #define _0000_TAU_CLOCK_MODE_CKS
+                                         99: 2    99
+              #define _1000_TAU_CLOCK_MODE_TIMN
+                                        100: 2
+              #define _0000_TAU_COMBINATION_SLAVE
+                                        102: 2    99
+              #define _0000_TAU_COMBINATION_MASTER
+                                        103: 2
+              #define _0800_TAU_COMBINATION_MASTER
+                                        104: 2
+              #define _0000_TAU_16BITS_MODE
+                                        106: 2
+              #define _0800_TAU_8BITS_MODE
+                                        107: 2
+              #define _0000_TAU_TRIGGER_SOFTWARE
+                                        109: 2   100
+              #define _0100_TAU_TRIGGER_TIMN_VALID
+                                        110: 2
+              #define _0200_TAU_TRIGGER_TIMN_BOTH
+                                        111: 2
+              #define _0400_TAU_TRIGGER_MASTER_INT
+                                        112: 2
+              #define _0000_TAU_TIMN_EDGE_FALLING
+                                        114: 2
+              #define _0040_TAU_TIMN_EDGE_RISING
+                                        115: 2
+              #define _0080_TAU_TIMN_EDGE_BOTH_LOW
+                                        116: 2
+              #define _00C0_TAU_TIMN_EDGE_BOTH_HIGH
+                                        117: 2
+              #define _0000_TAU_MODE_INTERVAL_TIMER
+                                        119: 2   100
+              #define _0004_TAU_MODE_CAPTURE
+                                        120: 2
+              #define _0006_TAU_MODE_EVENT_COUNT
+                                        121: 2
+              #define _0008_TAU_MODE_ONE_COUNT
+                                        122: 2
+              #define _000C_TAU_MODE_HIGHLOW_MEASURE
+                                        123: 2
+              #define _0001_TAU_MODE_PWM_MASTER
+                                        124: 2
+              #define _0009_TAU_MODE_PWM_SLAVE
+                                        125: 2
+              #define _0008_TAU_MODE_ONESHOT
+                                        126: 2
+              #define _0000_TAU_START_INT_UNUSED
+                                        128: 2   100
+              #define _0001_TAU_START_INT_USED
+                                        129: 2
+              #define _0000_TAU_OVERFLOW_NOT_OCCURS
+                                        135: 2
+              #define _0001_TAU_OVERFLOW_OCCURS
+                                        136: 2
+              #define _0000_TAU_CH0_OPERATION_STOP
+                                        142: 2
+              #define _0001_TAU_CH0_OPERATION_ENABLE
+                                        143: 2
+              #define _0000_TAU_CH1_OPERATION_STOP
+                                        145: 2
+              #define _0002_TAU_CH1_OPERATION_ENABLE
+                                        146: 2
+              #define _0000_TAU_CH2_OPERATION_STOP
+                                        148: 2
+              #define _0004_TAU_CH2_OPERATION_ENABLE
+                                        149: 2
+              #define _0000_TAU_CH3_OPERATION_STOP
+                                        151: 2
+              #define _0008_TAU_CH3_OPERATION_ENABLE
+                                        152: 2
+              #define _0000_TAU_CH4_OPERATION_STOP
+                                        154: 2
+              #define _0010_TAU_CH4_OPERATION_ENABLE
+                                        155: 2
+              #define _0000_TAU_CH5_OPERATION_STOP
+                                        157: 2
+              #define _0020_TAU_CH5_OPERATION_ENABLE
+                                        158: 2
+              #define _0000_TAU_CH6_OPERATION_STOP
+                                        160: 2
+              #define _0040_TAU_CH6_OPERATION_ENABLE
+                                        161: 2
+              #define _0000_TAU_CH7_OPERATION_STOP
+                                        163: 2
+              #define _0080_TAU_CH7_OPERATION_ENABLE
+                                        164: 2
+              #define _0000_TAU_CH1_H8_OPERATION_STOP
+                                        166: 2
+              #define _0200_TAU_CH1_H8_OPERATION_ENABLE
+                                        167: 2
+              #define _0000_TAU_CH3_H8_OPERATION_STOP
+                                        169: 2
+              #define _0800_TAU_CH3_H8_OPERATION_ENABLE
+                                        170: 2
+              #define _0000_TAU_CH0_START_TRG_OFF
+                                        176: 2
+              #define _0001_TAU_CH0_START_TRG_ON
+                                        177: 2   116
+              #define _0000_TAU_CH1_START_TRG_OFF
+                                        179: 2
+              #define _0002_TAU_CH1_START_TRG_ON
+                                        180: 2
+              #define _0000_TAU_CH2_START_TRG_OFF
+                                        182: 2
+              #define _0004_TAU_CH2_START_TRG_ON
+                                        183: 2
+              #define _0000_TAU_CH3_START_TRG_OFF
+                                        185: 2
+              #define _0008_TAU_CH3_START_TRG_ON
+                                        186: 2
+              #define _0000_TAU_CH4_START_TRG_OFF
+                                        188: 2
+              #define _0010_TAU_CH4_START_TRG_ON
+                                        189: 2
+              #define _0000_TAU_CH5_START_TRG_OFF
+                                        191: 2
+              #define _0020_TAU_CH5_START_TRG_ON
+                                        192: 2
+              #define _0000_TAU_CH6_START_TRG_OFF
+                                        194: 2
+              #define _0040_TAU_CH6_START_TRG_ON
+                                        195: 2
+              #define _0000_TAU_CH7_START_TRG_OFF
+                                        197: 2
+              #define _0080_TAU_CH7_START_TRG_ON
+                                        198: 2
+              #define _0000_TAU_CH1_H8_START_TRG_OFF
+                                        200: 2
+              #define _0200_TAU_CH1_H8_START_TRG_ON
+                                        201: 2
+              #define _0000_TAU_CH3_H8_START_TRG_OFF
+                                        203: 2
+              #define _0800_TAU_CH3_H8_START_TRG_ON
+                                        204: 2
+              #define _0000_TAU_CH0_STOP_TRG_OFF
+                                        210: 2
+              #define _0001_TAU_CH0_STOP_TRG_ON
+                                        211: 2    61      127
+              #define _0000_TAU_CH1_STOP_TRG_OFF
+                                        213: 2
+              #define _0002_TAU_CH1_STOP_TRG_ON
+                                        214: 2    61
+              #define _0000_TAU_CH2_STOP_TRG_OFF
+                                        216: 2
+              #define _0004_TAU_CH2_STOP_TRG_ON
+                                        217: 2    61
+              #define _0000_TAU_CH3_STOP_TRG_OFF
+                                        219: 2
+              #define _0008_TAU_CH3_STOP_TRG_ON
+                                        220: 2    62
+              #define _0000_TAU_CH4_STOP_TRG_OFF
+                                        222: 2
+              #define _0010_TAU_CH4_STOP_TRG_ON
+                                        223: 2    62
+              #define _0000_TAU_CH5_STOP_TRG_OFF
+                                        225: 2
+              #define _0020_TAU_CH5_STOP_TRG_ON
+                                        226: 2    62
+              #define _0000_TAU_CH6_STOP_TRG_OFF
+                                        228: 2
+              #define _0040_TAU_CH6_STOP_TRG_ON
+                                        229: 2    63
+              #define _0000_TAU_CH7_STOP_TRG_OFF
+                                        231: 2
+              #define _0080_TAU_CH7_STOP_TRG_ON
+                                        232: 2    63
+              #define _0000_TAU_CH1_H8_STOP_TRG_OFF
+                                        234: 2
+              #define _0200_TAU_CH1_H8_STOP_TRG_ON
+                                        235: 2    63
+              #define _0000_TAU_CH3_H8_STOP_TRG_OFF
+                                        237: 2
+              #define _0800_TAU_CH3_H8_STOP_TRG_ON
+                                        238: 2    64
+              #define _00_TAU_CH5_INPUT_TI05
+                                        244: 2
+              #define _01_TAU_CH5_INPUT_TI05
+                                        245: 2
+              #define _02_TAU_CH5_INPUT_TI05
+                                        246: 2
+              #define _03_TAU_CH5_INPUT_TI05
+                                        247: 2
+              #define _04_TAU_CH5_INPUT_FIL
+                                        248: 2
+              #define _05_TAU_CH5_INPUT_FSUB
+                                        249: 2
+              #define _0001_TAU_CH0_OUTPUT_ENABLE
+                                        255: 2   103
+              #define _0000_TAU_CH0_OUTPUT_DISABLE
+                                        256: 2
+              #define _0002_TAU_CH1_OUTPUT_ENABLE
+                                        258: 2
+              #define _0000_TAU_CH1_OUTPUT_DISABLE
+                                        259: 2
+              #define _0004_TAU_CH2_OUTPUT_ENABLE
+                                        261: 2
+              #define _0000_TAU_CH2_OUTPUT_DISABLE
+                                        262: 2
+              #define _0008_TAU_CH3_OUTPUT_ENABLE
+                                        264: 2
+              #define _0000_TAU_CH3_OUTPUT_DISABLE
+                                        265: 2
+              #define _0010_TAU_CH4_OUTPUT_ENABLE
+                                        267: 2
+              #define _0000_TAU_CH4_OUTPUT_DISABLE
+                                        268: 2
+              #define _0020_TAU_CH5_OUTPUT_ENABLE
+                                        270: 2
+              #define _0000_TAU_CH5_OUTPUT_DISABLE
+                                        271: 2
+              #define _0040_TAU_CH6_OUTPUT_ENABLE
+                                        273: 2
+              #define _0000_TAU_CH6_OUTPUT_DISABLE
+                                        274: 2
+              #define _0080_TAU_CH7_OUTPUT_ENABLE
+                                        276: 2
+              #define _0000_TAU_CH7_OUTPUT_DISABLE
+                                        277: 2
+              #define _0000_TAU_CH0_OUTPUT_VALUE_0
+                                        283: 2
+              #define _0001_TAU_CH0_OUTPUT_VALUE_1
+                                        284: 2   102
+              #define _0000_TAU_CH1_OUTPUT_VALUE_0
+                                        286: 2
+              #define _0002_TAU_CH1_OUTPUT_VALUE_1
+                                        287: 2
+              #define _0000_TAU_CH2_OUTPUT_VALUE_0
+                                        289: 2
+              #define _0004_TAU_CH2_OUTPUT_VALUE_1
+                                        290: 2
+              #define _0000_TAU_CH3_OUTPUT_VALUE_0
+                                        292: 2
+              #define _0008_TAU_CH3_OUTPUT_VALUE_1
+                                        293: 2
+              #define _0000_TAU_CH4_OUTPUT_VALUE_0
+                                        295: 2
+              #define _0010_TAU_CH4_OUTPUT_VALUE_1
+                                        296: 2
+              #define _0000_TAU_CH5_OUTPUT_VALUE_0
+                                        298: 2
+              #define _0020_TAU_CH5_OUTPUT_VALUE_1
+                                        299: 2
+              #define _0000_TAU_CH6_OUTPUT_VALUE_0
+                                        301: 2
+              #define _0040_TAU_CH6_OUTPUT_VALUE_1
+                                        302: 2
+              #define _0000_TAU_CH7_OUTPUT_VALUE_0
+                                        304: 2
+              #define _0080_TAU_CH7_OUTPUT_VALUE_1
+                                        305: 2
+              #define _0000_TAU_CH1_OUTPUT_LEVEL_H
+                                        311: 2
+              #define _0002_TAU_CH1_OUTPUT_LEVEL_L
+                                        312: 2
+              #define _0000_TAU_CH2_OUTPUT_LEVEL_H
+                                        314: 2
+              #define _0004_TAU_CH2_OUTPUT_LEVEL_L
+                                        315: 2
+              #define _0000_TAU_CH3_OUTPUT_LEVEL_H
+                                        317: 2
+              #define _0008_TAU_CH3_OUTPUT_LEVEL_L
+                                        318: 2
+              #define _0000_TAU_CH4_OUTPUT_LEVEL_H
+                                        320: 2
+              #define _0010_TAU_CH4_OUTPUT_LEVEL_L
+                                        321: 2
+              #define _0000_TAU_CH5_OUTPUT_LEVEL_H
+                                        323: 2
+              #define _0020_TAU_CH5_OUTPUT_LEVEL_L
+                                        324: 2
+              #define _0000_TAU_CH6_OUTPUT_LEVEL_H
+                                        326: 2
+              #define _0040_TAU_CH6_OUTPUT_LEVEL_L
+                                        327: 2
+              #define _0000_TAU_CH7_OUTPUT_LEVEL_H
+                                        329: 2
+              #define _0080_TAU_CH7_OUTPUT_LEVEL_L
+                                        330: 2
+              #define _0000_TAU_CH1_OUTPUT_TOGGLE
+                                        336: 2
+              #define _0002_TAU_CH1_OUTPUT_COMBIN
+                                        337: 2
+              #define _0000_TAU_CH2_OUTPUT_TOGGLE
+                                        339: 2
+              #define _0004_TAU_CH2_OUTPUT_COMBIN
+                                        340: 2
+              #define _0000_TAU_CH3_OUTPUT_TOGGLE
+                                        342: 2
+              #define _0008_TAU_CH3_OUTPUT_COMBIN
+                                        343: 2
+              #define _0000_TAU_CH4_OUTPUT_TOGGLE
+                                        345: 2
+              #define _0010_TAU_CH4_OUTPUT_COMBIN
+                                        346: 2
+              #define _0000_TAU_CH5_OUTPUT_TOGGLE
+                                        348: 2
+              #define _0020_TAU_CH5_OUTPUT_COMBIN
+                                        349: 2
+              #define _0000_TAU_CH6_OUTPUT_TOGGLE
+                                        351: 2
+              #define _0040_TAU_CH6_OUTPUT_COMBIN
+                                        352: 2
+              #define _0000_TAU_CH7_OUTPUT_TOGGLE
+                                        354: 2
+              #define _0080_TAU_CH7_OUTPUT_COMBIN
+                                        355: 2
+              #define _00_TAU_CH7_NO_INPUT
+                                        361: 2
+              #define _02_TAU_CH7_RXD3_INPUT
+                                        362: 2
+              #define _00_TAU_CH7_NOISE_OFF
+                                        368: 2
+              #define _80_TAU_CH7_NOISE_ON
+                                        369: 2
+              #define _00_TAU_CH6_NOISE_OFF
+                                        371: 2
+              #define _40_TAU_CH6_NOISE_ON
+                                        372: 2
+              #define _00_TAU_CH5_NOISE_OFF
+                                        374: 2
+              #define _20_TAU_CH5_NOISE_ON
+                                        375: 2
+              #define _00_TAU_CH4_NOISE_OFF
+                                        377: 2
+              #define _10_TAU_CH4_NOISE_ON
+                                        378: 2
+              #define _00_TAU_CH3_NOISE_OFF
+                                        380: 2
+              #define _08_TAU_CH3_NOISE_ON
+                                        381: 2
+              #define _00_TAU_CH2_NOISE_OFF
+                                        383: 2
+              #define _04_TAU_CH2_NOISE_ON
+                                        384: 2
+              #define _00_TAU_CH1_NOISE_OFF
+                                        386: 2
+              #define _02_TAU_CH1_NOISE_ON
+                                        387: 2
+              #define _00_TAU_CH0_NOISE_OFF
+                                        389: 2
+              #define _01_TAU_CH0_NOISE_ON
+                                        390: 2
+              #define _C34F_TAU_TDR00_VALUE
+                                        397: 2   101
+              #define _0040_TAU0_CHANNEL0_DIVISOR
+                                        399: 2
+              #define _USER_DEF_H        30: 3
+              #define TRUE               37: 3
+              #define FALSE              38: 3
+              #define TX2_BUFFER_LENTH
+                                         39: 3
+              #define RX2_BUFFER_LENTH
+                                         40: 3
+              #define TX1_BUFFER_LENTH
+                                         41: 3
+              #define RX1_BUFFER_LENTH
+                                         42: 3
+              #define TX0_BUFFER_LENTH
+                                         43: 3
+              #define RX0_BUFFER_LENTH
+                                         44: 3
+
+
+ Target chip : R5F100BC
+ Device file : V1.14 
